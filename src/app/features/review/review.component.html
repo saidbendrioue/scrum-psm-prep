@@ -1,0 +1,31 @@
+@if (loading()) {
+  <app-loading-block />
+} @else {
+  <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+    <div class="flex flex-wrap gap-2" role="tablist" aria-label="Review lists">
+      @for (item of tabs; track item) {
+        <button type="button" class="btn" [class.btn-primary]="tab() === item" [class.btn-ghost]="tab() !== item" role="tab" [attr.aria-selected]="tab() === item" (click)="select(item)">
+          {{ label(item) }}
+        </button>
+      }
+    </div>
+    <a class="btn btn-primary" routerLink="/practice" [queryParams]="{ set: tab() }">Practice this list</a>
+  </div>
+  @if (questions().length === 0) {
+    <app-empty-state
+      [title]="'No ' + label(tab()).toLowerCase() + ' yet'"
+      message="Practice or take a mock exam. Missed questions land here, bookmarks stay until you remove them, and due cards follow a simple spaced-repetition interval."
+    />
+  } @else {
+    <ul class="grid gap-3">
+      @for (question of questions(); track question.id) {
+        <li class="panel p-4">
+          <p class="text-sm font-semibold uppercase tracking-[0.12em] text-flag">{{ question.category }}</p>
+          <h2 class="mt-2 font-serif text-xl">{{ question.question }}</h2>
+          <p class="mt-3 leading-relaxed">{{ question.explanation }}</p>
+          <p class="mt-2 text-sm text-muted">{{ question.reference }}</p>
+        </li>
+      }
+    </ul>
+  }
+}

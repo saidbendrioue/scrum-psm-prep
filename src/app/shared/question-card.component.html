@@ -1,0 +1,35 @@
+<article class="panel p-5 md:p-7">
+  <p class="text-sm font-semibold uppercase tracking-[0.14em] text-muted">
+    {{ question().category }} · {{ question().difficulty }}
+    @if (positionLabel()) {
+      <span> · {{ positionLabel() }}</span>
+    }
+  </p>
+  <h2 class="mt-3 font-serif text-2xl leading-snug md:text-3xl">{{ question().question }}</h2>
+  <p class="mt-2 text-sm text-muted" [id]="'hint-' + question().id">
+    {{ prompt() }}
+    @if (question().type === 'multiple' && !revealed()) {
+      <span>{{ selectedIds().length === 0 ? 'None selected yet.' : selectedIds().length + ' selected.' }}</span>
+    }
+  </p>
+  <div class="mt-5 grid gap-3" role="group" [attr.aria-labelledby]="'hint-' + question().id">
+    @for (option of question().options; track option.id; let index = $index) {
+      <app-answer-option
+        [option]="option"
+        [index]="index"
+        [checked]="checked(option.id)"
+        [state]="optionState(option.id)"
+        [multiple]="question().type === 'multiple'"
+        [disabled]="revealed()"
+        (picked)="choose.emit(option.id)"
+      />
+    }
+  </div>
+  @if (revealed()) {
+    <div class="mt-5 rounded-2xl bg-surface-2 p-4" aria-live="polite">
+      <p class="font-semibold">{{ correctSelection() ? 'Correct.' : 'Not quite.' }}</p>
+      <p class="mt-2 leading-relaxed">{{ question().explanation }}</p>
+      <p class="mt-3 text-sm text-muted">{{ question().reference }}</p>
+    </div>
+  }
+</article>

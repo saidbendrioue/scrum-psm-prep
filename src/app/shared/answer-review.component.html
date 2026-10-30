@@ -1,0 +1,86 @@
+@if (active(); as row) {
+  <article class="panel p-5 md:p-7">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <button type="button" class="btn btn-ghost" (click)="close()">← Back to results</button>
+      <p class="text-sm text-muted">Question {{ row.number }} of {{ rows().length }}</p>
+    </div>
+    <h2 class="mt-6 font-serif text-2xl leading-snug md:text-3xl">{{ row.question?.question ?? 'Missing question' }}</h2>
+    <p class="mt-4">
+      <span
+        class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold"
+        [class.bg-good-bg]="row.correct"
+        [class.text-good]="row.correct"
+        [class.bg-bad-bg]="!row.correct"
+        [class.text-bad]="!row.correct"
+      >
+        {{ row.correct ? '✓ Correct' : '✗ Wrong' }}
+      </span>
+    </p>
+    <p class="mt-4 text-sm text-muted">{{ prompt(row) }}</p>
+    <div class="mt-5 grid gap-3">
+      @for (option of row.question?.options ?? []; track option.id; let index = $index) {
+        <div [class]="optionClass(mark(row, option.id))">
+          <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-current text-sm font-semibold">
+            {{ letter(index) }}
+          </span>
+          <span class="min-w-0 flex-1">{{ option.text }}</span>
+          @if (markLabel(mark(row, option.id)); as label) {
+            <span class="shrink-0 text-sm font-semibold">{{ label }}</span>
+          }
+        </div>
+      }
+    </div>
+    @if (row.question) {
+      <p class="mt-6 leading-relaxed">{{ row.question.explanation }}</p>
+      <p class="mt-3 text-sm text-muted">{{ row.question.reference }}</p>
+    }
+    <div class="mt-6 flex flex-wrap items-center justify-between gap-2">
+      <button type="button" class="btn btn-ghost" (click)="close()">← Back to results</button>
+      <div class="flex gap-2">
+        <button type="button" class="btn btn-ghost" [disabled]="activeIndex() <= 0" (click)="step(-1)">Previous</button>
+        <button type="button" class="btn btn-primary" [disabled]="activeIndex() >= rows().length - 1" (click)="step(1)">Next</button>
+      </div>
+    </div>
+  </article>
+} @else {
+  <div class="flex flex-wrap gap-2" role="tablist" aria-label="Answer review">
+    <button type="button" class="btn" [class.btn-primary]="filter() === 'wrong'" [class.btn-ghost]="filter() !== 'wrong'" role="tab" [attr.aria-selected]="filter() === 'wrong'" (click)="select('wrong')">
+      Wrong ({{ wrongCount() }})
+    </button>
+    <button type="button" class="btn" [class.btn-primary]="filter() === 'correct'" [class.btn-ghost]="filter() !== 'correct'" role="tab" [attr.aria-selected]="filter() === 'correct'" (click)="select('correct')">
+      Correct ({{ correctCount() }})
+    </button>
+    <button type="button" class="btn" [class.btn-primary]="filter() === 'all'" [class.btn-ghost]="filter() !== 'all'" role="tab" [attr.aria-selected]="filter() === 'all'" (click)="select('all')">
+      All ({{ rows().length }})
+    </button>
+  </div>
+  <p class="mt-3 text-sm text-muted">Select a question to see your answer and the correct one.</p>
+  <ol class="mt-4 grid gap-3">
+    @for (row of visible(); track row.questionId) {
+      <li>
+        <button
+          type="button"
+          class="panel flex w-full items-start gap-3 border-l-4 p-4 text-left"
+          [class.border-bad]="!row.correct"
+          [class.border-good]="row.correct"
+          (click)="open(row)"
+        >
+          <span class="mt-0.5 w-4 shrink-0 font-semibold" [class.text-bad]="!row.correct" [class.text-good]="row.correct" aria-hidden="true">
+            {{ row.correct ? '✓' : '✗' }}
+          </span>
+          <span class="min-w-0 flex-1 font-semibold">{{ row.number }}. {{ row.question?.question ?? 'Missing question' }}</span>
+          <span class="shrink-0 text-sm font-semibold" [class.text-bad]="!row.correct" [class.text-good]="row.correct">
+            {{ row.correct ? 'Correct' : 'Wrong' }}
+          </span>
+        </button>
+      </li>
+    } @empty {
+      <li>
+        <app-empty-state
+          [title]="filter() === 'wrong' ? 'No wrong answers' : 'No correct answers'"
+          [message]="filter() === 'wrong' ? 'Every question in this set was correct.' : 'None of the questions in this set were correct.'"
+        />
+      </li>
+    }
+  </ol>
+}

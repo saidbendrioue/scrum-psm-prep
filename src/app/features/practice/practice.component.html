@@ -1,0 +1,80 @@
+@if (loading()) {
+  <app-loading-block />
+} @else if (store.session(); as session) {
+  @if (session.phase === 'summary') {
+    @if (!reviewing()) {
+      <section class="panel p-6 md:p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-muted">Practice set</p>
+        <h2 class="mt-2 font-serif text-5xl">{{ session.correctCount }} / {{ session.answeredCount }}</h2>
+        <p class="mt-2 text-lg">Review your answers</p>
+        <p class="mt-1 max-w-2xl text-muted">Open a question to see your answer and the correct one, in the same layout as the test.</p>
+        <button type="button" class="btn btn-primary mt-5" (click)="end()">Back to filters</button>
+      </section>
+    }
+    <div [class.mt-6]="!reviewing()">
+      <app-answer-review [rows]="reviewRows()" (activeChange)="reviewing.set($event)" />
+    </div>
+  } @else if (store.current(); as question) {
+    <div
+      appAnswerHotkeys
+      [count]="question.options.length"
+      [enabled]="true"
+      (choose)="store.chooseIndex($event)"
+      (confirm)="submit()"
+      (flag)="bookmark()"
+    >
+      <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+        <app-progress-bar class="min-w-40 flex-1" [value]="session.index + 1" [max]="session.questionIds.length" label="Practice progress" />
+        <button type="button" class="btn btn-ghost" [attr.aria-pressed]="bookmarked()" (click)="bookmark()">
+          {{ bookmarked() ? 'Bookmarked' : 'Bookmark' }}
+        </button>
+      </div>
+      <app-question-card
+        [question]="question"
+        [selectedIds]="session.selected"
+        [revealed]="session.revealed"
+        [positionLabel]="session.index + 1 + ' of ' + session.questionIds.length"
+        (choose)="store.choose($event)"
+      />
+      <div class="mt-4 flex flex-wrap items-center gap-2">
+        @if (question.type === 'multiple') {
+          <button type="button" class="btn btn-primary" (click)="submit()">
+            {{ session.index + 1 === session.questionIds.length ? 'Finish' : 'Next' }}
+          </button>
+        }
+        <button type="button" class="btn btn-ghost" (click)="end()">End session</button>
+        <p class="text-sm text-muted">
+          @if (question.type === 'multiple') {
+            Select every option, then continue. Keys: 1–9 toggle, Enter continues, F bookmarks.
+          } @else {
+            Choosing an answer opens the next question. Keys: 1–9 answer, F bookmarks.
+          }
+        </p>
+      </div>
+    </div>
+  }
+} @else {
+  <div class="panel p-5 md:p-7">
+    <h2 class="font-serif text-3xl">Study one question at a time</h2>
+    <p class="mt-2 max-w-2xl text-muted">
+      Choose a slice of the PSM I bank. A single answer moves you straight to the next question. Multiple-answer questions wait until you continue. Explanations stay hidden until you review them later.
+    </p>
+    <div class="mt-6">
+      <app-question-filters
+        [categories]="categories()"
+        [showType]="true"
+        [value]="filters()"
+        (filtersChange)="onFilters($event)"
+      />
+    </div>
+    <div class="mt-6 flex flex-wrap items-center gap-3">
+      <button type="button" class="btn btn-primary" [disabled]="matching().length === 0" (click)="startPractice()">
+        Start {{ matching().length }} questions
+      </button>
+      <a class="btn btn-ghost" routerLink="/review">Review misses</a>
+    </div>
+    @if (matching().length === 0) {
+      <p class="mt-4 text-sm text-muted">Nothing matches these filters.</p>
+    }
+  </div>
+}

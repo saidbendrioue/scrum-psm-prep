@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PSM I Prep</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Practice for the Professional Scrum Master I assessment with questions, a timed mock exam, and progress tracking."
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('psm-prep-state');
+          var theme = raw ? JSON.parse(raw).theme : null;
+          var dark =
+            theme === 'dark' ||
+            (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (error) {
+          /* Keep the light theme if stored progress cannot be read. */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>

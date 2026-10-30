@@ -1,0 +1,41 @@
+@if (bank.status() === 'loading') {
+  <app-loading-block />
+} @else {
+  <div class="panel p-5">
+    <app-question-filters
+      [categories]="bank.categories()"
+      [showType]="true"
+      [value]="filters()"
+      (filtersChange)="onFilters($event)"
+    />
+    <p class="mt-4 text-sm text-muted">{{ visible().length }} PSM I questions</p>
+  </div>
+  @if (visible().length === 0) {
+    <app-empty-state class="mt-4 block" title="No questions found" message="Try a different category, difficulty, or search." />
+  } @else {
+    <ul class="mt-4 grid gap-3">
+      @for (question of visible(); track question.id) {
+        <li>
+          <details class="panel p-4">
+            <summary class="cursor-pointer">
+              <span class="text-sm font-semibold uppercase tracking-[0.12em] text-muted">{{ question.category }} · {{ question.difficulty }} · {{ typeLabel(question.type) }}</span>
+              <span class="mt-1 block font-serif text-xl">{{ question.question }}</span>
+            </summary>
+            <ul class="mt-4 grid gap-2">
+              @for (option of question.options; track option.id) {
+                <li [class.text-good]="question.correctOptionIds.includes(option.id)">
+                  @if (question.type === 'multiple' && question.correctOptionIds.includes(option.id)) {
+                    <span class="font-semibold">Correct · </span>
+                  }
+                  {{ option.text }}
+                </li>
+              }
+            </ul>
+            <p class="mt-4 leading-relaxed">{{ question.explanation }}</p>
+            <p class="mt-2 text-sm text-muted">{{ question.reference }}</p>
+          </details>
+        </li>
+      }
+    </ul>
+  }
+}

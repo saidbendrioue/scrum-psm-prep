@@ -1,0 +1,45 @@
+<form class="grid gap-4 md:grid-cols-2" [formGroup]="form">
+  @if (showSearch()) {
+    <label class="field md:col-span-2">
+      <span>Search</span>
+      <input type="search" formControlName="search" placeholder="Search the PSM I bank" />
+    </label>
+  }
+  <label class="field">
+    <span>Categories</span>
+    <select multiple formControlName="categories" size="6" aria-describedby="category-hint">
+      @for (category of categories(); track category) {
+        <option [value]="category">{{ category }}</option>
+      }
+    </select>
+    <span id="category-hint" class="text-xs text-muted">Leave unselected to include every category.</span>
+  </label>
+  <div class="grid content-start gap-4">
+    <label class="field">
+      <span>Difficulty</span>
+      <select formControlName="difficulty">
+        <option value="all">All difficulties</option>
+        @for (difficulty of difficulties; track difficulty) {
+          <option [value]="difficulty">{{ difficulty }}</option>
+        }
+      </select>
+    </label>
+    <label class="field">
+      <span>Certification</span>
+      <select disabled aria-label="Certification">
+        <option>PSM I</option>
+      </select>
+    </label>
+    @if (showType()) {
+      <label class="field">
+        <span>Question type</span>
+        <select formControlName="type">
+          <option value="all">All types</option>
+          @for (type of types; track type) {
+            <option [value]="type">{{ typeLabel(type) }}</option>
+          }
+        </select>
+      </label>
+    }
+  </div>
+</form>

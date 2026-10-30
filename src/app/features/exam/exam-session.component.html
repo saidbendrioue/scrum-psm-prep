@@ -1,0 +1,78 @@
+@if (bank.status() === 'loading') {
+  <app-loading-block />
+} @else if (examStore.exam(); as exam) {
+  @if (examStore.currentQuestion(); as question) {
+    <div
+      appAnswerHotkeys
+      [count]="question.options.length"
+      [enabled]="!confirming()"
+      (choose)="examStore.chooseIndex($event)"
+      (confirm)="onConfirm()"
+      (flag)="flag()"
+    >
+      <div class="mb-4 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p class="text-sm text-muted">Question {{ exam.currentIndex + 1 }} of {{ exam.questionIds.length }}</p>
+          <app-timer-display [seconds]="examStore.remainingSeconds()" />
+        </div>
+        <button type="button" class="btn btn-ghost" [attr.aria-pressed]="bookmarked()" (click)="flag()">
+          {{ bookmarked() ? 'Bookmarked' : 'Bookmark' }}
+        </button>
+      </div>
+      <app-progress-bar [value]="examStore.answeredCount()" [max]="exam.questionIds.length" label="Answered questions" />
+      <div class="mt-4">
+        <app-question-card
+          [question]="question"
+          [selectedIds]="examStore.selected()"
+          [revealed]="false"
+          (choose)="examStore.choose($event)"
+        />
+      </div>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <button type="button" class="btn btn-ghost" [disabled]="exam.currentIndex === 0" (click)="examStore.jump(exam.currentIndex - 1)">
+          Previous
+        </button>
+        <button type="button" class="btn btn-primary" (click)="onConfirm()">
+          {{ exam.currentIndex + 1 === exam.questionIds.length ? 'Review submit' : 'Next' }}
+        </button>
+        <button type="button" class="btn btn-danger" (click)="confirming.set(true)">Submit exam</button>
+      </div>
+      <p class="mt-3 text-sm text-muted">A single answer opens the next question. On multiple-answer questions, select every option, then continue. Explanations stay hidden until you submit. Keys: 1–9 answer, Enter moves ahead, F bookmarks.</p>
+      <div class="mt-4 grid grid-cols-8 gap-2 sm:grid-cols-10" aria-label="Question navigator">
+        @for (questionId of exam.questionIds; track questionId; let index = $index) {
+          <button
+            type="button"
+            class="h-9 rounded-lg border text-sm"
+            [class.border-accent]="index === exam.currentIndex"
+            [class.bg-flag-bg]="progress.isBookmarked(questionId)"
+            [class.bg-surface-2]="chosen(questionId)"
+            [attr.aria-current]="index === exam.currentIndex ? 'true' : null"
+            [attr.aria-label]="'Question ' + (index + 1)"
+            (click)="examStore.jump(index)"
+          >
+            {{ index + 1 }}
+          </button>
+        }
+      </div>
+    </div>
+  } @else {
+    <app-empty-state title="This question is missing" message="The saved exam points at a question that is no longer in the bank." />
+  }
+} @else {
+  <app-empty-state title="No exam in progress" message="Start a mock exam when you are ready." />
+}
+
+@if (confirming()) {
+  <div class="fixed inset-0 z-50 grid place-items-center bg-ink/50 p-4" role="dialog" aria-modal="true" aria-labelledby="submit-title">
+    <div class="panel max-w-md p-6">
+      <h2 id="submit-title" class="font-serif text-2xl">Submit the exam?</h2>
+      <p class="mt-2 text-muted">
+        {{ unanswered() }} {{ unanswered() === 1 ? 'question is' : 'questions are' }} still unanswered. Blank answers count as incorrect. The pass mark is 85%.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <button type="button" class="btn btn-primary" (click)="examStore.finish('completed')">Submit</button>
+        <button type="button" class="btn btn-ghost" (click)="confirming.set(false)">Keep working</button>
+      </div>
+    </div>
+  </div>
+}

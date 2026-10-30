@@ -1,0 +1,37 @@
+<header class="sticky top-0 z-20 flex flex-wrap items-center justify-between gap-3 border-b border-line bg-canvas/90 px-4 py-3 backdrop-blur md:px-8">
+  <div class="flex items-center gap-3">
+    <button
+      type="button"
+      class="btn btn-ghost hidden size-11 shrink-0 p-0 md:inline-flex"
+      [attr.aria-expanded]="shell.desktopNavOpen()"
+      aria-controls="primary-nav"
+      [attr.aria-label]="shell.desktopNavOpen() ? 'Hide navigation' : 'Show navigation'"
+      (click)="shell.toggleDesktopNav()"
+    >
+      <svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        @if (shell.desktopNavOpen()) {
+          <path d="M6 6l12 12M18 6L6 18" />
+        } @else {
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        }
+      </svg>
+    </button>
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">PSM I</p>
+      <h1 class="font-serif text-2xl leading-tight">{{ pageTitle() }}</h1>
+    </div>
+  </div>
+  <div class="flex items-center gap-2">
+    @if (progress.activeExam()) {
+      <a class="btn btn-primary" routerLink="/exam/session">Resume {{ timeLeft() }}</a>
+    }
+    <button
+      type="button"
+      class="btn btn-ghost"
+      [attr.aria-pressed]="theme.theme() === 'dark'"
+      (click)="theme.toggle()"
+    >
+      {{ theme.theme() === 'dark' ? 'Light mode' : 'Dark mode' }}
+    </button>
+  </div>
+</header>

@@ -13,12 +13,7 @@ describe('App', () => {
     localStorage.clear();
     await TestBed.configureTestingModule({
       imports: [App],
-      providers: [
-        provideZonelessChangeDetection(),
-        provideRouter([]),
-        provideHttpClient(),
-        provideHttpClientTesting(),
-      ],
+      providers: [provideZonelessChangeDetection(), provideRouter([]), provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
     http = TestBed.inject(HttpTestingController);
   });
@@ -28,27 +23,27 @@ describe('App', () => {
     localStorage.clear();
   });
 
-  it('renders the Java QCM shell', async () => {
+  it('renders the PSM I shell', async () => {
     const fixture = TestBed.createComponent(App);
     http.expectOne('assets/questions.json').flush([
       {
         id: 'q001',
-        category: 'Types and OOP',
-        cert: ['Java'],
+        category: 'Scrum Theory',
+        cert: ['PSM I'],
         difficulty: 'easy',
         type: 'truefalse',
-        question: 'int is a primitive type.',
+        question: 'Scrum is a framework.',
         options: [
           { id: 'a', text: 'True' },
           { id: 'b', text: 'False' },
         ],
         correctOptionIds: ['a'],
-        explanation: 'int is one of the eight primitive types.',
-        reference: 'Java Language Specification — Primitive Types and Values',
+        explanation: 'Scrum is a lightweight framework.',
+        reference: 'Scrum Guide (2020)',
       },
     ]);
     await fixture.whenStable();
     fixture.detectChanges();
-    expect(fixture.nativeElement.textContent).toContain('Java QCM');
+    expect(fixture.nativeElement.textContent).toContain('PSM I');
   });
 });

@@ -10,9 +10,9 @@
 } @else {
   <form class="panel grid gap-5 p-5 md:p-7" [formGroup]="form" (ngSubmit)="start()">
     <div>
-      <h2 class="font-serif text-3xl">Java QCM simulation</h2>
+      <h2 class="font-serif text-3xl">PSM I simulation</h2>
       <p class="mt-2 max-w-2xl text-muted">
-        A full simulation is 80 questions in 60 minutes, with 85% required to pass. Some questions have more than one correct answer: select each of them. This mock hides explanations until you submit.
+        Scrum.org’s PSM I assessment is 80 questions in 60 minutes, with 85% required to pass. Some questions have more than one correct answer: select each of them. This mock hides explanations until you submit. Confirm the live format on Scrum.org before exam day.
       </p>
     </div>
     <div class="flex flex-wrap gap-2">
@@ -44,7 +44,7 @@
             <option [value]="category">{{ category }}</option>
           }
         </select>
-        <span id="exam-category-hint" class="text-xs text-muted">Leave unselected to use the whole Java bank. {{ available() }} questions match.</span>
+        <span id="exam-category-hint" class="text-xs text-muted">Leave unselected to use the whole PSM I bank. {{ available() }} questions match.</span>
       </label>
     </div>
     @if (submitted() && form.invalid) {

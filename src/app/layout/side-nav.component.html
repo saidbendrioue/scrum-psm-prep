@@ -4,8 +4,8 @@
   [class.-translate-x-full]="!shell.desktopNavOpen()"
   [attr.inert]="shell.desktopNavOpen() ? null : ''"
 >
-  <p class="px-3 font-serif text-3xl leading-none">PSM I Prep</p>
-  <p class="mt-2 px-3 text-sm text-nav-ink/70">Professional Scrum Master I</p>
+  <p class="px-3 font-serif text-3xl leading-none">Java QCM</p>
+  <p class="mt-2 px-3 text-sm text-nav-ink/70">Java multiple-choice quiz</p>
   <nav class="mt-8 flex-1" aria-label="Primary">
     <ul class="grid gap-1">
       @for (item of items; track item.path) {
@@ -22,7 +22,7 @@
       }
     </ul>
   </nav>
-  <p class="px-3 text-xs text-nav-ink/70">{{ questions.questions().length }} PSM I questions · 85% to pass</p>
+  <p class="px-3 text-xs text-nav-ink/70">{{ questions.questions().length }} Java questions · 85% to pass</p>
 </aside>
 <nav class="fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-nav text-nav-ink md:hidden" aria-label="Primary">
   <ul class="grid grid-cols-5 pb-[env(safe-area-inset-bottom)]">

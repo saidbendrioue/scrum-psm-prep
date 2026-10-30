@@ -57,7 +57,7 @@
   <section class="mt-6">
     <h2 class="font-serif text-2xl">Exam history</h2>
     @if (summary().recentExams.length === 0) {
-      <app-empty-state class="mt-4 block" title="No exams yet" message="A full PSM I simulation is 80 questions, 60 minutes, and 85% to pass.">
+      <app-empty-state class="mt-4 block" title="No exams yet" message="A full simulation is 80 questions, 60 minutes, and 85% to pass.">
         <a class="btn btn-primary" routerLink="/exam">Start a mock exam</a>
       </app-empty-state>
     } @else {

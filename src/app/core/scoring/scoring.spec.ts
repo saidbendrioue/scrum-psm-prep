@@ -4,19 +4,19 @@ import { buildScore, isAnswerCorrect, scoreAttempt, toggleSelection } from './sc
 function question(overrides: Partial<Question> = {}): Question {
   return {
     id: 'q1',
-    category: 'Scrum Theory',
-    cert: ['PSM I'],
+    category: 'Types and OOP',
+    cert: ['Java'],
     difficulty: 'easy',
     type: 'single',
-    question: 'What is Scrum?',
+    question: 'Which of these is a primitive type?',
     options: [
-      { id: 'a', text: 'A framework' },
-      { id: 'b', text: 'A methodology' },
-      { id: 'c', text: 'A process' },
+      { id: 'a', text: 'int' },
+      { id: 'b', text: 'Integer' },
+      { id: 'c', text: 'String' },
     ],
     correctOptionIds: ['a'],
-    explanation: 'Scrum is a framework.',
-    reference: 'Scrum Guide (2020)',
+    explanation: 'int is a primitive type.',
+    reference: 'Java Language Specification — Primitive Types and Values',
     ...overrides,
   };
 }
@@ -48,6 +48,12 @@ describe('scoring', () => {
     expect(failed.correctCount).toBe(16);
     expect(failed.unanswered).toBe(1);
     expect(failed.passed).toBe(false);
-    expect(buildScore(0, 0, 0)).toEqual({ correctCount: 0, total: 0, percent: 0, passed: false, unanswered: 0 });
+    expect(buildScore(0, 0, 0)).toEqual({
+      correctCount: 0,
+      total: 0,
+      percent: 0,
+      passed: false,
+      unanswered: 0,
+    });
   });
 });

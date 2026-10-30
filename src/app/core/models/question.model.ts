@@ -10,7 +10,7 @@ export function questionTypeLabel(type: QuestionType): string {
   return 'One answer';
 }
 
-export const CERTIFICATIONS = ['PSM I', 'CSM', 'PSPO I'] as const;
+export const CERTIFICATIONS = ['Java', 'OCP'] as const;
 export type Certification = (typeof CERTIFICATIONS)[number];
 
 export interface AnswerOption {
@@ -44,7 +44,7 @@ export const EMPTY_FILTER: QuestionFilter = {
   search: '',
   categories: [],
   difficulties: [],
-  certs: ['PSM I'],
+  certs: ['Java'],
   types: [],
   questionIds: null,
 };

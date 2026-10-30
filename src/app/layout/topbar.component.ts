@@ -4,6 +4,7 @@ import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { filter, map } from 'rxjs';
 
+import { APP_NAME } from '../core/constants';
 import { formatDuration } from '../core/format';
 import { ProgressService } from '../core/services/progress.service';
 import { ThemeService } from '../core/services/theme.service';
@@ -41,12 +42,12 @@ export class TopbarComponent {
   });
 
   constructor() {
-    effect(() => this.title.setTitle(`${this.pageTitle()} · PSM I Prep`));
+    effect(() => this.title.setTitle(`${this.pageTitle()} · ${APP_NAME}`));
   }
 
   private currentTitle(): string {
     let current = this.router.routerState.root;
-    let label = 'PSM I Prep';
+    let label = APP_NAME;
     while (current.firstChild) {
       current = current.firstChild;
       const value = current.snapshot.data['title'];

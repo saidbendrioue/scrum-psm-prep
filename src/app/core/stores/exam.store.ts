@@ -144,7 +144,7 @@ export class ExamStore {
       search: '',
       categories: config.categories,
       difficulties: config.difficulty === 'all' ? [] : [config.difficulty],
-      certs: ['PSM I'],
+      certs: ['Java'],
       types: [],
       questionIds: null,
     });

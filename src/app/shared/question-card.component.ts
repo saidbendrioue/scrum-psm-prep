@@ -15,12 +15,13 @@ export class QuestionCardComponent {
   readonly selectedIds = input<readonly string[]>([]);
   readonly revealed = input(false);
   readonly positionLabel = input('');
+  readonly showMeta = input(true);
   readonly choose = output<string>();
 
   protected readonly prompt = computed(() => {
     const question = this.question();
-    if (question.type === 'multiple') return 'Select every correct answer. A partial selection is scored incorrect.';
-    if (question.type === 'truefalse') return 'True or false.';
+    if (question.type === 'multiple') return 'Select every correct answer.';
+    if (question.type === 'truefalse') return 'True or false?';
     return 'Select one answer.';
   });
 

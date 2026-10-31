@@ -17,19 +17,15 @@ export type OptionState = 'idle' | 'correct' | 'incorrect' | 'missed';
       [attr.role]="multiple() ? 'checkbox' : 'radio'"
       (click)="onClick()"
     >
-      <span
-        class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center border border-current text-sm font-semibold"
-        [class.rounded-full]="!multiple()"
-        [class.rounded-md]="multiple()"
-      >
-        @if (multiple() && checked()) {
+      <span [class]="badgeClass()">
+        @if (multiple() && checked() && state() === 'idle') {
           <span aria-hidden="true">✓</span>
           <span class="sr-only">{{ letter() }}</span>
         } @else {
           {{ letter() }}
         }
       </span>
-      <span>{{ option().text }}</span>
+      <span class="min-w-0 flex-1 pt-0.5">{{ option().text }}</span>
     </button>
   `,
 })
@@ -47,8 +43,8 @@ export class AnswerOptionComponent {
   }
 
   protected stateClass(): string {
-    const layout = 'flex w-full items-start gap-3 rounded-2xl border px-4 py-3 text-left transition';
-    const base = this.checked() && this.state() === 'idle' ? 'border-accent bg-surface-2' : 'border-line bg-surface';
+    const layout =
+      'flex w-full items-start gap-3 rounded-xl border-2 px-4 py-3.5 text-left text-base transition';
     switch (this.state()) {
       case 'correct':
       case 'missed':
@@ -56,7 +52,25 @@ export class AnswerOptionComponent {
       case 'incorrect':
         return `${layout} border-bad bg-bad-bg text-bad`;
       default:
-        return `${layout} ${base}`;
+        return this.checked()
+          ? `${layout} border-accent bg-accent/10 text-ink`
+          : `${layout} border-line bg-transparent text-ink hover:border-accent/50`;
+    }
+  }
+
+  protected badgeClass(): string {
+    const shape = this.multiple() ? 'rounded-md' : 'rounded-full';
+    const base = `mt-0.5 grid h-7 w-7 shrink-0 place-items-center text-sm font-semibold ${shape}`;
+    switch (this.state()) {
+      case 'correct':
+      case 'missed':
+        return `${base} border border-current bg-good text-good-bg`;
+      case 'incorrect':
+        return `${base} border border-current bg-bad text-bad-bg`;
+      default:
+        return this.checked()
+          ? `${base} border border-accent bg-accent text-accent-ink`
+          : `${base} border border-muted/60 text-muted`;
     }
   }
 

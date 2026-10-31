@@ -22,8 +22,8 @@ npm run build
 
 ## What you can do
 
-- **Practice** one question at a time, with an explanation immediately after you submit. Keys: `1`–`9` select, `Enter` submits or continues, `F` bookmarks.
-- **Mock exam** hides explanations until you submit or the timer expires. A full simulation is 80 questions and 60 minutes. Leaving the page does not wipe the exam; the deadline is stored locally and restored on reload.
+- **Practice** one question at a time: select an answer, check it to see the explanation, then click Next. Keys: `1`–`9` select, `Enter` checks or continues, `F` flags for review.
+- **Mock exam** hides explanations until you submit or the timer expires. Select an answer, then click Next (no auto-advance). A full simulation is 80 questions and 60 minutes. Leaving the page does not wipe the exam; the deadline is stored locally and restored on reload.
 - **Question bank** searches and filters the PSM I items and shows the explanation for each one.
 - **Review** lists latest misses, bookmarks, and cards that are due under a simple SM-2 schedule.
 - **Dashboard** shows accuracy by category, streak, exam history, and export or import of progress as JSON.

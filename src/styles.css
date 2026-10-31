@@ -3,43 +3,43 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-serif: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --color-canvas: #e7eef8;
-  --color-surface: #f8fafc;
-  --color-surface-2: #dbe7f5;
-  --color-ink: #0b1b33;
-  --color-muted: #3e5570;
-  --color-line: #c5d4e8;
-  --color-accent: #1e3a8a;
-  --color-accent-ink: #eff6ff;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --color-canvas: #f3f1fb;
+  --color-surface: #ffffff;
+  --color-surface-2: #ebe8f8;
+  --color-ink: #12121e;
+  --color-muted: #6b6880;
+  --color-line: #d5d1e8;
+  --color-accent: #7c74f0;
+  --color-accent-ink: #12121e;
   --color-good: #166534;
   --color-good-bg: #dcfce7;
   --color-bad: #9f1239;
   --color-bad-bg: #ffe4e6;
   --color-flag: #92400e;
   --color-flag-bg: #fef3c7;
-  --color-nav: #0c2340;
-  --color-nav-ink: #e7eef8;
+  --color-nav: #12121e;
+  --color-nav-ink: #f3f1fb;
 }
 
 .dark {
-  --color-canvas: #07111f;
-  --color-surface: #0e1a2e;
-  --color-surface-2: #162743;
-  --color-ink: #e7eef8;
-  --color-muted: #9eb0c8;
-  --color-line: #2c4260;
-  --color-accent: #7eb6ff;
-  --color-accent-ink: #07111f;
+  --color-canvas: #0b0e14;
+  --color-surface: #1c1c2e;
+  --color-surface-2: #26263a;
+  --color-ink: #ffffff;
+  --color-muted: #a0a0b8;
+  --color-line: #35354a;
+  --color-accent: #9891ff;
+  --color-accent-ink: #0b0e14;
   --color-good: #86efac;
   --color-good-bg: #052e16;
   --color-bad: #fecdd3;
   --color-bad-bg: #4c0519;
   --color-flag: #fde68a;
   --color-flag-bg: #451a03;
-  --color-nav: #050b16;
-  --color-nav-ink: #e7eef8;
+  --color-nav: #080a10;
+  --color-nav-ink: #f3f1fb;
 }
 
 :root {
@@ -81,12 +81,17 @@ summary:focus-visible {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-radius: 999px;
+    border-radius: 0.75rem;
     border: 1px solid transparent;
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 1.1rem;
     font-size: 0.95rem;
     font-weight: 600;
     line-height: 1.2;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      color 0.15s ease,
+      opacity 0.15s ease;
   }
 
   .btn:disabled {
@@ -99,16 +104,28 @@ summary:focus-visible {
     color: var(--color-accent-ink);
   }
 
+  .btn-primary:hover:not(:disabled) {
+    filter: brightness(1.06);
+  }
+
   .btn-ghost {
-    border-color: var(--color-line);
+    border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-line));
     background: transparent;
-    color: var(--color-ink);
+    color: var(--color-accent);
+  }
+
+  .btn-ghost:hover:not(:disabled) {
+    background: color-mix(in srgb, var(--color-accent) 12%, transparent);
   }
 
   .btn-danger {
     border-color: var(--color-bad);
     background: var(--color-bad-bg);
     color: var(--color-bad);
+  }
+
+  .btn-block {
+    width: 100%;
   }
 
   .field {
@@ -121,7 +138,7 @@ summary:focus-visible {
   .field input,
   .field select {
     border: 1px solid var(--color-line);
-    border-radius: 0.9rem;
+    border-radius: 0.75rem;
     background: var(--color-surface);
     color: var(--color-ink);
     padding: 0.65rem 0.8rem;
@@ -129,12 +146,21 @@ summary:focus-visible {
 
   .panel {
     border: 1px solid var(--color-line);
-    border-radius: 1.25rem;
+    border-radius: 1rem;
     background: var(--color-surface);
   }
 
   .is-active {
     background: color-mix(in srgb, var(--color-accent) 28%, transparent);
     color: var(--color-nav-ink);
+  }
+
+  .brand-mark {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .brand-mark span {
+    color: var(--color-accent);
   }
 }

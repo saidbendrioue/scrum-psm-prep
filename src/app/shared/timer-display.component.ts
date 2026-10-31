@@ -7,7 +7,7 @@ import { formatDuration } from '../core/format';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <p
-      class="font-serif text-3xl tabular-nums"
+      class="tabular-nums"
       role="timer"
       [class.text-bad]="urgent()"
       [attr.aria-label]="'Time remaining ' + label()"

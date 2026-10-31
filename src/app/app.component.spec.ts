@@ -23,7 +23,7 @@ describe('App', () => {
     localStorage.clear();
   });
 
-  it('renders the PSM I shell', async () => {
+  it('renders the ScrumQuiz shell', async () => {
     const fixture = TestBed.createComponent(App);
     http.expectOne('assets/questions.json').flush([
       {
@@ -44,6 +44,7 @@ describe('App', () => {
     ]);
     await fixture.whenStable();
     fixture.detectChanges();
-    expect(fixture.nativeElement.textContent).toContain('PSM I');
+    expect(fixture.nativeElement.textContent).toContain('Scrum');
+    expect(fixture.nativeElement.textContent).toContain('Quiz');
   });
 });

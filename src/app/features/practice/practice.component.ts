@@ -83,13 +83,25 @@ export class PracticeComponent {
     if (!started) this.toast.show('No questions match these filters.', 'info');
   }
 
-  protected submit(): void {
-    if (this.store.submit() !== 'need-answer') return;
+  protected check(): void {
+    if (this.store.check() !== 'need-answer') return;
     const multiple = this.store.current()?.type === 'multiple';
     this.toast.show(
-      multiple ? 'Select at least one answer before continuing.' : 'Select an answer before continuing.',
+      multiple ? 'Select at least one answer before checking.' : 'Select an answer before checking.',
       'info',
     );
+  }
+
+  protected next(): void {
+    const result = this.store.next();
+    if (result === 'need-check') this.toast.show('Check your answer before continuing.', 'info');
+  }
+
+  protected onConfirm(): void {
+    const session = this.store.session();
+    if (!session) return;
+    if (session.revealed) this.next();
+    else this.check();
   }
 
   protected bookmark(): void {

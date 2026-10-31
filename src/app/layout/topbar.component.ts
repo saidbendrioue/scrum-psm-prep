@@ -41,12 +41,12 @@ export class TopbarComponent {
   });
 
   constructor() {
-    effect(() => this.title.setTitle(`${this.pageTitle()} · ScrumQuiz.org`));
+    effect(() => this.title.setTitle(`${this.pageTitle()} · PSM 1 Quizz`));
   }
 
   private currentTitle(): string {
     let current = this.router.routerState.root;
-    let label = 'PSM I Prep';
+    let label = 'PSM 1 Quizz';
     while (current.firstChild) {
       current = current.firstChild;
       const value = current.snapshot.data['title'];

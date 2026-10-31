@@ -5,7 +5,7 @@
     @if (!reviewing()) {
       <section class="panel p-6 md:p-8">
         <p class="text-sm font-semibold uppercase tracking-[0.14em] text-muted">Practice set</p>
-        <h2 class="mt-2 font-serif text-5xl">{{ session.correctCount }} / {{ session.answeredCount }}</h2>
+        <h2 class="mt-2 text-5xl font-bold">{{ session.correctCount }} / {{ session.answeredCount }}</h2>
         <p class="mt-2 text-lg">Review your answers</p>
         <p class="mt-1 max-w-2xl text-muted">Open a question to see your answer and the correct one, in the same layout as the test.</p>
         <button type="button" class="btn btn-primary mt-5" (click)="end()">Back to filters</button>
@@ -16,48 +16,84 @@
     </div>
   } @else if (store.current(); as question) {
     <div
+      class="mx-auto max-w-2xl"
       appAnswerHotkeys
       [count]="question.options.length"
       [enabled]="true"
       (choose)="store.chooseIndex($event)"
-      (confirm)="submit()"
+      (confirm)="onConfirm()"
       (flag)="bookmark()"
     >
-      <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <app-progress-bar class="min-w-40 flex-1" [value]="session.index + 1" [max]="session.questionIds.length" label="Practice progress" />
-        <button type="button" class="btn btn-ghost" [attr.aria-pressed]="bookmarked()" (click)="bookmark()">
-          {{ bookmarked() ? 'Bookmarked' : 'Bookmark' }}
-        </button>
+      <div class="mb-3 flex items-center justify-between gap-3 text-sm text-muted">
+        <p>Question {{ session.index + 1 }} of {{ session.questionIds.length }}</p>
+        <p class="tabular-nums">{{ session.correctCount }} correct</p>
       </div>
+      <app-progress-bar
+        class="mb-4 block"
+        [value]="session.index + 1"
+        [max]="session.questionIds.length"
+        label="Practice progress"
+      />
+
       <app-question-card
         [question]="question"
         [selectedIds]="session.selected"
         [revealed]="session.revealed"
-        [positionLabel]="session.index + 1 + ' of ' + session.questionIds.length"
+        [showMeta]="false"
         (choose)="store.choose($event)"
       />
-      <div class="mt-4 flex flex-wrap items-center gap-2">
-        @if (question.type === 'multiple') {
-          <button type="button" class="btn btn-primary" (click)="submit()">
-            {{ session.index + 1 === session.questionIds.length ? 'Finish' : 'Next' }}
-          </button>
-        }
-        <button type="button" class="btn btn-ghost" (click)="end()">End session</button>
+
+      <div class="mt-4 grid grid-cols-2 gap-3">
+        <button
+          type="button"
+          class="btn btn-ghost"
+          [disabled]="session.index === 0"
+          (click)="store.previous()"
+        >
+          ← Previous
+        </button>
+        <button
+          type="button"
+          class="btn btn-ghost"
+          [attr.aria-pressed]="bookmarked()"
+          (click)="bookmark()"
+        >
+          {{ bookmarked() ? '⚑ Bookmarked' : '⚑ Flag for review' }}
+        </button>
+      </div>
+
+      @if (!session.revealed) {
+        <button
+          type="button"
+          class="btn btn-primary btn-block mt-3"
+          [disabled]="session.selected.length === 0"
+          (click)="check()"
+        >
+          Check answer
+        </button>
+      } @else {
+        <button type="button" class="btn btn-primary btn-block mt-3" (click)="next()">
+          {{ session.index + 1 === session.questionIds.length ? 'Finish' : 'Next →' }}
+        </button>
+      }
+
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-2">
+        <button type="button" class="btn btn-ghost text-sm" (click)="end()">End session</button>
         <p class="text-sm text-muted">
-          @if (question.type === 'multiple') {
-            Select every option, then continue. Keys: 1–9 toggle, Enter continues, F bookmarks.
+          @if (!session.revealed) {
+            Select an answer, then check it. Keys: 1–9, Enter checks, F flags.
           } @else {
-            Choosing an answer opens the next question. Keys: 1–9 answer, F bookmarks.
+            Review the explanation, then continue. Enter goes next.
           }
         </p>
       </div>
     </div>
   }
 } @else {
-  <div class="panel p-5 md:p-7">
-    <h2 class="font-serif text-3xl">Study one question at a time</h2>
+  <div class="panel mx-auto max-w-3xl p-5 md:p-7">
+    <h2 class="text-3xl font-bold">Study one question at a time</h2>
     <p class="mt-2 max-w-2xl text-muted">
-      Choose a slice of the PSM I bank. A single answer moves you straight to the next question. Multiple-answer questions wait until you continue. Explanations stay hidden until you review them later.
+      Choose a slice of the PSM I bank. Pick an answer, check it to see the explanation, then click Next for the following question.
     </p>
     <div class="mt-6">
       <app-question-filters

@@ -41,7 +41,7 @@ export class TopbarComponent {
   });
 
   constructor() {
-    effect(() => this.title.setTitle(`${this.pageTitle()} · PSM I Prep`));
+    effect(() => this.title.setTitle(`${this.pageTitle()} · ScrumQuiz.org`));
   }
 
   private currentTitle(): string {

@@ -103,11 +103,9 @@ export class ExamStore {
     const question = this.currentQuestion();
     if (!exam || !question) return;
     const next = toggleSelection(question, exam.answers[question.id] ?? [], optionId);
-    const moveOn = question.type !== 'multiple' && exam.currentIndex < exam.questionIds.length - 1;
     this.progress.patchActive((current) => ({
       ...current,
       answers: { ...current.answers, [question.id]: next },
-      currentIndex: moveOn ? current.currentIndex + 1 : current.currentIndex,
     }));
   }
 

@@ -18,7 +18,7 @@ export interface PracticeSession {
   phase: 'question' | 'summary';
 }
 
-export type PracticeAction = 'need-answer' | 'advanced' | 'summary' | 'idle';
+export type PracticeAction = 'need-answer' | 'need-check' | 'revealed' | 'advanced' | 'summary' | 'idle';
 
 @Injectable({ providedIn: 'root' })
 export class PracticeStore {
@@ -61,13 +61,10 @@ export class PracticeStore {
   choose(optionId: string): PracticeAction {
     const session = this.session();
     const question = this.current();
-    if (!session || !question) return 'idle';
+    if (!session || !question || session.revealed) return 'idle';
     const selected = toggleSelection(question, session.selected, optionId);
-    if (question.type === 'multiple') {
-      this.sessionState.set({ ...session, selected });
-      return 'idle';
-    }
-    return this.commit(session, question, selected);
+    this.sessionState.set({ ...session, selected });
+    return 'idle';
   }
 
   chooseIndex(index: number): PracticeAction {
@@ -75,38 +72,76 @@ export class PracticeStore {
     return option ? this.choose(option.id) : 'idle';
   }
 
-  submit(): PracticeAction {
+  /** Reveal feedback for the current selection without advancing. */
+  check(): PracticeAction {
     const session = this.session();
     const question = this.current();
     if (!session || !question) return 'idle';
-    return this.commit(session, question, session.selected);
+    if (session.revealed) return 'idle';
+    if (session.selected.length === 0) return 'need-answer';
+
+    const already = session.answers[question.id] !== undefined;
+    const correct = isAnswerCorrect(question, session.selected);
+    if (!already) this.progress.recordAnswer(question, session.selected, session.mode);
+
+    this.sessionState.set({
+      ...session,
+      answers: { ...session.answers, [question.id]: [...session.selected] },
+      revealed: true,
+      answeredCount: already ? session.answeredCount : session.answeredCount + 1,
+      correctCount: already ? session.correctCount : session.correctCount + (correct ? 1 : 0),
+    });
+    return 'revealed';
+  }
+
+  /** Move to the next question, or summary when finished. Requires a checked answer. */
+  next(): PracticeAction {
+    const session = this.session();
+    if (!session) return 'idle';
+    if (!session.revealed) return 'need-check';
+
+    if (session.index + 1 >= session.questionIds.length) {
+      this.sessionState.set({ ...session, phase: 'summary' });
+      return 'summary';
+    }
+
+    const nextIndex = session.index + 1;
+    const nextId = session.questionIds[nextIndex];
+    const selected = nextId ? (session.answers[nextId] ?? []) : [];
+    this.sessionState.set({
+      ...session,
+      index: nextIndex,
+      selected: [...selected],
+      revealed: selected.length > 0,
+    });
+    return 'advanced';
+  }
+
+  previous(): PracticeAction {
+    const session = this.session();
+    if (!session || session.index === 0) return 'idle';
+
+    const prevIndex = session.index - 1;
+    const prevId = session.questionIds[prevIndex];
+    const selected = prevId ? (session.answers[prevId] ?? []) : [];
+    this.sessionState.set({
+      ...session,
+      index: prevIndex,
+      selected: [...selected],
+      revealed: selected.length > 0,
+    });
+    return 'idle';
+  }
+
+  /** Enter: check first, then advance once feedback is visible. */
+  submit(): PracticeAction {
+    const session = this.session();
+    if (!session) return 'idle';
+    return session.revealed ? this.next() : this.check();
   }
 
   toggleBookmark(): boolean {
     const question = this.current();
     return question ? this.progress.toggleBookmark(question.id) : false;
-  }
-
-  private commit(session: PracticeSession, question: Question, selected: readonly string[]): PracticeAction {
-    if (selected.length === 0) return 'need-answer';
-    const correct = isAnswerCorrect(question, selected);
-    this.progress.recordAnswer(question, selected, session.mode);
-    const answers = { ...session.answers, [question.id]: [...selected] };
-    const answeredCount = session.answeredCount + 1;
-    const correctCount = session.correctCount + (correct ? 1 : 0);
-    if (session.index + 1 >= session.questionIds.length) {
-      this.sessionState.set({ ...session, selected, answers, revealed: false, answeredCount, correctCount, phase: 'summary' });
-      return 'summary';
-    }
-    this.sessionState.set({
-      ...session,
-      index: session.index + 1,
-      selected: [],
-      answers,
-      revealed: false,
-      answeredCount,
-      correctCount,
-    });
-    return 'advanced';
   }
 }

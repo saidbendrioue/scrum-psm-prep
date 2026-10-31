@@ -17,7 +17,7 @@
       </svg>
     </button>
     <div>
-      <p class="brand-mark text-lg leading-tight md:text-xl">Scrum<span>Quiz</span>.org</p>
+      <p class="brand-mark text-lg leading-tight md:text-xl">PSM 1 <span>Quizz</span></p>
       <p class="text-xs text-muted">{{ pageTitle() }}</p>
     </div>
   </div>
@@ -25,8 +25,6 @@
     @if (progress.activeExam()) {
       <a class="btn btn-primary" routerLink="/exam/session">Resume {{ timeLeft() }}</a>
     }
-    <a class="btn btn-ghost hidden text-sm sm:inline-flex" routerLink="/browser">Resources</a>
-    <a class="btn btn-ghost hidden text-sm sm:inline-flex" routerLink="/dashboard">About</a>
     <button
       type="button"
       class="btn btn-ghost"

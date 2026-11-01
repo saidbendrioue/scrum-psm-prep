@@ -1,7 +1,7 @@
 @if (bank.status() === 'loading') {
   <app-loading-block />
 } @else {
-  <div class="panel p-5">
+  <div class="bank-filters panel p-5">
     <app-question-filters
       [categories]="bank.categories()"
       [showType]="true"
@@ -13,27 +13,93 @@
   @if (visible().length === 0) {
     <app-empty-state class="mt-4 block" title="No questions found" message="Try a different category, difficulty, or search." />
   } @else {
-    <ul class="mt-4 grid gap-3">
+    <ul class="bank-list">
       @for (question of visible(); track question.id) {
         <li>
-          <details class="panel p-4">
-            <summary class="cursor-pointer">
-              <span class="text-sm font-semibold uppercase tracking-[0.12em] text-muted">{{ question.category }} · {{ question.difficulty }} · {{ typeLabel(question.type) }}</span>
-              <span class="mt-1 block font-serif text-xl">{{ question.question }}</span>
-            </summary>
-            <ul class="mt-4 grid gap-2">
-              @for (option of question.options; track option.id) {
-                <li [class.text-good]="question.correctOptionIds.includes(option.id)">
-                  @if (question.type === 'multiple' && question.correctOptionIds.includes(option.id)) {
-                    <span class="font-semibold">Correct · </span>
-                  }
-                  {{ option.text }}
-                </li>
-              }
-            </ul>
-            <p class="mt-4 leading-relaxed">{{ question.explanation }}</p>
-            <p class="mt-2 text-sm text-muted">{{ question.reference }}</p>
-          </details>
+          <article class="bank-card">
+            <header class="bank-card-top">
+              <div class="bank-tags">
+                <span class="bank-tag bank-tag-category">{{ question.category }}</span>
+                <span
+                  class="bank-tag"
+                  [class.bank-tag-easy]="question.difficulty === 'easy'"
+                  [class.bank-tag-medium]="question.difficulty === 'medium'"
+                  [class.bank-tag-hard]="question.difficulty === 'hard'"
+                >{{ difficultyLabel(question.difficulty) }}</span>
+                <span class="bank-q">{{ questionLabel(question.id) }}</span>
+              </div>
+              <button
+                type="button"
+                class="bank-save"
+                [class.is-saved]="bookmarked(question.id)"
+                [attr.aria-pressed]="bookmarked(question.id)"
+                [attr.aria-label]="bookmarked(question.id) ? 'Saved' : 'Save'"
+                (click)="toggleBookmark(question.id)"
+              >
+                @if (bookmarked(question.id)) {
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4.1L5 21V4.5a1 1 0 0 1 1-1z" />
+                  </svg>
+                } @else {
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M7 4.2h10a1 1 0 0 1 1 1V20l-6-3.5L6 20V5.2a1 1 0 0 1 1-1z" />
+                  </svg>
+                }
+              </button>
+            </header>
+            <h2 class="bank-question">{{ question.question }}</h2>
+            <section class="bank-answer">
+              <button
+                type="button"
+                class="bank-answer-toggle"
+                [attr.aria-expanded]="answerOpen(question.id)"
+                [attr.aria-controls]="'answer-' + question.id"
+                [attr.aria-label]="answerOpen(question.id) ? 'Hide answer' : 'Show answer'"
+                (click)="toggleAnswer(question.id)"
+              >
+                <span>Answer</span>
+                <svg class="bank-chevron" [class.is-open]="answerOpen(question.id)" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div
+                class="bank-answer-panel"
+                [id]="'answer-' + question.id"
+                [class.is-open]="answerOpen(question.id)"
+                [attr.aria-hidden]="answerOpen(question.id) ? null : true"
+              >
+                <div>
+                  <ul class="bank-options">
+                    @for (option of question.options; track option.id) {
+                      <li class="bank-option" [class.is-correct]="isCorrect(question, option.id)">
+                        @if (isCorrect(question, option.id)) {
+                          <span class="bank-mark" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                              <circle cx="12" cy="12" r="10" fill="currentColor" />
+                              <path fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7.8 12.4l2.6 2.6 5.8-6" />
+                            </svg>
+                          </span>
+                        } @else {
+                          <span class="bank-mark bank-mark-empty" aria-hidden="true"></span>
+                        }
+                        <span class="bank-option-copy">
+                          <span class="bank-option-text">{{ option.text }}</span>
+                          @if (isCorrect(question, option.id)) {
+                            <span class="bank-correct-label">Correct answer</span>
+                          }
+                        </span>
+                      </li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section class="bank-explain">
+              <h3>Explanation</h3>
+              <p>{{ question.explanation }}</p>
+            </section>
+            <p class="bank-reference">{{ question.reference }}</p>
+          </article>
         </li>
       }
     </ul>

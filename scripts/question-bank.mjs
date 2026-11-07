@@ -2,17 +2,23 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { situationalQuestions } from './bank/situational.mjs';
+
 let sequence = 0;
 
 function q(fields) {
   sequence += 1;
-  return {
+  const question = {
     cert: ['PSM I'],
     difficulty: 'medium',
     type: 'single',
     ...fields,
     id: `q${String(sequence).padStart(3, '0')}`,
   };
+  if (question.type === 'multiple' && !/select all that apply/i.test(question.question)) {
+    question.question = `${question.question.replace(/\?$/, '')}? Select all that apply.`;
+  }
+  return question;
 }
 
 function tf(statement, isTrue, fields) {
@@ -1842,6 +1848,7 @@ const questions = [
     explanation: 'The 2020 Guide defines three accountabilities inside one Scrum Team: Developers, Product Owner, and Scrum Master. It no longer describes a separate Development Team inside the Scrum Team.',
     reference: 'Scrum Guide (2020) — Scrum Team; Changes between 2017 and 2020',
   }),
+  ...situationalQuestions.map((fields) => q(fields)),
 ];
 
 const difficulties = new Set(['easy', 'medium', 'hard']);
@@ -1863,6 +1870,11 @@ for (const question of questions) {
   }
   if (question.type === 'multiple' && correct.size < 2) throw new Error(`Multiple answer expected ${question.id}`);
   if (question.type === 'truefalse' && question.options.length !== 2) throw new Error(`True/false shape ${question.id}`);
+  if (question.optionNotes) {
+    for (const key of Object.keys(question.optionNotes)) {
+      if (!optionIds.has(key)) throw new Error(`Bad optionNotes key ${question.id}:${key}`);
+    }
+  }
 }
 
 if (questions.length < 80) throw new Error(`Expected at least 80 questions, found ${questions.length}`);

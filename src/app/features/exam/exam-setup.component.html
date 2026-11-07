@@ -17,9 +17,14 @@
       <p class="pass-mark mt-3">Pass 85%</p>
     </div>
     <div class="flex flex-wrap gap-2">
-      <button type="button" class="btn btn-ghost" (click)="applyPreset(80, 60)">80 / 60 min</button>
-      <button type="button" class="btn btn-ghost" (click)="applyPreset(20, 20)">20-question drill</button>
+      <button type="button" class="btn btn-ghost" (click)="applyPreset(80, 60)">Full mock · 80 / 60</button>
+      <button type="button" class="btn btn-ghost" (click)="applyPreset(40, 30)">Half mock · 40 / 30</button>
+      <button type="button" class="btn btn-ghost" (click)="applyPreset(20, 20, 'hard')">Hard only · 20</button>
+      <button type="button" class="btn btn-ghost" (click)="applyWeakCategories()">Weak categories</button>
     </div>
+    @if (weakCategories().length > 0) {
+      <p class="meta">Weak categories ready: {{ weakCategories().join(', ') }}</p>
+    }
     <div class="grid gap-4 md:grid-cols-2">
       <label class="field">
         <span>Questions</span>
@@ -48,6 +53,15 @@
         <span id="exam-category-hint" class="meta">Leave unselected to use the whole PSM I bank. {{ available() }} questions match</span>
       </label>
     </div>
+    <label class="flex items-center gap-2 text-[14px]">
+      <input
+        type="checkbox"
+        class="size-4"
+        [checked]="preferFresh()"
+        (change)="setPreferFresh($any($event.target).checked)"
+      />
+      Prefer questions not used in your last 3 finished mocks
+    </label>
     @if (submitted() && form.invalid) {
       <p class="text-[13px] font-medium text-bad" role="alert">Enter a question count from 1 to 200 and a time limit from 1 to 180 minutes</p>
     }

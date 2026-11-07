@@ -110,6 +110,12 @@
         (filtersChange)="onFilters($event)"
       />
     </div>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <button type="button" class="btn btn-ghost" (click)="applyDifficulty('hard')">Hard only</button>
+      <button type="button" class="btn btn-ghost" (click)="applyDifficulty('medium')">Medium</button>
+      <button type="button" class="btn btn-ghost" (click)="applyDifficulty('easy')">Easy</button>
+      <button type="button" class="btn btn-ghost" (click)="applyDifficulty('all')">All levels</button>
+    </div>
     <div class="mt-6 flex flex-wrap items-center gap-3">
       <button type="button" class="btn btn-primary" [disabled]="matching().length === 0" (click)="startPractice()">
         Start {{ matching().length }} questions

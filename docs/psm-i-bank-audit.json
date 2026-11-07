@@ -1,0 +1,1686 @@
+{
+  "summary": {
+    "total": 139,
+    "statuses": {
+      "keep": 100,
+      "improve": 39,
+      "rewrite": 0,
+      "delete": 0
+    },
+    "situationalCount": 28,
+    "multiNoHint": [
+      "q013",
+      "q029",
+      "q036",
+      "q042",
+      "q046",
+      "q062",
+      "q082",
+      "q132"
+    ],
+    "categories": {
+      "Scrum Theory": 15,
+      "Scrum Values": 8,
+      "Scrum Team": 8,
+      "Product Owner": 10,
+      "Scrum Master": 10,
+      "Developers": 6,
+      "Scrum Events": 5,
+      "Sprint": 10,
+      "Sprint Planning": 8,
+      "Daily Scrum": 9,
+      "Sprint Review": 7,
+      "Sprint Retrospective": 6,
+      "Product Backlog": 8,
+      "Sprint Backlog": 6,
+      "Increment": 7,
+      "Definition of Done": 7,
+      "Scaling": 4,
+      "Scrum Definition": 1,
+      "Changes 2017-2020": 3,
+      "Artifacts": 1
+    }
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "category": "Scrum Theory",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "distractor_pattern:c"
+      ],
+      "explanationLen": 146,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q002",
+      "category": "Scrum Theory",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 123,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q003",
+      "category": "Scrum Theory",
+      "difficulty": "easy",
+      "type": "multiple",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 107,
+      "optionCount": 5,
+      "status": "keep"
+    },
+    {
+      "id": "q004",
+      "category": "Scrum Theory",
+      "difficulty": "easy",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 83,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q005",
+      "category": "Scrum Theory",
+      "difficulty": "easy",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 138,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q006",
+      "category": "Scrum Theory",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "distractor_pattern:d"
+      ],
+      "explanationLen": 96,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q007",
+      "category": "Scrum Theory",
+      "difficulty": "medium",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 98,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q008",
+      "category": "Scrum Theory",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 141,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q009",
+      "category": "Scrum Values",
+      "difficulty": "easy",
+      "type": "multiple",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 106,
+      "optionCount": 6,
+      "status": "keep"
+    },
+    {
+      "id": "q010",
+      "category": "Scrum Values",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 128,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q011",
+      "category": "Scrum Values",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 87,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q012",
+      "category": "Scrum Values",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 128,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q013",
+      "category": "Scrum Team",
+      "difficulty": "easy",
+      "type": "multiple",
+      "situational": false,
+      "issues": [
+        "distractor_pattern:d",
+        "multiple_without_select_all_hint"
+      ],
+      "explanationLen": 167,
+      "optionCount": 5,
+      "status": "improve"
+    },
+    {
+      "id": "q014",
+      "category": "Scrum Team",
+      "difficulty": "easy",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 128,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q015",
+      "category": "Scrum Team",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 149,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q016",
+      "category": "Scrum Team",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 89,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q017",
+      "category": "Scrum Team",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "distractor_pattern:c",
+        "distractor_pattern:d"
+      ],
+      "explanationLen": 114,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q018",
+      "category": "Scrum Team",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 177,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q019",
+      "category": "Scrum Team",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 147,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q020",
+      "category": "Product Owner",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 162,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q021",
+      "category": "Product Owner",
+      "difficulty": "medium",
+      "type": "truefalse",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 164,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q022",
+      "category": "Product Owner",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 120,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q023",
+      "category": "Product Owner",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b"
+      ],
+      "explanationLen": 125,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q024",
+      "category": "Product Owner",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "distractor_pattern:c"
+      ],
+      "explanationLen": 137,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q025",
+      "category": "Product Owner",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 171,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q026",
+      "category": "Scrum Master",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 130,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q027",
+      "category": "Scrum Master",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 132,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q028",
+      "category": "Scrum Master",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 136,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q029",
+      "category": "Scrum Master",
+      "difficulty": "medium",
+      "type": "multiple",
+      "situational": false,
+      "issues": [
+        "multiple_without_select_all_hint"
+      ],
+      "explanationLen": 152,
+      "optionCount": 5,
+      "status": "improve"
+    },
+    {
+      "id": "q030",
+      "category": "Scrum Master",
+      "difficulty": "easy",
+      "type": "truefalse",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 122,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q031",
+      "category": "Scrum Master",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "distractor_pattern:b"
+      ],
+      "explanationLen": 138,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q032",
+      "category": "Developers",
+      "difficulty": "medium",
+      "type": "multiple",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 126,
+      "optionCount": 5,
+      "status": "keep"
+    },
+    {
+      "id": "q033",
+      "category": "Developers",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 170,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q034",
+      "category": "Developers",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b"
+      ],
+      "explanationLen": 118,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q035",
+      "category": "Developers",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 92,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q036",
+      "category": "Scrum Events",
+      "difficulty": "medium",
+      "type": "multiple",
+      "situational": false,
+      "issues": [
+        "multiple_without_select_all_hint"
+      ],
+      "explanationLen": 159,
+      "optionCount": 6,
+      "status": "improve"
+    },
+    {
+      "id": "q037",
+      "category": "Scrum Events",
+      "difficulty": "medium",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 86,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q038",
+      "category": "Scrum Events",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 140,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q039",
+      "category": "Sprint",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:d"
+      ],
+      "explanationLen": 103,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q040",
+      "category": "Sprint",
+      "difficulty": "easy",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 191,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q041",
+      "category": "Sprint",
+      "difficulty": "easy",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [
+        "thin_explanation"
+      ],
+      "explanationLen": 67,
+      "optionCount": 2,
+      "status": "improve"
+    },
+    {
+      "id": "q042",
+      "category": "Sprint",
+      "difficulty": "hard",
+      "type": "multiple",
+      "situational": true,
+      "issues": [
+        "multiple_without_select_all_hint"
+      ],
+      "explanationLen": 158,
+      "optionCount": 5,
+      "status": "improve"
+    },
+    {
+      "id": "q043",
+      "category": "Sprint",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 125,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q044",
+      "category": "Sprint",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 148,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q045",
+      "category": "Sprint Planning",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 123,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q046",
+      "category": "Sprint Planning",
+      "difficulty": "medium",
+      "type": "multiple",
+      "situational": false,
+      "issues": [
+        "multiple_without_select_all_hint"
+      ],
+      "explanationLen": 167,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q047",
+      "category": "Sprint Planning",
+      "difficulty": "easy",
+      "type": "truefalse",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 133,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q048",
+      "category": "Sprint Planning",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 136,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q049",
+      "category": "Sprint Planning",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 131,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q050",
+      "category": "Daily Scrum",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 136,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q051",
+      "category": "Daily Scrum",
+      "difficulty": "medium",
+      "type": "truefalse",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 160,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q052",
+      "category": "Daily Scrum",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 145,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q053",
+      "category": "Daily Scrum",
+      "difficulty": "easy",
+      "type": "truefalse",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 130,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q054",
+      "category": "Daily Scrum",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 144,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q055",
+      "category": "Sprint Review",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 128,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q056",
+      "category": "Sprint Review",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:d"
+      ],
+      "explanationLen": 107,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q057",
+      "category": "Sprint Review",
+      "difficulty": "medium",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 98,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q058",
+      "category": "Sprint Review",
+      "difficulty": "hard",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 135,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q059",
+      "category": "Sprint Review",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 155,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q060",
+      "category": "Sprint Retrospective",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 115,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q061",
+      "category": "Sprint Retrospective",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 101,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q062",
+      "category": "Sprint Retrospective",
+      "difficulty": "medium",
+      "type": "multiple",
+      "situational": false,
+      "issues": [
+        "multiple_without_select_all_hint"
+      ],
+      "explanationLen": 142,
+      "optionCount": 5,
+      "status": "improve"
+    },
+    {
+      "id": "q063",
+      "category": "Sprint Retrospective",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 167,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q064",
+      "category": "Product Backlog",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 106,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q065",
+      "category": "Product Backlog",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 185,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q066",
+      "category": "Product Backlog",
+      "difficulty": "medium",
+      "type": "truefalse",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 157,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q067",
+      "category": "Product Backlog",
+      "difficulty": "medium",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 162,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q068",
+      "category": "Product Backlog",
+      "difficulty": "hard",
+      "type": "truefalse",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 175,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q069",
+      "category": "Sprint Backlog",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 91,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q070",
+      "category": "Sprint Backlog",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 133,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q071",
+      "category": "Sprint Backlog",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": true,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c"
+      ],
+      "explanationLen": 167,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q072",
+      "category": "Sprint Backlog",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 132,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q073",
+      "category": "Increment",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 97,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q074",
+      "category": "Increment",
+      "difficulty": "easy",
+      "type": "truefalse",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 138,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q075",
+      "category": "Increment",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 108,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q076",
+      "category": "Increment",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 178,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q077",
+      "category": "Definition of Done",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 136,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q078",
+      "category": "Definition of Done",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 172,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q079",
+      "category": "Definition of Done",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 134,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q080",
+      "category": "Definition of Done",
+      "difficulty": "medium",
+      "type": "truefalse",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 111,
+      "optionCount": 2,
+      "status": "keep"
+    },
+    {
+      "id": "q081",
+      "category": "Scaling",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "distractor_pattern:b"
+      ],
+      "explanationLen": 166,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q082",
+      "category": "Scaling",
+      "difficulty": "hard",
+      "type": "multiple",
+      "situational": true,
+      "issues": [
+        "multiple_without_select_all_hint"
+      ],
+      "explanationLen": 134,
+      "optionCount": 5,
+      "status": "improve"
+    },
+    {
+      "id": "q083",
+      "category": "Scaling",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 134,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q084",
+      "category": "Scaling",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 165,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q085",
+      "category": "Developers",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 146,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q086",
+      "category": "Scrum Events",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 108,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q087",
+      "category": "Scrum Theory",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": true,
+      "issues": [
+        "short_distractor:d"
+      ],
+      "explanationLen": 147,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q088",
+      "category": "Product Owner",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:c"
+      ],
+      "explanationLen": 140,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q089",
+      "category": "Daily Scrum",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 155,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q090",
+      "category": "Increment",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b"
+      ],
+      "explanationLen": 163,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q091",
+      "category": "Sprint Backlog",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 149,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q092",
+      "category": "Scrum Values",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 107,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q093",
+      "category": "Scrum Definition",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 191,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q094",
+      "category": "Product Owner",
+      "difficulty": "medium",
+      "type": "multiple",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 150,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q095",
+      "category": "Product Owner",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 143,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q096",
+      "category": "Scrum Master",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 221,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q097",
+      "category": "Scrum Master",
+      "difficulty": "medium",
+      "type": "multiple",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 150,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q098",
+      "category": "Scrum Master",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 163,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q099",
+      "category": "Sprint",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 157,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q100",
+      "category": "Sprint",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:a"
+      ],
+      "explanationLen": 224,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q101",
+      "category": "Sprint Planning",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 185,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q102",
+      "category": "Daily Scrum",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [
+        "short_distractor:d"
+      ],
+      "explanationLen": 124,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q103",
+      "category": "Sprint Review",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 183,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q104",
+      "category": "Sprint Retrospective",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:a",
+        "short_distractor:b",
+        "short_distractor:c"
+      ],
+      "explanationLen": 93,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q105",
+      "category": "Product Backlog",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 228,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q106",
+      "category": "Product Backlog",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 236,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q107",
+      "category": "Definition of Done",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 224,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q108",
+      "category": "Changes 2017-2020",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 161,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q109",
+      "category": "Changes 2017-2020",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 211,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q110",
+      "category": "Scrum Theory",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 150,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q111",
+      "category": "Scrum Theory",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 134,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q112",
+      "category": "Scrum Theory",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c"
+      ],
+      "explanationLen": 187,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q113",
+      "category": "Scrum Theory",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:c"
+      ],
+      "explanationLen": 176,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q114",
+      "category": "Scrum Theory",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 200,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q115",
+      "category": "Scrum Theory",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 240,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q116",
+      "category": "Scrum Values",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 132,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q117",
+      "category": "Scrum Values",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 83,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q118",
+      "category": "Scrum Values",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 178,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q119",
+      "category": "Scrum Team",
+      "difficulty": "hard",
+      "type": "multiple",
+      "situational": false,
+      "issues": [
+        "distractor_pattern:d"
+      ],
+      "explanationLen": 288,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q120",
+      "category": "Developers",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 170,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q121",
+      "category": "Product Owner",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 182,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q122",
+      "category": "Scrum Master",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 278,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q123",
+      "category": "Scrum Events",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 232,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q124",
+      "category": "Sprint",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 275,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q125",
+      "category": "Sprint",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 291,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q126",
+      "category": "Sprint Planning",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:c"
+      ],
+      "explanationLen": 131,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q127",
+      "category": "Sprint Planning",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 324,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q128",
+      "category": "Daily Scrum",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 146,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q129",
+      "category": "Daily Scrum",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": true,
+      "issues": [
+        "short_distractor:c",
+        "short_distractor:d"
+      ],
+      "explanationLen": 218,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q130",
+      "category": "Sprint Review",
+      "difficulty": "hard",
+      "type": "single",
+      "situational": true,
+      "issues": [],
+      "explanationLen": 273,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q131",
+      "category": "Sprint Retrospective",
+      "difficulty": "medium",
+      "type": "multiple",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 284,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q132",
+      "category": "Product Backlog",
+      "difficulty": "medium",
+      "type": "multiple",
+      "situational": false,
+      "issues": [
+        "multiple_without_select_all_hint"
+      ],
+      "explanationLen": 229,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q133",
+      "category": "Sprint Backlog",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 216,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q134",
+      "category": "Increment",
+      "difficulty": "easy",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 228,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q135",
+      "category": "Increment",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 221,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q136",
+      "category": "Definition of Done",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 187,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q137",
+      "category": "Definition of Done",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [
+        "short_distractor:b",
+        "short_distractor:d"
+      ],
+      "explanationLen": 180,
+      "optionCount": 4,
+      "status": "improve"
+    },
+    {
+      "id": "q138",
+      "category": "Artifacts",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 229,
+      "optionCount": 4,
+      "status": "keep"
+    },
+    {
+      "id": "q139",
+      "category": "Changes 2017-2020",
+      "difficulty": "medium",
+      "type": "single",
+      "situational": false,
+      "issues": [],
+      "explanationLen": 187,
+      "optionCount": 4,
+      "status": "keep"
+    }
+  ]
+}

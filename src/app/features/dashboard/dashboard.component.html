@@ -57,6 +57,8 @@
       <div class="mt-5 flex flex-wrap gap-2">
         <a class="btn btn-primary" routerLink="/practice">Practice</a>
         <a class="btn btn-ghost" routerLink="/exam">Mock exam</a>
+        <a class="btn btn-ghost" routerLink="/practice" [queryParams]="{ set: 'mistakes' }">Misses</a>
+        <a class="btn btn-ghost" routerLink="/review" [queryParams]="{ tab: 'due' }">Due cards</a>
       </div>
       <div class="mt-3 flex flex-wrap gap-2">
         <button type="button" class="btn btn-ghost" (click)="exportFile()">Export</button>

@@ -29,6 +29,10 @@ export interface Question {
   correctOptionIds: string[];
   explanation: string;
   reference: string;
+  /** Optional per-option teaching notes (why correct / why wrong). */
+  optionNotes?: Readonly<Record<string, string>>;
+  /** One exam takeaway sentence. */
+  takeaway?: string;
 }
 
 export interface QuestionFilter {
@@ -130,6 +134,22 @@ function parseQuestion(value: unknown): Question | null {
   }
   if (value['type'] === 'multiple' && correctOptionIds.length < 2) return null;
   if (value['type'] === 'truefalse' && parsedOptions.length !== 2) return null;
+  let optionNotes: Record<string, string> | undefined;
+  if (value['optionNotes'] !== undefined) {
+    if (!isRecord(value['optionNotes'])) return null;
+    optionNotes = {};
+    for (const [key, note] of Object.entries(value['optionNotes'])) {
+      if (typeof note !== 'string' || !note.trim() || !optionIds.has(key)) return null;
+      optionNotes[key] = note.trim();
+    }
+  }
+  const takeaway =
+    value['takeaway'] === undefined
+      ? undefined
+      : typeof value['takeaway'] === 'string' && value['takeaway'].trim()
+        ? value['takeaway'].trim()
+        : null;
+  if (takeaway === null) return null;
   return {
     id,
     category,
@@ -141,5 +161,7 @@ function parseQuestion(value: unknown): Question | null {
     correctOptionIds,
     explanation,
     reference,
+    ...(optionNotes ? { optionNotes } : {}),
+    ...(takeaway ? { takeaway } : {}),
   };
 }

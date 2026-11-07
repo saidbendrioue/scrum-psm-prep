@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, input, output } from '@angular/core';
 
 import type { Question } from '../core/models/question.model';
-import { isAnswerCorrect } from '../core/scoring/scoring';
+import { isAnswerCorrect, optionLetter } from '../core/scoring/scoring';
 import { AnswerOptionComponent, type OptionState } from './answer-option.component';
 
 @Component({
@@ -20,7 +20,7 @@ export class QuestionCardComponent {
 
   protected readonly prompt = computed(() => {
     const question = this.question();
-    if (question.type === 'multiple') return 'Select every correct answer.';
+    if (question.type === 'multiple') return 'Select all that apply.';
     if (question.type === 'truefalse') return 'True or false?';
     return 'Select one answer.';
   });
@@ -41,5 +41,10 @@ export class QuestionCardComponent {
     if (selected && !correct) return 'incorrect';
     if (!selected && correct) return 'missed';
     return 'idle';
+  }
+
+  protected optionLetter(optionId: string): string {
+    const index = this.question().options.findIndex((option) => option.id === optionId);
+    return optionLetter(Math.max(0, index));
   }
 }

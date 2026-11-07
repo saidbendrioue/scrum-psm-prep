@@ -15,6 +15,8 @@ export interface ExamConfig {
   minutes: number;
   difficulty: Difficulty | 'all';
   categories: readonly string[];
+  /** Prefer unused items from recent finished exams when building a fresh mock. */
+  preferFresh: boolean;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -70,7 +72,7 @@ export class ExamStore {
 
   start(config: ExamConfig): number {
     if (this.exam()) return 0;
-    const pool = shuffle(this.pool(config));
+    const pool = this.orderedPool(config);
     const count = Math.min(Math.max(1, config.count), pool.length);
     if (count === 0) return 0;
     const minutes = Math.min(180, Math.max(1, config.minutes));
@@ -147,6 +149,20 @@ export class ExamStore {
       questionIds: null,
     });
   }
+
+  private orderedPool(config: ExamConfig) {
+    const pool = shuffle(this.pool(config));
+    if (!config.preferFresh) return pool;
+    const recent = new Set(
+      this.progress.state()
+        .exams.filter((exam) => exam.status === 'completed' || exam.status === 'expired')
+        .slice(-3)
+        .flatMap((exam) => exam.questionIds),
+    );
+    const fresh = pool.filter((question) => !recent.has(question.id));
+    const reused = pool.filter((question) => recent.has(question.id));
+    return [...fresh, ...reused];
+  }
 }
 
 export const DEFAULT_EXAM_CONFIG: ExamConfig = {
@@ -154,4 +170,5 @@ export const DEFAULT_EXAM_CONFIG: ExamConfig = {
   minutes: PSM_MINUTES,
   difficulty: 'all',
   categories: [],
+  preferFresh: true,
 };

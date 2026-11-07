@@ -4,7 +4,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 
 import { filterQuestions } from '../../core/filtering/filter-questions';
-import { EMPTY_FILTER, type Question, type QuestionFilter } from '../../core/models/question.model';
+import { EMPTY_FILTER, type Difficulty, type Question, type QuestionFilter } from '../../core/models/question.model';
 import { isAnswerCorrect } from '../../core/scoring/scoring';
 import { PracticeStore } from '../../core/stores/practice.store';
 import { ProgressService } from '../../core/services/progress.service';
@@ -76,6 +76,13 @@ export class PracticeComponent {
 
   protected onFilters(filters: QuestionFilter): void {
     this.filters.set(filters);
+  }
+
+  protected applyDifficulty(difficulty: Difficulty | 'all'): void {
+    this.filters.set({
+      ...this.filters(),
+      difficulties: difficulty === 'all' ? [] : [difficulty],
+    });
   }
 
   protected startPractice(): void {

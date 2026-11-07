@@ -33,6 +33,21 @@
         {{ correctSelection() ? 'Correct' : 'Not quite' }}
       </p>
       <p class="mt-2 leading-relaxed text-ink/90">{{ question().explanation }}</p>
+      @if (question().optionNotes; as notes) {
+        <ul class="mt-4 grid gap-2 text-[14px]">
+          @for (option of question().options; track option.id) {
+            @if (notes[option.id]; as note) {
+              <li class="border-t border-line pt-2">
+                <span class="font-medium">{{ optionLetter(option.id) }}.</span>
+                {{ note }}
+              </li>
+            }
+          }
+        </ul>
+      }
+      @if (question().takeaway; as takeaway) {
+        <p class="mt-4 text-[14px] font-medium">Remember: {{ takeaway }}</p>
+      }
       <p class="meta mt-3">{{ question().reference }}</p>
     </div>
   }

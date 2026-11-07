@@ -4,9 +4,9 @@
   @if (session.phase === 'summary') {
     @if (!reviewing()) {
       <section class="panel p-6 md:p-8">
-        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-muted">Practice set</p>
-        <h2 class="mt-2 text-5xl font-bold">{{ session.correctCount }} / {{ session.answeredCount }}</h2>
-        <p class="mt-2 text-lg">Review your answers</p>
+        <p class="text-sm font-bold uppercase tracking-[0.14em] text-accent">Practice set</p>
+        <h2 class="mt-2 font-serif text-5xl tabular-nums">{{ session.correctCount }} / {{ session.answeredCount }}</h2>
+        <p class="mt-2 text-lg font-semibold">Review your answers</p>
         <p class="mt-1 max-w-2xl text-muted">Open a question to see your answer and the correct one, in the same layout as the test.</p>
         <button type="button" class="btn btn-primary mt-5" (click)="end()">Back to filters</button>
       </section>
@@ -24,7 +24,7 @@
       (confirm)="onConfirm()"
       (flag)="bookmark()"
     >
-      <div class="mb-3 flex items-center justify-between gap-3 text-sm text-muted">
+      <div class="mb-3 flex items-center justify-between gap-3 text-sm font-semibold text-muted">
         <p>Question {{ session.index + 1 }} of {{ session.questionIds.length }}</p>
         <p class="tabular-nums">{{ session.correctCount }} correct</p>
       </div>
@@ -58,7 +58,14 @@
           [attr.aria-pressed]="bookmarked()"
           (click)="bookmark()"
         >
-          {{ bookmarked() ? '⚑ Bookmarked' : '⚑ Flag for review' }}
+          <svg viewBox="0 0 24 24" class="size-4" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+            @if (bookmarked()) {
+              <path fill="currentColor" stroke="none" d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4.1L5 21V4.5a1 1 0 0 1 1-1z" />
+            } @else {
+              <path d="M7 4.2h10a1 1 0 0 1 1 1V20l-6-3.5L6 20V5.2a1 1 0 0 1 1-1z" />
+            }
+          </svg>
+          {{ bookmarked() ? 'Bookmarked' : 'Flag for review' }}
         </button>
       </div>
 
@@ -91,7 +98,8 @@
   }
 } @else {
   <div class="panel mx-auto max-w-3xl p-5 md:p-7">
-    <h2 class="text-3xl font-bold">Study one question at a time</h2>
+    <p class="text-sm font-bold uppercase tracking-[0.14em] text-accent">Practice mode</p>
+    <h2 class="mt-2 font-serif text-3xl md:text-4xl">Study one question at a time</h2>
     <p class="mt-2 max-w-2xl text-muted">
       Choose a slice of the PSM I bank. Pick an answer, check it to see the explanation, then click Next for the following question.
     </p>

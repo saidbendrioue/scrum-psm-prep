@@ -52,15 +52,15 @@ export class CategoryChartComponent {
 
   private draw(canvas: HTMLCanvasElement, labels: readonly string[], values: readonly number[]): void {
     const styles = getComputedStyle(document.documentElement);
-    const accent = styles.getPropertyValue('--color-accent').trim() || '#1e3a8a';
-    const ink = styles.getPropertyValue('--color-muted').trim() || '#5c564c';
-    const line = styles.getPropertyValue('--color-line').trim() || '#e4d8c4';
+    const accent = styles.getPropertyValue('--color-accent').trim() || '#0f766e';
+    const ink = styles.getPropertyValue('--color-muted').trim() || '#5b6b67';
+    const line = styles.getPropertyValue('--color-line').trim() || '#c5dbd4';
     this.chart?.destroy();
     this.chart = new Chart(canvas, {
       type: 'bar',
       data: {
         labels: [...labels],
-        datasets: [{ label: 'Accuracy', data: [...values], backgroundColor: accent, borderRadius: 6 }],
+        datasets: [{ label: 'Accuracy', data: [...values], backgroundColor: accent, borderRadius: 10 }],
       },
       options: {
         indexAxis: 'y',

@@ -40,7 +40,14 @@
           ← Previous
         </button>
         <button type="button" class="btn btn-ghost" [attr.aria-pressed]="bookmarked()" (click)="flag()">
-          {{ bookmarked() ? '⚑ Bookmarked' : '⚑ Flag for review' }}
+          <svg viewBox="0 0 24 24" class="size-4" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+            @if (bookmarked()) {
+              <path fill="currentColor" stroke="none" d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4.1L5 21V4.5a1 1 0 0 1 1-1z" />
+            } @else {
+              <path d="M7 4.2h10a1 1 0 0 1 1 1V20l-6-3.5L6 20V5.2a1 1 0 0 1 1-1z" />
+            }
+          </svg>
+          {{ bookmarked() ? 'Bookmarked' : 'Flag for review' }}
         </button>
       </div>
 

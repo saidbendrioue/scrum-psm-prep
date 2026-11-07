@@ -45,3 +45,4 @@ Thumbs.db
 
 # Graphify AST cache (graph.json and GRAPH_REPORT.md stay tracked)
 /graphify-out/cache/
+.cursor/skills/

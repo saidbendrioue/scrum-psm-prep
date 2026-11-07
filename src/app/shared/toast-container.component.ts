@@ -10,7 +10,7 @@ import { ToastService } from '../core/services/toast.service';
       @for (toast of toastService.toasts(); track toast.id) {
         <button
           type="button"
-          class="rounded-2xl border-[3px] px-4 py-3 text-left text-sm font-semibold shadow-[var(--shadow-clay-sm)]"
+          class="rounded-[10px] border px-4 py-3 text-left text-[14px] font-medium shadow-[var(--shadow-soft)]"
           [class]="toneClass(toast.tone)"
           (click)="toastService.dismiss(toast.id)"
         >

@@ -52,15 +52,19 @@ export class CategoryChartComponent {
 
   private draw(canvas: HTMLCanvasElement, labels: readonly string[], values: readonly number[]): void {
     const styles = getComputedStyle(document.documentElement);
-    const accent = styles.getPropertyValue('--color-accent').trim() || '#0f766e';
-    const ink = styles.getPropertyValue('--color-muted').trim() || '#5b6b67';
-    const line = styles.getPropertyValue('--color-line').trim() || '#c5dbd4';
+    const accent = styles.getPropertyValue('--color-accent').trim() || '#1d4ed8';
+    const ink = styles.getPropertyValue('--color-muted').trim() || '#5e554a';
+    const line = styles.getPropertyValue('--color-line').trim() || 'rgba(31,27,22,0.1)';
+    // One accent on the strongest category; the rest stay quiet neutrals.
+    const max = Math.max(...values, 0);
+    const quiet = styles.getPropertyValue('--color-surface-2').trim() || '#efe9df';
+    const colors = values.map((value) => (value === max && max > 0 ? accent : quiet));
     this.chart?.destroy();
     this.chart = new Chart(canvas, {
       type: 'bar',
       data: {
         labels: [...labels],
-        datasets: [{ label: 'Accuracy', data: [...values], backgroundColor: accent, borderRadius: 10 }],
+        datasets: [{ label: 'Accuracy', data: [...values], backgroundColor: colors, borderRadius: 4 }],
       },
       options: {
         indexAxis: 'y',

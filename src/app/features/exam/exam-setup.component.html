@@ -1,8 +1,7 @@
 @if (progress.activeExam()) {
   <section class="panel p-6 md:p-8">
-    <p class="text-sm font-bold uppercase tracking-[0.14em] text-accent">In progress</p>
-    <h2 class="mt-2 font-serif text-3xl md:text-4xl">An exam is already running</h2>
-    <p class="mt-2 text-muted">Your answers and the deadline are saved in this browser. Resume, or discard it and start over.</p>
+    <h2 class="page-title">An exam is already running</h2>
+    <p class="mt-3 text-[15px] text-muted">Your answers and the deadline are saved in this browser. Resume, or discard it and start over</p>
     <div class="mt-5 flex flex-wrap gap-2">
       <a class="btn btn-primary" routerLink="/exam/session">Resume exam</a>
       <button type="button" class="btn btn-danger" (click)="discard()">Discard exam</button>
@@ -11,11 +10,11 @@
 } @else {
   <form class="panel grid gap-5 p-5 md:p-7" [formGroup]="form" (ngSubmit)="start()">
     <div>
-      <p class="text-sm font-bold uppercase tracking-[0.14em] text-accent">Mock exam</p>
-      <h2 class="mt-2 font-serif text-3xl md:text-4xl">PSM I simulation</h2>
-      <p class="mt-2 max-w-2xl text-muted">
-        Scrum.org’s PSM I assessment is 80 questions in 60 minutes, with 85% required to pass. Some questions have more than one correct answer: select each of them. This mock hides explanations until you submit. Confirm the live format on Scrum.org before exam day.
+      <h2 class="page-title">PSM I simulation</h2>
+      <p class="mt-3 max-w-2xl text-[15px] text-muted">
+        Scrum.org’s PSM I assessment is 80 questions in 60 minutes, with 85% required to pass. Some questions have more than one correct answer. This mock hides explanations until you submit. Confirm the live format on Scrum.org before exam day
       </p>
+      <p class="pass-mark mt-3">Pass 85%</p>
     </div>
     <div class="flex flex-wrap gap-2">
       <button type="button" class="btn btn-ghost" (click)="applyPreset(80, 60)">80 / 60 min</button>
@@ -46,11 +45,11 @@
             <option [value]="category">{{ category }}</option>
           }
         </select>
-        <span id="exam-category-hint" class="text-xs font-medium text-muted">Leave unselected to use the whole PSM I bank. {{ available() }} questions match.</span>
+        <span id="exam-category-hint" class="meta">Leave unselected to use the whole PSM I bank. {{ available() }} questions match</span>
       </label>
     </div>
     @if (submitted() && form.invalid) {
-      <p class="text-sm font-semibold text-bad" role="alert">Enter a question count from 1 to 200 and a time limit from 1 to 180 minutes.</p>
+      <p class="text-[13px] font-medium text-bad" role="alert">Enter a question count from 1 to 200 and a time limit from 1 to 180 minutes</p>
     }
     <button type="submit" class="btn btn-primary w-fit" [disabled]="available() === 0">Start exam</button>
   </form>

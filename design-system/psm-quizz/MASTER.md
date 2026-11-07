@@ -1,61 +1,50 @@
 # Design System Master File
 
-> **LOGIC:** When building a specific page, first check `design-system/pages/[page-name].md`.
-> If that page file exists, its rules **override** this Master file.
+> Unslopped with [heydamir/unslop](https://github.com/heydamir/unslop) (CC BY 4.0, Damir Sokolovsky).
 
 ---
 
 **Project:** PSM Quizz  
-**Generated:** 2026-11-07 (UI/UX Pro Max)  
-**Adapted:** Claymorphism education style + trust teal/navy palette (purple study default overridden for brand clarity)  
-**Category:** Flashcard & Study Tool / Certification prep  
-**Design Dials:** Variance 5/10 | Motion 5/10 | Density 7/10
+**Updated:** 2026-11-07
 
----
+## Direction
 
-## Global Rules
+- **Product.** Practice questions and timed mock exams for people preparing for the Professional Scrum Master I assessment
+- **Character.** exact, quiet, a little warm
+- **World.** Study desk before an open-book exam — paper, ink, the Scrum Guide
+- **Moments.** Category accuracy chart; score figures with the pass threshold
+- **Signature.** Quiet mono `Pass 85%` near scores, exam setup, and sidebar meta
 
-### Style
-- **Name:** Claymorphism (professional education)
-- Soft 3D surfaces, 3px borders, double shadows (outer offset + inset), 16–24px radii
-- Soft press on interactive controls (~200ms)
-- Stagger rise on dashboard tiles; honor `prefers-reduced-motion`
+## Color
 
-### Color Palette
+Warm graphite ramp. Surfaces stay neutral; ink blue accent is rare.
 
-| Role | Hex | Token |
-|------|-----|-------|
-| Primary / CTA | `#0F766E` | `--color-accent` |
-| On Primary | `#FFFFFF` | `--color-accent-ink` |
-| Background | `#EEF6F3` | `--color-canvas` |
-| Foreground | `#0F1C1A` | `--color-ink` |
-| Card | `#FFFFFF` | `--color-surface` |
-| Muted text | `#5B6B67` | `--color-muted` |
-| Border | `#C5DBD4` | `--color-line` |
-| Nav | `#0B1F1C` | `--color-nav` |
-| Success | `#047857` | `--color-good` |
-| Danger | `#B91C1C` | `--color-bad` |
-| Flag | `#B45309` | `--color-flag` |
+| Role | Light | Dark |
+|------|-------|------|
+| Canvas | `#f7f4ee` | `#161513` |
+| Surface | `#fdfbf7` | `#1c1a18` |
+| Raised | `#efe9df` | `#262421` |
+| Ink | `#1f1b16` | `#efe9de` |
+| Muted | `#5e554a` | `#aaa398` |
+| Accent | `#1d4ed8` | `#93c5fd` |
+| Nav | `#12110f` | `#0f0f10` |
 
-**Notes:** Trust teal + deep navy-green nav. Avoid purple-on-lavender study defaults.
+Primary buttons use ink fill (light) or off-white fill (dark), not the accent. Accent marks selection, chart lead, and the pass-mark tick.
 
-### Typography
-- **Display / headings:** Fraunces
-- **Body / UI:** Manrope
-- Google Fonts: `Fraunces` + `Manrope`
+## Type
 
-### Motion
-- Soft press: translateY on active
-- Stagger: `.reveal-stagger` children, ~40–60ms steps, `clay-rise`
-- Skip when `prefers-reduced-motion: reduce`
+- Interface: Instrument Sans (400 / 500)
+- Display titles: Newsreader (500)
+- Meta / pass mark: IBM Plex Mono (400)
 
-### Components
-- `.panel` / `.stat-tile`: clay borders + `--shadow-clay`
-- `.btn-primary` / `.btn-ghost`: pill shape, clay shadow, press feedback
-- Nav icons: outline SVG (Phosphor-style), no emoji icons
+## Radius & depth
 
-### Anti-patterns
-- Flat single-color canvases without atmosphere
-- Purple/lilac default AI study themes
-- Emoji as structural icons
-- Missing focus rings or reduced-motion support
+- Controls 8px, cards 14px
+- Light: soft neutral shadow `0 1px 2px rgba(0,0,0,0.05)`
+- Dark: surface steps + hairlines only
+
+## Motion
+
+- Easing: `cubic-bezier(0.22, 1, 0.36, 1)`
+- One short entrance stagger on dashboard stats
+- Press scale 0.98; no bounce, no pulse on static chrome

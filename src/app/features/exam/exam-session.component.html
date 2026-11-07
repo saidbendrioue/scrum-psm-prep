@@ -11,9 +11,9 @@
       (confirm)="onConfirm()"
       (flag)="flag()"
     >
-      <div class="mb-3 flex items-center justify-between gap-3 text-sm text-muted">
-        <p>Question {{ exam.currentIndex + 1 }} of {{ exam.questionIds.length }}</p>
-        <app-timer-display class="text-base" [seconds]="examStore.remainingSeconds()" />
+      <div class="mb-3 flex items-center justify-between gap-3">
+        <p class="meta">Question {{ exam.currentIndex + 1 }} of {{ exam.questionIds.length }}</p>
+        <app-timer-display class="meta" [seconds]="examStore.remainingSeconds()" />
       </div>
       <app-progress-bar
         class="mb-4 block"

@@ -1,12 +1,13 @@
 @if (exam(); as result) {
   @if (!reviewing()) {
     <section class="panel p-6 md:p-8">
-      <p class="text-sm font-semibold uppercase tracking-[0.14em] text-muted">{{ formatWhen(result.startedAt) }} · {{ elapsed() }}</p>
-      <h2 class="mt-2 font-serif text-5xl" [class.text-good]="result.passed" [class.text-bad]="result.passed === false">
+      <p class="meta">{{ formatWhen(result.startedAt) }} · {{ elapsed() }}</p>
+      <h2 class="mt-2 text-5xl font-medium tabular-nums tracking-tight" [class.text-good]="result.passed" [class.text-bad]="result.passed === false">
         {{ result.scorePercent === null ? '—' : formatPercent(result.scorePercent) }}
       </h2>
-      <p class="mt-2 text-lg">{{ result.passed ? 'Passing score.' : 'Below the 85% pass mark.' }}</p>
-      <p class="mt-1 text-muted">{{ result.correctCount }} of {{ result.questionIds.length }} correct · {{ result.status }}</p>
+      <p class="pass-mark mt-2">Pass 85%</p>
+      <p class="mt-3 text-[15px]">{{ result.passed ? 'Passing score' : 'Below the 85% pass mark' }}</p>
+      <p class="meta mt-1">{{ result.correctCount }} of {{ result.questionIds.length }} correct · {{ result.status }}</p>
       <div class="mt-5 flex flex-wrap gap-2">
         <a class="btn btn-primary" routerLink="/exam">New exam</a>
         <a class="btn btn-ghost" routerLink="/review" [queryParams]="{ tab: 'mistakes' }">Review misses</a>

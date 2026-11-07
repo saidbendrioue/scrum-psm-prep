@@ -2,44 +2,63 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*
+  Unslop direction (heydamir/unslop, CC BY 4.0)
+  Product: Practice and timed mocks for PSM I candidates
+  Character: exact, quiet, a little warm
+  World: study desk / paper and ink before an open-book exam
+  Moments: category accuracy chart; score figures with pass threshold
+  Signature: quiet mono “85%” pass mark near scores and exam chrome
+*/
+
 @theme {
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-serif: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --color-canvas: #f3f1fb;
-  --color-surface: #ffffff;
-  --color-surface-2: #ebe8f8;
-  --color-ink: #12121e;
-  --color-muted: #6b6880;
-  --color-line: #d5d1e8;
-  --color-accent: #7c74f0;
-  --color-accent-ink: #12121e;
-  --color-good: #166534;
-  --color-good-bg: #dcfce7;
-  --color-bad: #9f1239;
-  --color-bad-bg: #ffe4e6;
-  --color-flag: #92400e;
-  --color-flag-bg: #fef3c7;
-  --color-nav: #12121e;
-  --color-nav-ink: #f3f1fb;
+  --font-sans: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Newsreader', 'Instrument Sans', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Light: warm graphite */
+  --color-canvas: #f7f4ee;
+  --color-surface: #fdfbf7;
+  --color-surface-2: #efe9df;
+  --color-ink: #1f1b16;
+  --color-muted: #5e554a;
+  --color-line: color-mix(in srgb, #1f1b16 10%, transparent);
+  --color-accent: #1d4ed8;
+  --color-accent-ink: #ffffff;
+  --color-good: #16a34a;
+  --color-good-bg: color-mix(in srgb, #16a34a 12%, #fdfbf7);
+  --color-bad: #dc2626;
+  --color-bad-bg: color-mix(in srgb, #dc2626 10%, #fdfbf7);
+  --color-flag: #b45309;
+  --color-flag-bg: color-mix(in srgb, #b45309 12%, #fdfbf7);
+  --color-nav: #12110f;
+  --color-nav-ink: #efe9de;
+
+  --radius-control: 8px;
+  --radius-card: 14px;
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .dark {
-  --color-canvas: #0b0e14;
-  --color-surface: #1c1c2e;
-  --color-surface-2: #26263a;
-  --color-ink: #ffffff;
-  --color-muted: #a0a0b8;
-  --color-line: #35354a;
-  --color-accent: #9891ff;
-  --color-accent-ink: #0b0e14;
-  --color-good: #86efac;
-  --color-good-bg: #052e16;
-  --color-bad: #fecdd3;
-  --color-bad-bg: #4c0519;
-  --color-flag: #fde68a;
-  --color-flag-bg: #451a03;
-  --color-nav: #080a10;
-  --color-nav-ink: #f3f1fb;
+  /* Dark: warm graphite */
+  --color-canvas: #161513;
+  --color-surface: #1c1a18;
+  --color-surface-2: #262421;
+  --color-ink: #efe9de;
+  --color-muted: #aaa398;
+  --color-line: color-mix(in srgb, #efe9de 10%, transparent);
+  --color-accent: #93c5fd;
+  --color-accent-ink: #12110f;
+  --color-good: #4cc38a;
+  --color-good-bg: color-mix(in srgb, #4cc38a 14%, #1c1a18);
+  --color-bad: #e5484d;
+  --color-bad-bg: color-mix(in srgb, #e5484d 14%, #1c1a18);
+  --color-flag: #f0b429;
+  --color-flag-bg: color-mix(in srgb, #f0b429 14%, #1c1a18);
+  --color-nav: #0f0f10;
+  --color-nav-ink: #efe9de;
+  --shadow-soft: none;
 }
 
 :root {
@@ -56,13 +75,39 @@ body {
   background: var(--color-canvas);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.45;
 }
 
 h1,
 h2,
 .font-serif {
-  font-family: var(--font-sans);
-  font-weight: 700;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.page-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 2.4vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.meta,
+.pass-mark {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-muted);
+}
+
+.pass-mark {
+  color: var(--color-muted);
 }
 
 a:focus-visible,
@@ -80,18 +125,21 @@ summary:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    border-radius: 0.75rem;
+    gap: 8px;
+    border-radius: var(--radius-control);
     border: 1px solid transparent;
-    padding: 0.7rem 1.1rem;
-    font-size: 0.95rem;
-    font-weight: 600;
+    padding: 10px 16px;
+    min-height: 40px;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 1.2;
+    cursor: pointer;
     transition:
-      background-color 0.15s ease,
-      border-color 0.15s ease,
-      color 0.15s ease,
-      opacity 0.15s ease;
+      background-color 150ms var(--ease-out),
+      border-color 150ms var(--ease-out),
+      color 150ms var(--ease-out),
+      opacity 150ms var(--ease-out),
+      transform 150ms var(--ease-out);
   }
 
   .btn:disabled {
@@ -99,27 +147,37 @@ summary:focus-visible {
     opacity: 0.5;
   }
 
+  .btn:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
   .btn-primary {
-    background: var(--color-accent);
-    color: var(--color-accent-ink);
+    background: var(--color-ink);
+    color: var(--color-canvas);
+  }
+
+  .dark .btn-primary {
+    background: #efe9de;
+    color: #12110f;
   }
 
   .btn-primary:hover:not(:disabled) {
-    filter: brightness(1.06);
+    filter: brightness(1.05);
   }
 
   .btn-ghost {
-    border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-line));
-    background: transparent;
-    color: var(--color-accent);
+    border-color: var(--color-line);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    box-shadow: var(--shadow-soft);
   }
 
   .btn-ghost:hover:not(:disabled) {
-    background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+    background: var(--color-surface-2);
   }
 
   .btn-danger {
-    border-color: var(--color-bad);
+    border-color: color-mix(in srgb, var(--color-bad) 28%, var(--color-line));
     background: var(--color-bad-bg);
     color: var(--color-bad);
   }
@@ -131,36 +189,108 @@ summary:focus-visible {
   .field {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
-    font-size: 0.95rem;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-muted);
   }
 
   .field input,
   .field select {
     border: 1px solid var(--color-line);
-    border-radius: 0.75rem;
+    border-radius: var(--radius-control);
     background: var(--color-surface);
     color: var(--color-ink);
-    padding: 0.65rem 0.8rem;
+    padding: 10px 12px;
+    font-weight: 400;
+    box-shadow: none;
+    transition:
+      border-color 150ms var(--ease-out),
+      background-color 150ms var(--ease-out);
+  }
+
+  .field input:focus,
+  .field select:focus {
+    border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-line));
+    background: var(--color-surface);
   }
 
   .panel {
     border: 1px solid var(--color-line);
-    border-radius: 1rem;
+    border-radius: var(--radius-card);
     background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
   }
 
   .is-active {
-    background: color-mix(in srgb, var(--color-accent) 28%, transparent);
+    background: var(--color-surface-2);
     color: var(--color-nav-ink);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
 
   .brand-mark {
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: -0.01em;
   }
 
   .brand-mark span {
-    color: var(--color-accent);
+    color: inherit;
+    font-weight: 500;
+  }
+
+  .stat-tile {
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+    padding: 20px;
+    min-height: 112px;
+  }
+
+  .stat-tile .figure {
+    margin-top: 8px;
+    font-family: var(--font-sans);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .reveal-stagger > * {
+    animation: rise-in 360ms var(--ease-out) both;
+  }
+
+  .reveal-stagger > *:nth-child(1) {
+    animation-delay: 40ms;
+  }
+  .reveal-stagger > *:nth-child(2) {
+    animation-delay: 90ms;
+  }
+  .reveal-stagger > *:nth-child(3) {
+    animation-delay: 140ms;
+  }
+  .reveal-stagger > *:nth-child(4) {
+    animation-delay: 190ms;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-stagger > *,
+  .btn {
+    animation: none !important;
+    transition: none !important;
   }
 }

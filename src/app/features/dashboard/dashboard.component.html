@@ -1,52 +1,66 @@
 @if (loading()) {
   <app-loading-block [count]="4" />
 } @else {
-  <section class="grid gap-4 md:grid-cols-4">
-    <article class="panel p-4">
-      <p class="text-sm text-muted">Accuracy</p>
-      <p class="font-serif text-4xl">{{ formatPercent(summary().accuracy) }}</p>
-      <p class="text-sm text-muted">{{ summary().correct }} of {{ summary().answered }} latest answers</p>
+  <section class="mb-8 max-w-2xl">
+    <h1 class="page-title">PSM I progress</h1>
+    <p class="mt-3 max-w-xl text-[15px] text-muted">
+      Practice questions, timed mocks, and spaced review for the Professional Scrum Master I assessment. Progress stays in this browser
+    </p>
+  </section>
+
+  <section class="reveal-stagger grid gap-4 md:grid-cols-4">
+    <article class="stat-tile">
+      <p class="meta">Accuracy</p>
+      <p class="figure">{{ formatPercent(summary().accuracy) }}</p>
+      <p class="mt-2 text-[13px] text-muted">{{ summary().correct }} of {{ summary().answered }} latest</p>
     </article>
-    <article class="panel p-4">
-      <p class="text-sm text-muted">Streak</p>
-      <p class="font-serif text-4xl">{{ summary().streak.current }}</p>
-      <p class="text-sm text-muted">Best {{ summary().streak.best }} days</p>
+    <article class="stat-tile">
+      <p class="meta">Streak</p>
+      <p class="figure">{{ summary().streak.current }}</p>
+      <p class="mt-2 text-[13px] text-muted">Best {{ summary().streak.best }} days</p>
     </article>
-    <article class="panel p-4">
-      <p class="text-sm text-muted">Exams passed</p>
-      <p class="font-serif text-4xl">{{ summary().examsPassed }}/{{ summary().examsTaken }}</p>
-      <p class="text-sm text-muted">Pass mark 85%</p>
+    <article class="stat-tile">
+      <p class="meta">Exams passed</p>
+      <p class="figure">{{ summary().examsPassed }}/{{ summary().examsTaken }}</p>
+      <p class="pass-mark mt-2">Pass 85%</p>
     </article>
-    <article class="panel p-4">
-      <p class="text-sm text-muted">Due for review</p>
-      <p class="font-serif text-4xl">{{ summary().due }}</p>
-      <a class="text-sm font-semibold text-accent" routerLink="/review" [queryParams]="{ tab: 'due' }">Open the queue</a>
+    <article class="stat-tile">
+      <p class="meta">Due for review</p>
+      <p class="figure">{{ summary().due }}</p>
+      <a class="mt-2 inline-flex text-[13px] font-medium text-accent" routerLink="/review" [queryParams]="{ tab: 'due' }">
+        Open queue
+      </a>
     </article>
   </section>
 
-  <section class="mt-6 grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
-    <article class="panel p-5">
-      <h2 class="font-serif text-2xl">Accuracy by category</h2>
+  <section class="mt-6 grid gap-4 lg:grid-cols-[minmax(0,1.7fr)_minmax(240px,0.8fr)]">
+    <article class="panel p-5 md:p-6">
+      <h2 class="text-[18px] font-medium tracking-tight">Accuracy by category</h2>
       @if (chartLabels().length === 0) {
-        <p class="mt-4 text-muted">Answer a few practice questions and this chart will fill in.</p>
+        <p class="mt-4 text-[14px] text-muted">Answer a few practice questions and this chart fills in</p>
       } @else {
         <app-category-chart class="mt-4 block" [labels]="chartLabels()" [values]="chartValues()" [themeName]="theme.theme()" />
       }
     </article>
-    <article class="panel p-5">
-      <h2 class="font-serif text-2xl">Keep going</h2>
-      <ul class="mt-4 grid gap-3 text-sm">
-        <li class="flex justify-between gap-3"><span>Bookmarks</span><strong>{{ summary().bookmarks }}</strong></li>
-        <li class="flex justify-between gap-3"><span>Latest misses</span><strong>{{ summary().mistakes }}</strong></li>
+    <article class="panel p-5 md:p-6">
+      <h2 class="text-[18px] font-medium tracking-tight">Next</h2>
+      <ul class="mt-4 grid gap-2 text-[14px]">
+        <li class="flex items-center justify-between gap-3 border-b border-line py-2.5">
+          <span class="text-muted">Bookmarks</span>
+          <strong class="font-medium tabular-nums">{{ summary().bookmarks }}</strong>
+        </li>
+        <li class="flex items-center justify-between gap-3 border-b border-line py-2.5">
+          <span class="text-muted">Latest misses</span>
+          <strong class="font-medium tabular-nums">{{ summary().mistakes }}</strong>
+        </li>
       </ul>
       <div class="mt-5 flex flex-wrap gap-2">
         <a class="btn btn-primary" routerLink="/practice">Practice</a>
         <a class="btn btn-ghost" routerLink="/exam">Mock exam</a>
-        <a class="btn btn-ghost" routerLink="/review">Review</a>
       </div>
-      <div class="mt-5 flex flex-wrap gap-2">
-        <button type="button" class="btn btn-ghost" (click)="exportFile()">Export progress</button>
-        <label class="btn btn-ghost">
+      <div class="mt-3 flex flex-wrap gap-2">
+        <button type="button" class="btn btn-ghost" (click)="exportFile()">Export</button>
+        <label class="btn btn-ghost cursor-pointer">
           Import
           <input class="sr-only" type="file" accept="application/json" (change)="importFile($event)" />
         </label>
@@ -54,22 +68,30 @@
     </article>
   </section>
 
-  <section class="mt-6">
-    <h2 class="font-serif text-2xl">Exam history</h2>
+  <section class="mt-10">
+    <div class="flex items-baseline justify-between gap-3">
+      <h2 class="text-[18px] font-medium tracking-tight">Exam history</h2>
+      <span class="pass-mark">Pass 85%</span>
+    </div>
     @if (summary().recentExams.length === 0) {
-      <app-empty-state class="mt-4 block" title="No exams yet" message="A full PSM I simulation is 80 questions, 60 minutes, and 85% to pass.">
-        <a class="btn btn-primary" routerLink="/exam">Start a mock exam</a>
+      <app-empty-state class="mt-4 block" title="No exams yet" message="A full PSM I simulation is 80 questions, 60 minutes, and 85% to pass">
+        <a class="btn btn-primary" routerLink="/exam">Start mock exam</a>
       </app-empty-state>
     } @else {
-      <ul class="mt-4 grid gap-3">
+      <ul class="mt-4 grid gap-2">
         @for (exam of summary().recentExams; track exam.id) {
           <li class="panel flex flex-wrap items-center justify-between gap-3 px-4 py-3">
             <div>
-              <p class="font-semibold">{{ formatWhen(exam.startedAt) }}</p>
-              <p class="text-sm text-muted">{{ exam.questionIds.length }} questions · {{ exam.status }}</p>
+              <p class="font-medium">{{ formatWhen(exam.startedAt) }}</p>
+              <p class="meta mt-1">{{ exam.questionIds.length }} questions · {{ exam.status }}</p>
             </div>
             @if (exam.scorePercent !== null) {
-              <a class="font-serif text-2xl" [class.text-good]="exam.passed" [class.text-bad]="exam.passed === false" [routerLink]="['/exam/results', exam.id]">
+              <a
+                class="text-[22px] font-medium tabular-nums"
+                [class.text-good]="exam.passed"
+                [class.text-bad]="exam.passed === false"
+                [routerLink]="['/exam/results', exam.id]"
+              >
                 {{ formatPercent(exam.scorePercent) }}
               </a>
             } @else if (exam.status === 'in-progress') {

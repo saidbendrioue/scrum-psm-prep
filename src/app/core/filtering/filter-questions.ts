@@ -30,3 +30,15 @@ export function shuffle<T>(items: readonly T[], random: () => number = Math.rand
   }
   return copy;
 }
+
+/** Shuffle answer options so the correct choice is not stuck in first position. */
+export function withShuffledOptions(question: Question, random: () => number = Math.random): Question {
+  return { ...question, options: shuffle(question.options, random) };
+}
+
+export function shuffleQuestionOptions(
+  questions: readonly Question[],
+  random: () => number = Math.random,
+): Question[] {
+  return questions.map((question) => withShuffledOptions(question, random));
+}

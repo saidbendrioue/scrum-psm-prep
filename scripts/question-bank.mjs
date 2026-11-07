@@ -1879,7 +1879,46 @@ for (const question of questions) {
 
 if (questions.length < 80) throw new Error(`Expected at least 80 questions, found ${questions.length}`);
 
+/** Stable mulberry32 PRNG so regenerating the bank does not churn option order. */
+function seededRandom(seed) {
+  let state = seed >>> 0;
+  return () => {
+    state = (state + 0x6d2b79f5) >>> 0;
+    let t = state;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function hashSeed(text) {
+  let hash = 2166136261;
+  for (let index = 0; index < text.length; index += 1) {
+    hash ^= text.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function shuffleOptions(options, random) {
+  const copy = [...options];
+  for (let index = copy.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(random() * (index + 1));
+    const current = copy[index];
+    copy[index] = copy[swapIndex];
+    copy[swapIndex] = current;
+  }
+  return copy;
+}
+
+// Authoring keeps the correct choice as option "a" for readability; shuffle before publish
+// so position is not a free hint in the shipped JSON (the app also reshuffles on load).
+const published = questions.map((question) => ({
+  ...question,
+  options: shuffleOptions(question.options, seededRandom(hashSeed(question.id))),
+}));
+
 const output = resolve(dirname(fileURLToPath(import.meta.url)), '../public/assets/questions.json');
 await mkdir(dirname(output), { recursive: true });
-await writeFile(output, `${JSON.stringify(questions, null, 2)}\n`);
-console.log(`Wrote ${questions.length} questions to ${output}`);
+await writeFile(output, `${JSON.stringify(published, null, 2)}\n`);
+console.log(`Wrote ${published.length} questions to ${output}`);

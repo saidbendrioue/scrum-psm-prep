@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
+import { shuffleQuestionOptions } from '../filtering/filter-questions';
 import type { Certification } from '../models/question.model';
 import { parseQuestions, type Question } from '../models/question.model';
 
@@ -34,7 +35,8 @@ export class QuestionService {
       .then((payload) => {
         const questions = parseQuestions(payload);
         if (!questions || questions.length === 0) throw new Error('invalid question bank');
-        this.questionsState.set(questions);
+        // Options in the bank often list the correct answer first; shuffle so position is not a hint.
+        this.questionsState.set(shuffleQuestionOptions(questions));
         this.statusState.set('ready');
       })
       .catch(() => {

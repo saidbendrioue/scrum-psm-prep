@@ -9,16 +9,16 @@
     "question": "What is Scrum?",
     "options": [
       {
+        "id": "c",
+        "text": "A project-management process owned by a project manager"
+      },
+      {
         "id": "a",
         "text": "A lightweight framework for generating value through adaptive solutions for complex problems"
       },
       {
         "id": "b",
         "text": "A predictive methodology that prescribes every design, test, and release step"
-      },
-      {
-        "id": "c",
-        "text": "A project-management process owned by a project manager"
       },
       {
         "id": "d",
@@ -46,16 +46,16 @@
         "text": "Empiricism and lean thinking"
       },
       {
+        "id": "d",
+        "text": "Fixed scope and variable quality"
+      },
+      {
         "id": "b",
         "text": "Command-and-control and detailed upfront planning"
       },
       {
         "id": "c",
         "text": "Utilization targets and individual incentives"
-      },
-      {
-        "id": "d",
-        "text": "Fixed scope and variable quality"
       }
     ],
     "correctOptionIds": [
@@ -75,6 +75,14 @@
     "question": "Which are the three pillars of empirical process control? Select all that apply.",
     "options": [
       {
+        "id": "c",
+        "text": "Adaptation"
+      },
+      {
+        "id": "e",
+        "text": "Utilization"
+      },
+      {
         "id": "a",
         "text": "Transparency"
       },
@@ -83,16 +91,8 @@
         "text": "Inspection"
       },
       {
-        "id": "c",
-        "text": "Adaptation"
-      },
-      {
         "id": "d",
         "text": "Prediction"
-      },
-      {
-        "id": "e",
-        "text": "Utilization"
       }
     ],
     "correctOptionIds": [
@@ -113,12 +113,12 @@
     "question": "Transparency enables inspection. Inspection without transparency is misleading and wasteful.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -138,12 +138,12 @@
     "question": "Inspection without adaptation is considered pointless in Scrum.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -196,12 +196,12 @@
     "question": "Implementing only parts of Scrum still produces Scrum, as long as the team delivers something each month.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -226,12 +226,12 @@
         "text": "Create regularity and provide formal opportunities to inspect and adapt"
       },
       {
-        "id": "b",
-        "text": "Give management a weekly status forum"
-      },
-      {
         "id": "c",
         "text": "Replace the need for a Product Goal"
+      },
+      {
+        "id": "b",
+        "text": "Give management a weekly status forum"
       },
       {
         "id": "d",
@@ -255,12 +255,12 @@
     "question": "Which are Scrum values? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "Commitment"
-      },
-      {
         "id": "b",
         "text": "Focus"
+      },
+      {
+        "id": "f",
+        "text": "Obedience"
       },
       {
         "id": "c",
@@ -271,12 +271,12 @@
         "text": "Respect"
       },
       {
-        "id": "e",
-        "text": "Courage"
+        "id": "a",
+        "text": "Commitment"
       },
       {
-        "id": "f",
-        "text": "Obedience"
+        "id": "e",
+        "text": "Courage"
       }
     ],
     "correctOptionIds": [
@@ -300,20 +300,20 @@
     "question": "What does commitment mean in Scrum?",
     "options": [
       {
-        "id": "a",
-        "text": "The Scrum Team commits to achieving its goals and to supporting each other"
+        "id": "d",
+        "text": "The Scrum Master commits to remove every impediment personally"
       },
       {
         "id": "b",
         "text": "Developers sign a contract to finish every selected Product Backlog item"
       },
       {
-        "id": "c",
-        "text": "The Product Owner commits stakeholders to a fixed release date"
+        "id": "a",
+        "text": "The Scrum Team commits to achieving its goals and to supporting each other"
       },
       {
-        "id": "d",
-        "text": "The Scrum Master commits to remove every impediment personally"
+        "id": "c",
+        "text": "The Product Owner commits stakeholders to a fixed release date"
       }
     ],
     "correctOptionIds": [
@@ -333,16 +333,16 @@
     "question": "Focus, as a Scrum value, means the Scrum Team primarily focuses on what?",
     "options": [
       {
-        "id": "a",
-        "text": "The work of the Sprint, so it can make the best possible progress toward its goals"
+        "id": "c",
+        "text": "Maximizing individual utilization"
       },
       {
         "id": "b",
         "text": "Keeping every stakeholder request inside the current Sprint"
       },
       {
-        "id": "c",
-        "text": "Maximizing individual utilization"
+        "id": "a",
+        "text": "The work of the Sprint, so it can make the best possible progress toward its goals"
       },
       {
         "id": "d",
@@ -366,16 +366,16 @@
     "question": "Why do the Scrum values matter to empiricism?",
     "options": [
       {
+        "id": "c",
+        "text": "They let the team skip Sprint events when trust is high"
+      },
+      {
         "id": "a",
         "text": "When the team lives them, the pillars of transparency, inspection, and adaptation come to life and trust is built"
       },
       {
         "id": "b",
         "text": "They replace the need for a Definition of Done"
-      },
-      {
-        "id": "c",
-        "text": "They let the team skip Sprint events when trust is high"
       },
       {
         "id": "d",
@@ -399,16 +399,12 @@
     "question": "Which accountabilities exist inside a Scrum Team? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "Product Owner"
+        "id": "c",
+        "text": "Developers"
       },
       {
         "id": "b",
         "text": "Scrum Master"
-      },
-      {
-        "id": "c",
-        "text": "Developers"
       },
       {
         "id": "d",
@@ -417,6 +413,10 @@
       {
         "id": "e",
         "text": "Business analyst as a separate accountability"
+      },
+      {
+        "id": "a",
+        "text": "Product Owner"
       }
     ],
     "correctOptionIds": [
@@ -437,12 +437,12 @@
     "question": "A Scrum Team has no sub-teams or hierarchies.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -463,20 +463,20 @@
     "question": "In the 2020 Scrum Guide, self-managing means the team internally decides what?",
     "options": [
       {
-        "id": "a",
-        "text": "Who does what, when, and how"
-      },
-      {
-        "id": "b",
-        "text": "Which Product Goal the organization must fund"
-      },
-      {
         "id": "c",
         "text": "The company-wide release policy without the Product Owner"
       },
       {
         "id": "d",
         "text": "That Sprint events are optional"
+      },
+      {
+        "id": "a",
+        "text": "Who does what, when, and how"
+      },
+      {
+        "id": "b",
+        "text": "Which Product Goal the organization must fund"
       }
     ],
     "correctOptionIds": [
@@ -500,16 +500,16 @@
         "text": "The team as a whole has all the skills needed to create value each Sprint"
       },
       {
-        "id": "b",
-        "text": "Every person must be able to do every job equally well"
+        "id": "d",
+        "text": "Only Developers need skills; the Product Owner and Scrum Master do not count"
       },
       {
         "id": "c",
         "text": "Specialists stay in separate functional teams and hand work over"
       },
       {
-        "id": "d",
-        "text": "Only Developers need skills; the Product Owner and Scrum Master do not count"
+        "id": "b",
+        "text": "Every person must be able to do every job equally well"
       }
     ],
     "correctOptionIds": [
@@ -529,6 +529,10 @@
     "question": "The typical Scrum Team size is:",
     "options": [
       {
+        "id": "d",
+        "text": "Whatever a resource manager assigns for the quarter"
+      },
+      {
         "id": "a",
         "text": "10 or fewer people"
       },
@@ -539,10 +543,6 @@
       {
         "id": "c",
         "text": "Exactly 7 plus or minus 2, as a hard rule"
-      },
-      {
-        "id": "d",
-        "text": "Whatever a resource manager assigns for the quarter"
       }
     ],
     "correctOptionIds": [
@@ -566,16 +566,16 @@
         "text": "The entire Scrum Team"
       },
       {
+        "id": "d",
+        "text": "The Scrum Master"
+      },
+      {
         "id": "b",
         "text": "Only the Developers"
       },
       {
         "id": "c",
         "text": "Only the Product Owner"
-      },
-      {
-        "id": "d",
-        "text": "The Scrum Master"
       }
     ],
     "correctOptionIds": [
@@ -599,16 +599,16 @@
         "text": "A service, a physical product, or something more abstract, with a clear boundary and known stakeholders"
       },
       {
-        "id": "b",
-        "text": "Only a software application"
+        "id": "d",
+        "text": "A backlog of stakeholder requests with no users"
       },
       {
         "id": "c",
         "text": "Only a project with a fixed end date"
       },
       {
-        "id": "d",
-        "text": "A backlog of stakeholder requests with no users"
+        "id": "b",
+        "text": "Only a software application"
       }
     ],
     "correctOptionIds": [
@@ -628,20 +628,20 @@
     "question": "The Product Owner is accountable for maximizing the value of the product and for what else?",
     "options": [
       {
-        "id": "a",
-        "text": "Effective Product Backlog management"
-      },
-      {
-        "id": "b",
-        "text": "Assigning daily tasks to Developers"
-      },
-      {
         "id": "c",
         "text": "Facilitating every Daily Scrum"
       },
       {
         "id": "d",
         "text": "Writing the Definition of Done alone"
+      },
+      {
+        "id": "b",
+        "text": "Assigning daily tasks to Developers"
+      },
+      {
+        "id": "a",
+        "text": "Effective Product Backlog management"
       }
     ],
     "correctOptionIds": [
@@ -660,12 +660,12 @@
     "question": "The Product Owner may be a committee if every stakeholder gets a vote on ordering.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -686,16 +686,16 @@
     "question": "The Product Owner delegates Product Backlog refinement to Developers. Who remains accountable?",
     "options": [
       {
-        "id": "a",
-        "text": "The Product Owner"
+        "id": "c",
+        "text": "The Scrum Master, because facilitation was involved"
       },
       {
         "id": "b",
         "text": "The Developers who did the refinement"
       },
       {
-        "id": "c",
-        "text": "The Scrum Master, because facilitation was involved"
+        "id": "a",
+        "text": "The Product Owner"
       },
       {
         "id": "d",
@@ -723,12 +723,12 @@
         "text": "Only the Product Owner"
       },
       {
-        "id": "b",
-        "text": "Only the Scrum Master"
-      },
-      {
         "id": "c",
         "text": "Any Developer, when the forecast looks wrong"
+      },
+      {
+        "id": "b",
+        "text": "Only the Scrum Master"
       },
       {
         "id": "d",
@@ -785,12 +785,12 @@
     "question": "During Sprint Planning, how does the Product Owner contribute to the Sprint Goal?",
     "options": [
       {
-        "id": "a",
-        "text": "The Product Owner proposes how the Sprint can increase value, then the whole Scrum Team collaborates on the Sprint Goal"
-      },
-      {
         "id": "b",
         "text": "The Product Owner writes the Sprint Goal alone and hands it to Developers"
+      },
+      {
+        "id": "a",
+        "text": "The Product Owner proposes how the Sprint can increase value, then the whole Scrum Team collaborates on the Sprint Goal"
       },
       {
         "id": "c",
@@ -818,10 +818,6 @@
     "question": "The Scrum Master is accountable for what?",
     "options": [
       {
-        "id": "a",
-        "text": "The Scrum Team’s effectiveness"
-      },
-      {
         "id": "b",
         "text": "The commercial budget of the product"
       },
@@ -832,6 +828,10 @@
       {
         "id": "d",
         "text": "Ordering the Product Backlog"
+      },
+      {
+        "id": "a",
+        "text": "The Scrum Team’s effectiveness"
       }
     ],
     "correctOptionIds": [
@@ -855,16 +855,16 @@
         "text": "True leaders who serve the Scrum Team and the larger organization"
       },
       {
+        "id": "d",
+        "text": "The only people allowed to talk to stakeholders"
+      },
+      {
         "id": "b",
         "text": "People managers who assign tasks and rate individual performance"
       },
       {
         "id": "c",
         "text": "Meeting schedulers with no accountability for effectiveness"
-      },
-      {
-        "id": "d",
-        "text": "The only people allowed to talk to stakeholders"
       }
     ],
     "correctOptionIds": [
@@ -884,20 +884,20 @@
     "question": "What does “causing removal of impediments” mean?",
     "options": [
       {
-        "id": "a",
-        "text": "The Scrum Master is accountable for causing impediments to be removed, not necessarily for personally fixing every one"
-      },
-      {
-        "id": "b",
-        "text": "The Scrum Master must resolve every impediment before the next Daily Scrum"
+        "id": "d",
+        "text": "Impediments can be removed only by a manager"
       },
       {
         "id": "c",
         "text": "Developers are forbidden from removing their own impediments"
       },
       {
-        "id": "d",
-        "text": "Impediments can be removed only by a manager"
+        "id": "a",
+        "text": "The Scrum Master is accountable for causing impediments to be removed, not necessarily for personally fixing every one"
+      },
+      {
+        "id": "b",
+        "text": "The Scrum Master must resolve every impediment before the next Daily Scrum"
       }
     ],
     "correctOptionIds": [
@@ -917,24 +917,24 @@
     "question": "Which services does the Scrum Master provide to the organization? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "Leading, training, and coaching the organization in its Scrum adoption"
-      },
-      {
-        "id": "b",
-        "text": "Planning and advising Scrum implementations"
+        "id": "e",
+        "text": "Assigning Developers to Product Backlog items"
       },
       {
         "id": "c",
         "text": "Helping employees and stakeholders understand an empirical approach"
       },
       {
-        "id": "d",
-        "text": "Removing barriers between stakeholders and Scrum Teams"
+        "id": "b",
+        "text": "Planning and advising Scrum implementations"
       },
       {
-        "id": "e",
-        "text": "Assigning Developers to Product Backlog items"
+        "id": "a",
+        "text": "Leading, training, and coaching the organization in its Scrum adoption"
+      },
+      {
+        "id": "d",
+        "text": "Removing barriers between stakeholders and Scrum Teams"
       }
     ],
     "correctOptionIds": [
@@ -956,12 +956,12 @@
     "question": "The Scrum Master is required to assign tasks during Sprint Planning.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -982,20 +982,20 @@
     "question": "May a Scrum Master also do work in the Sprint Backlog?",
     "options": [
       {
-        "id": "a",
-        "text": "Yes. If they are actively working on Sprint Backlog items, they participate in the Daily Scrum as a Developer"
-      },
-      {
-        "id": "b",
-        "text": "No. The Scrum Master is forbidden from creating any part of the Increment"
-      },
-      {
         "id": "c",
         "text": "Yes, but only the Product Owner may then attend the Daily Scrum"
       },
       {
         "id": "d",
         "text": "No, because a person cannot hold more than one skill"
+      },
+      {
+        "id": "a",
+        "text": "Yes. If they are actively working on Sprint Backlog items, they participate in the Daily Scrum as a Developer"
+      },
+      {
+        "id": "b",
+        "text": "No. The Scrum Master is forbidden from creating any part of the Increment"
       }
     ],
     "correctOptionIds": [
@@ -1015,24 +1015,24 @@
     "question": "Developers are always accountable for which of the following? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "Creating a plan for the Sprint, the Sprint Backlog"
-      },
-      {
-        "id": "b",
-        "text": "Instilling quality by adhering to the Definition of Done"
-      },
-      {
-        "id": "c",
-        "text": "Adapting their plan each day toward the Sprint Goal"
+        "id": "e",
+        "text": "Ordering the Product Backlog for the Product Owner"
       },
       {
         "id": "d",
         "text": "Holding each other accountable as professionals"
       },
       {
-        "id": "e",
-        "text": "Ordering the Product Backlog for the Product Owner"
+        "id": "b",
+        "text": "Instilling quality by adhering to the Definition of Done"
+      },
+      {
+        "id": "a",
+        "text": "Creating a plan for the Sprint, the Sprint Backlog"
+      },
+      {
+        "id": "c",
+        "text": "Adapting their plan each day toward the Sprint Goal"
       }
     ],
     "correctOptionIds": [
@@ -1055,16 +1055,16 @@
     "question": "Who selects how much Product Backlog work can be done in a Sprint?",
     "options": [
       {
-        "id": "a",
-        "text": "The Developers, through discussion with the Product Owner"
+        "id": "c",
+        "text": "The Scrum Master, based on last Sprint’s velocity"
       },
       {
         "id": "b",
         "text": "The Product Owner, who pushes a fixed scope into the Sprint"
       },
       {
-        "id": "c",
-        "text": "The Scrum Master, based on last Sprint’s velocity"
+        "id": "a",
+        "text": "The Developers, through discussion with the Product Owner"
       },
       {
         "id": "d",
@@ -1088,20 +1088,20 @@
     "question": "Who is responsible for sizing Product Backlog items?",
     "options": [
       {
-        "id": "a",
-        "text": "The Developers who will do the work"
-      },
-      {
         "id": "b",
         "text": "The Product Owner alone"
       },
       {
-        "id": "c",
-        "text": "The Scrum Master, using a mandated pointing scale"
-      },
-      {
         "id": "d",
         "text": "An external estimating office"
+      },
+      {
+        "id": "a",
+        "text": "The Developers who will do the work"
+      },
+      {
+        "id": "c",
+        "text": "The Scrum Master, using a mandated pointing scale"
       }
     ],
     "correctOptionIds": [
@@ -1129,12 +1129,12 @@
         "text": "The Product Owner, because they own the value decision"
       },
       {
-        "id": "c",
-        "text": "The Scrum Master, because they own the process"
-      },
-      {
         "id": "d",
         "text": "The architecture review board outside the Scrum Team"
+      },
+      {
+        "id": "c",
+        "text": "The Scrum Master, because they own the process"
       }
     ],
     "correctOptionIds": [
@@ -1154,28 +1154,28 @@
     "question": "Which events does Scrum define? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "The Sprint"
+        "id": "c",
+        "text": "Daily Scrum"
       },
       {
         "id": "b",
         "text": "Sprint Planning"
       },
       {
-        "id": "c",
-        "text": "Daily Scrum"
-      },
-      {
         "id": "d",
         "text": "Sprint Review"
       },
       {
-        "id": "e",
-        "text": "Sprint Retrospective"
+        "id": "a",
+        "text": "The Sprint"
       },
       {
         "id": "f",
         "text": "Backlog refinement as a mandatory event"
+      },
+      {
+        "id": "e",
+        "text": "Sprint Retrospective"
       }
     ],
     "correctOptionIds": [
@@ -1228,16 +1228,16 @@
         "text": "Sprint Planning, the Sprint Review, and the Sprint Retrospective are usually shorter. The Daily Scrum stays 15 minutes"
       },
       {
+        "id": "d",
+        "text": "The Daily Scrum becomes optional"
+      },
+      {
         "id": "b",
         "text": "Every event, including the Daily Scrum, must be cut exactly in half"
       },
       {
         "id": "c",
         "text": "Timeboxes stay at the one-month maximum even for a one-week Sprint"
-      },
-      {
-        "id": "d",
-        "text": "The Daily Scrum becomes optional"
       }
     ],
     "correctOptionIds": [
@@ -1257,8 +1257,8 @@
     "question": "What is the maximum length of a Sprint?",
     "options": [
       {
-        "id": "a",
-        "text": "One month"
+        "id": "d",
+        "text": "One quarter"
       },
       {
         "id": "b",
@@ -1269,8 +1269,8 @@
         "text": "Until the selected Product Backlog items are Done"
       },
       {
-        "id": "d",
-        "text": "One quarter"
+        "id": "a",
+        "text": "One month"
       }
     ],
     "correctOptionIds": [
@@ -1340,24 +1340,24 @@
     "question": "Which statements describe work during a Sprint? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "No changes are made that would endanger the Sprint Goal"
-      },
-      {
         "id": "b",
         "text": "Quality does not decrease"
-      },
-      {
-        "id": "c",
-        "text": "The Product Backlog is refined as needed"
       },
       {
         "id": "d",
         "text": "Scope may be clarified and renegotiated with the Product Owner as more is learned"
       },
       {
+        "id": "c",
+        "text": "The Product Backlog is refined as needed"
+      },
+      {
         "id": "e",
         "text": "The Sprint Goal is rewritten whenever a new request arrives"
+      },
+      {
+        "id": "a",
+        "text": "No changes are made that would endanger the Sprint Goal"
       }
     ],
     "correctOptionIds": [
@@ -1380,20 +1380,20 @@
     "question": "The Developers finish the Sprint Goal early. What should happen?",
     "options": [
       {
-        "id": "a",
-        "text": "The Sprint continues until the timebox ends. They may collaborate with the Product Owner about further work"
-      },
-      {
-        "id": "b",
-        "text": "The Sprint ends immediately so the next Sprint can start"
-      },
-      {
         "id": "c",
         "text": "The Definition of Done is weakened so more items can be called Done"
       },
       {
         "id": "d",
         "text": "Stakeholders extend the Sprint to pull in extra scope without negotiation"
+      },
+      {
+        "id": "a",
+        "text": "The Sprint continues until the timebox ends. They may collaborate with the Product Owner about further work"
+      },
+      {
+        "id": "b",
+        "text": "The Sprint ends immediately so the next Sprint can start"
       }
     ],
     "correctOptionIds": [
@@ -1450,12 +1450,12 @@
         "text": "A maximum of eight hours"
       },
       {
-        "id": "b",
-        "text": "Exactly eight hours, even if the team is done"
-      },
-      {
         "id": "c",
         "text": "Four hours"
+      },
+      {
+        "id": "b",
+        "text": "Exactly eight hours, even if the team is done"
       },
       {
         "id": "d",
@@ -1479,10 +1479,6 @@
     "question": "Sprint Planning addresses which topics? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "Why is this Sprint valuable?"
-      },
-      {
         "id": "b",
         "text": "What can be Done this Sprint?"
       },
@@ -1493,6 +1489,10 @@
       {
         "id": "d",
         "text": "Which individuals failed last Sprint?"
+      },
+      {
+        "id": "a",
+        "text": "Why is this Sprint valuable?"
       }
     ],
     "correctOptionIds": [
@@ -1543,16 +1543,16 @@
         "text": "Other people, to provide advice"
       },
       {
-        "id": "b",
-        "text": "Only the Product Owner’s manager, who must approve the Sprint Goal"
-      },
-      {
         "id": "c",
         "text": "No one. The event is closed even for advice"
       },
       {
         "id": "d",
         "text": "Customers, who select the Sprint Backlog for the Developers"
+      },
+      {
+        "id": "b",
+        "text": "Only the Product Owner’s manager, who must approve the Sprint Goal"
       }
     ],
     "correctOptionIds": [
@@ -1572,16 +1572,16 @@
     "question": "What improves the Developers’ confidence in their Sprint forecast?",
     "options": [
       {
-        "id": "a",
-        "text": "Knowing their past performance, upcoming capacity, and Definition of Done"
+        "id": "c",
+        "text": "A fixed story-point quota"
       },
       {
         "id": "b",
         "text": "A mandated velocity number from the Scrum Master"
       },
       {
-        "id": "c",
-        "text": "A fixed story-point quota"
+        "id": "a",
+        "text": "Knowing their past performance, upcoming capacity, and Definition of Done"
       },
       {
         "id": "d",
@@ -1605,20 +1605,20 @@
     "question": "What is the Daily Scrum?",
     "options": [
       {
-        "id": "a",
-        "text": "A 15-minute event for the Developers of the Scrum Team"
-      },
-      {
         "id": "b",
         "text": "A status meeting led by the Product Owner"
       },
       {
-        "id": "c",
-        "text": "A stakeholder demo held every day"
-      },
-      {
         "id": "d",
         "text": "A problem-solving workshop with no timebox"
+      },
+      {
+        "id": "a",
+        "text": "A 15-minute event for the Developers of the Scrum Team"
+      },
+      {
+        "id": "c",
+        "text": "A stakeholder demo held every day"
       }
     ],
     "correctOptionIds": [
@@ -1637,12 +1637,12 @@
     "question": "The three questions (what I did, what I will do, and my impediments) are mandatory in the Daily Scrum.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -1663,10 +1663,6 @@
     "question": "When do the Product Owner and Scrum Master participate in the Daily Scrum?",
     "options": [
       {
-        "id": "a",
-        "text": "When they are actively working on Sprint Backlog items, they participate as Developers"
-      },
-      {
         "id": "b",
         "text": "They must attend every Daily Scrum to receive a status report"
       },
@@ -1677,6 +1673,10 @@
       {
         "id": "d",
         "text": "They never attend, even if they are doing Sprint work"
+      },
+      {
+        "id": "a",
+        "text": "When they are actively working on Sprint Backlog items, they participate as Developers"
       }
     ],
     "correctOptionIds": [
@@ -1754,20 +1754,20 @@
     "question": "What is the timebox of the Sprint Review for a one-month Sprint?",
     "options": [
       {
-        "id": "a",
-        "text": "A maximum of four hours"
+        "id": "d",
+        "text": "Eight hours"
       },
       {
         "id": "b",
         "text": "A maximum of three hours"
       },
       {
-        "id": "c",
-        "text": "Fifteen minutes"
+        "id": "a",
+        "text": "A maximum of four hours"
       },
       {
-        "id": "d",
-        "text": "Eight hours"
+        "id": "c",
+        "text": "Fifteen minutes"
       }
     ],
     "correctOptionIds": [
@@ -1791,16 +1791,16 @@
         "text": "The Scrum Team and stakeholders"
       },
       {
+        "id": "d",
+        "text": "Only the Scrum Master"
+      },
+      {
         "id": "b",
         "text": "Only the Developers"
       },
       {
         "id": "c",
         "text": "Only the Product Owner and the stakeholders"
-      },
-      {
-        "id": "d",
-        "text": "Only the Scrum Master"
       }
     ],
     "correctOptionIds": [
@@ -1819,12 +1819,12 @@
     "question": "The Sprint Review should be limited to a slide presentation.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -1844,12 +1844,12 @@
     "question": "The Sprint Review is a gate: an Increment cannot be released until the Review is over.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -1870,20 +1870,20 @@
     "question": "Work that does not meet the Definition of Done may be:",
     "options": [
       {
-        "id": "a",
-        "text": "Returned to the Product Backlog. It cannot be released or presented at the Sprint Review"
+        "id": "d",
+        "text": "Counted in the Increment because the Sprint timebox ended"
       },
       {
-        "id": "b",
-        "text": "Presented as part of the Increment if the Product Owner accepts the risk"
+        "id": "a",
+        "text": "Returned to the Product Backlog. It cannot be released or presented at the Sprint Review"
       },
       {
         "id": "c",
         "text": "Released with a note that testing will follow next Sprint"
       },
       {
-        "id": "d",
-        "text": "Counted in the Increment because the Sprint timebox ended"
+        "id": "b",
+        "text": "Presented as part of the Increment if the Product Owner accepts the risk"
       }
     ],
     "correctOptionIds": [
@@ -1903,20 +1903,20 @@
     "question": "What is the timebox of the Sprint Retrospective for a one-month Sprint?",
     "options": [
       {
-        "id": "a",
-        "text": "A maximum of three hours"
+        "id": "d",
+        "text": "Eight hours"
       },
       {
         "id": "b",
         "text": "A maximum of four hours"
       },
       {
-        "id": "c",
-        "text": "Fifteen minutes"
+        "id": "a",
+        "text": "A maximum of three hours"
       },
       {
-        "id": "d",
-        "text": "Eight hours"
+        "id": "c",
+        "text": "Fifteen minutes"
       }
     ],
     "correctOptionIds": [
@@ -1936,8 +1936,8 @@
     "question": "What is the purpose of the Sprint Retrospective?",
     "options": [
       {
-        "id": "a",
-        "text": "To plan ways to increase quality and effectiveness"
+        "id": "d",
+        "text": "To assign individual performance ratings"
       },
       {
         "id": "b",
@@ -1948,8 +1948,8 @@
         "text": "To reorder the Product Backlog"
       },
       {
-        "id": "d",
-        "text": "To assign individual performance ratings"
+        "id": "a",
+        "text": "To plan ways to increase quality and effectiveness"
       }
     ],
     "correctOptionIds": [
@@ -1969,24 +1969,24 @@
     "question": "The Sprint Retrospective inspects the last Sprint with regard to which topics? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "Individuals"
-      },
-      {
-        "id": "b",
-        "text": "Interactions"
-      },
-      {
-        "id": "c",
-        "text": "Processes and tools"
-      },
-      {
         "id": "d",
         "text": "The Definition of Done"
       },
       {
         "id": "e",
         "text": "Individual salary decisions"
+      },
+      {
+        "id": "a",
+        "text": "Individuals"
+      },
+      {
+        "id": "c",
+        "text": "Processes and tools"
+      },
+      {
+        "id": "b",
+        "text": "Interactions"
       }
     ],
     "correctOptionIds": [
@@ -2009,20 +2009,20 @@
     "question": "What may the Scrum Team do with the most impactful improvement?",
     "options": [
       {
-        "id": "a",
-        "text": "Address it as soon as possible, and even add it to the Sprint Backlog for the next Sprint"
-      },
-      {
-        "id": "b",
-        "text": "Store it until a hardening Sprint"
+        "id": "d",
+        "text": "Wait for the Product Owner to cancel a Sprint"
       },
       {
         "id": "c",
         "text": "Hand it to a separate process-improvement team"
       },
       {
-        "id": "d",
-        "text": "Wait for the Product Owner to cancel a Sprint"
+        "id": "a",
+        "text": "Address it as soon as possible, and even add it to the Sprint Backlog for the next Sprint"
+      },
+      {
+        "id": "b",
+        "text": "Store it until a hardening Sprint"
       }
     ],
     "correctOptionIds": [
@@ -2042,20 +2042,20 @@
     "question": "What is the Product Backlog?",
     "options": [
       {
-        "id": "a",
-        "text": "An emergent, ordered list of what is needed to improve the product, and the single source of work for the Scrum Team"
+        "id": "d",
+        "text": "A list of tasks assigned to individuals"
       },
       {
-        "id": "b",
-        "text": "A fixed requirements document signed before the first Sprint"
+        "id": "a",
+        "text": "An emergent, ordered list of what is needed to improve the product, and the single source of work for the Scrum Team"
       },
       {
         "id": "c",
         "text": "The plan for the current Sprint only"
       },
       {
-        "id": "d",
-        "text": "A list of tasks assigned to individuals"
+        "id": "b",
+        "text": "A fixed requirements document signed before the first Sprint"
       }
     ],
     "correctOptionIds": [
@@ -2079,16 +2079,16 @@
         "text": "The Product Goal"
       },
       {
-        "id": "b",
-        "text": "The Sprint Goal"
-      },
-      {
         "id": "c",
         "text": "The Definition of Done"
       },
       {
         "id": "d",
         "text": "A release burndown"
+      },
+      {
+        "id": "b",
+        "text": "The Sprint Goal"
       }
     ],
     "correctOptionIds": [
@@ -2132,12 +2132,12 @@
     "question": "Product Backlog refinement is a mandatory Scrum event with its own timebox.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -2157,12 +2157,12 @@
     "question": "Scrum requires a Definition of Ready before a Product Backlog item can enter Sprint Planning.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -2183,6 +2183,10 @@
     "question": "The Sprint Backlog is composed of which three things?",
     "options": [
       {
+        "id": "d",
+        "text": "Only the Product Backlog items the Product Owner assigned"
+      },
+      {
         "id": "a",
         "text": "The Sprint Goal, the selected Product Backlog items, and the plan for delivering them"
       },
@@ -2193,10 +2197,6 @@
       {
         "id": "c",
         "text": "A task list, a velocity target, and a risk log"
-      },
-      {
-        "id": "d",
-        "text": "Only the Product Backlog items the Product Owner assigned"
       }
     ],
     "correctOptionIds": [
@@ -2216,20 +2216,20 @@
     "question": "What is the commitment for the Sprint Backlog?",
     "options": [
       {
-        "id": "a",
-        "text": "The Sprint Goal"
+        "id": "d",
+        "text": "The Definition of Done"
       },
       {
-        "id": "b",
-        "text": "The list of selected Product Backlog items"
+        "id": "a",
+        "text": "The Sprint Goal"
       },
       {
         "id": "c",
         "text": "The Product Goal"
       },
       {
-        "id": "d",
-        "text": "The Definition of Done"
+        "id": "b",
+        "text": "The list of selected Product Backlog items"
       }
     ],
     "correctOptionIds": [
@@ -2249,8 +2249,8 @@
     "question": "Who can change the Sprint Backlog during the Sprint?",
     "options": [
       {
-        "id": "a",
-        "text": "The Developers. Scope changes are negotiated with the Product Owner without affecting the Sprint Goal"
+        "id": "d",
+        "text": "Any stakeholder who attends the Daily Scrum"
       },
       {
         "id": "b",
@@ -2261,8 +2261,8 @@
         "text": "Only the Scrum Master"
       },
       {
-        "id": "d",
-        "text": "Any stakeholder who attends the Daily Scrum"
+        "id": "a",
+        "text": "The Developers. Scope changes are negotiated with the Product Owner without affecting the Sprint Goal"
       }
     ],
     "correctOptionIds": [
@@ -2282,16 +2282,16 @@
     "question": "The Sprint Goal becomes obsolete midway through the Sprint. What is the appropriate Scrum response?",
     "options": [
       {
-        "id": "a",
-        "text": "The Product Owner may cancel the Sprint"
+        "id": "c",
+        "text": "The Scrum Master extends the Sprint"
       },
       {
         "id": "b",
         "text": "The Developers rewrite the Sprint Goal and continue"
       },
       {
-        "id": "c",
-        "text": "The Scrum Master extends the Sprint"
+        "id": "a",
+        "text": "The Product Owner may cancel the Sprint"
       },
       {
         "id": "d",
@@ -2323,12 +2323,12 @@
         "text": "When the Sprint Review starts"
       },
       {
-        "id": "c",
-        "text": "When a stakeholder says the demo looked good"
-      },
-      {
         "id": "d",
         "text": "When the Sprint timebox ends, whether or not the work is Done"
+      },
+      {
+        "id": "c",
+        "text": "When a stakeholder says the demo looked good"
       }
     ],
     "correctOptionIds": [
@@ -2347,12 +2347,12 @@
     "question": "More than one Increment can be created during a Sprint.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -2373,12 +2373,12 @@
     "question": "What must be true of an Increment?",
     "options": [
       {
-        "id": "a",
-        "text": "It is usable and additive to all prior Increments, which have been thoroughly verified so they work together"
-      },
-      {
         "id": "b",
         "text": "It is potentially releasable only after a separate hardening Sprint"
+      },
+      {
+        "id": "a",
+        "text": "It is usable and additive to all prior Increments, which have been thoroughly verified so they work together"
       },
       {
         "id": "c",
@@ -2410,16 +2410,16 @@
         "text": "There is no hardening Sprint. Every Sprint must produce a Done, usable Increment"
       },
       {
-        "id": "b",
-        "text": "A hardening Sprint is required once quality work is deferred"
-      },
-      {
         "id": "c",
         "text": "Sprint 0 creates the Increment, and later Sprints only add features"
       },
       {
         "id": "d",
         "text": "Testing is a Scrum event that happens after the Retrospective"
+      },
+      {
+        "id": "b",
+        "text": "A hardening Sprint is required once quality work is deferred"
       }
     ],
     "correctOptionIds": [
@@ -2439,10 +2439,6 @@
     "question": "The Definition of Done is the commitment for which artifact?",
     "options": [
       {
-        "id": "a",
-        "text": "The Increment"
-      },
-      {
         "id": "b",
         "text": "The Product Backlog"
       },
@@ -2453,6 +2449,10 @@
       {
         "id": "d",
         "text": "The Sprint Goal"
+      },
+      {
+        "id": "a",
+        "text": "The Increment"
       }
     ],
     "correctOptionIds": [
@@ -2476,16 +2476,16 @@
         "text": "Follow it as a minimum. The team may make it stricter"
       },
       {
-        "id": "b",
-        "text": "Ignore it and write a private Definition of Done"
-      },
-      {
         "id": "c",
         "text": "Use it only for the Sprint Review demo"
       },
       {
         "id": "d",
         "text": "Replace it with each Developer’s personal checklist"
+      },
+      {
+        "id": "b",
+        "text": "Ignore it and write a private Definition of Done"
       }
     ],
     "correctOptionIds": [
@@ -2509,16 +2509,16 @@
         "text": "They must mutually define and comply with the same Definition of Done"
       },
       {
-        "id": "b",
-        "text": "Each team keeps a private Definition of Done"
-      },
-      {
         "id": "c",
         "text": "Only the integration team needs a Definition of Done"
       },
       {
         "id": "d",
         "text": "The Product Owner chooses a different one per Sprint"
+      },
+      {
+        "id": "b",
+        "text": "Each team keeps a private Definition of Done"
       }
     ],
     "correctOptionIds": [
@@ -2537,12 +2537,12 @@
     "question": "Developers may weaken the Definition of Done during a Sprint so the forecast can be called complete.",
     "options": [
       {
-        "id": "a",
-        "text": "True"
-      },
-      {
         "id": "b",
         "text": "False"
+      },
+      {
+        "id": "a",
+        "text": "True"
       }
     ],
     "correctOptionIds": [
@@ -2563,20 +2563,20 @@
     "question": "A Scrum Team grows too large. What does the Scrum Guide suggest?",
     "options": [
       {
-        "id": "a",
-        "text": "Reorganize into multiple cohesive Scrum Teams on the same product, sharing the Product Goal, Product Backlog, and Product Owner"
-      },
-      {
         "id": "b",
         "text": "Add a project manager layer above the Developers"
       },
       {
-        "id": "c",
-        "text": "Split the Product Backlog so each team has its own Product Owner and Product Goal"
-      },
-      {
         "id": "d",
         "text": "Create a separate testing team that receives work after each Sprint"
+      },
+      {
+        "id": "a",
+        "text": "Reorganize into multiple cohesive Scrum Teams on the same product, sharing the Product Goal, Product Backlog, and Product Owner"
+      },
+      {
+        "id": "c",
+        "text": "Split the Product Backlog so each team has its own Product Owner and Product Goal"
       }
     ],
     "correctOptionIds": [
@@ -2596,6 +2596,10 @@
     "question": "Which statements are true when multiple Scrum Teams work on one product? Select all that apply.",
     "options": [
       {
+        "id": "d",
+        "text": "They mutually define and follow the same Definition of Done"
+      },
+      {
         "id": "a",
         "text": "They share one Product Owner"
       },
@@ -2606,10 +2610,6 @@
       {
         "id": "c",
         "text": "They share one Product Goal"
-      },
-      {
-        "id": "d",
-        "text": "They mutually define and follow the same Definition of Done"
       },
       {
         "id": "e",
@@ -2640,16 +2640,16 @@
         "text": "None. Velocity, burndown charts, and user stories may be used, but Scrum does not require them"
       },
       {
-        "id": "b",
-        "text": "Story points and planning poker"
+        "id": "d",
+        "text": "User stories with a mandatory template"
       },
       {
         "id": "c",
         "text": "A release burndown owned by the Scrum Master"
       },
       {
-        "id": "d",
-        "text": "User stories with a mandatory template"
+        "id": "b",
+        "text": "Story points and planning poker"
       }
     ],
     "correctOptionIds": [
@@ -2669,20 +2669,20 @@
     "question": "A person is asked to be both Product Owner and Scrum Master for the same team. What is the best description?",
     "options": [
       {
-        "id": "a",
-        "text": "The Scrum Guide does not forbid it, but the accountabilities can conflict, so it is generally unwise"
-      },
-      {
         "id": "b",
         "text": "Scrum forbids one person from holding both accountabilities"
       },
       {
-        "id": "c",
-        "text": "It is the recommended pattern because it shortens communication"
+        "id": "a",
+        "text": "The Scrum Guide does not forbid it, but the accountabilities can conflict, so it is generally unwise"
       },
       {
         "id": "d",
         "text": "It is allowed only if stakeholders approve the Sprint Goal"
+      },
+      {
+        "id": "c",
+        "text": "It is the recommended pattern because it shortens communication"
       }
     ],
     "correctOptionIds": [
@@ -2702,20 +2702,20 @@
     "question": "A tester and a business analyst create the Increment with the other Developers. What are their Scrum accountabilities?",
     "options": [
       {
-        "id": "a",
-        "text": "Developers. Scrum does not create separate tester or analyst accountabilities"
-      },
-      {
         "id": "b",
         "text": "A QA accountability and a business-analyst accountability"
       },
       {
-        "id": "c",
-        "text": "Stakeholders, because they do not write production code"
-      },
-      {
         "id": "d",
         "text": "Scrum Masters, because they improve quality and clarity"
+      },
+      {
+        "id": "a",
+        "text": "Developers. Scrum does not create separate tester or analyst accountabilities"
+      },
+      {
+        "id": "c",
+        "text": "Stakeholders, because they do not write production code"
       }
     ],
     "correctOptionIds": [
@@ -2735,20 +2735,20 @@
     "question": "Why does Scrum prescribe formal events?",
     "options": [
       {
-        "id": "a",
-        "text": "To create regularity and to minimize the need for meetings not defined in Scrum"
-      },
-      {
-        "id": "b",
-        "text": "To give each accountability a private status meeting"
+        "id": "d",
+        "text": "To replace transparency of the artifacts"
       },
       {
         "id": "c",
         "text": "To delay adaptation until the end of the month"
       },
       {
-        "id": "d",
-        "text": "To replace transparency of the artifacts"
+        "id": "a",
+        "text": "To create regularity and to minimize the need for meetings not defined in Scrum"
+      },
+      {
+        "id": "b",
+        "text": "To give each accountability a private status meeting"
       }
     ],
     "correctOptionIds": [
@@ -2768,16 +2768,16 @@
     "question": "Adaptation becomes more difficult when:",
     "options": [
       {
-        "id": "a",
-        "text": "The people involved are not empowered or self-managing"
+        "id": "c",
+        "text": "The Definition of Done is shared"
       },
       {
         "id": "b",
         "text": "The Scrum Team inspects a transparent Increment"
       },
       {
-        "id": "c",
-        "text": "The Definition of Done is shared"
+        "id": "a",
+        "text": "The people involved are not empowered or self-managing"
       },
       {
         "id": "d",
@@ -2801,10 +2801,6 @@
     "question": "Who is accountable for the order of the Product Backlog?",
     "options": [
       {
-        "id": "a",
-        "text": "The Product Owner"
-      },
-      {
         "id": "b",
         "text": "The Developers, because they size the work"
       },
@@ -2815,6 +2811,10 @@
       {
         "id": "d",
         "text": "The stakeholders collectively"
+      },
+      {
+        "id": "a",
+        "text": "The Product Owner"
       }
     ],
     "correctOptionIds": [
@@ -2871,16 +2871,16 @@
         "text": "The Sprint Review"
       },
       {
-        "id": "b",
-        "text": "The Daily Scrum"
-      },
-      {
         "id": "c",
         "text": "A management status meeting outside Scrum"
       },
       {
         "id": "d",
         "text": "Sprint Planning topic three only"
+      },
+      {
+        "id": "b",
+        "text": "The Daily Scrum"
       }
     ],
     "correctOptionIds": [
@@ -2900,20 +2900,20 @@
     "question": "The Sprint Goal is a commitment by whom, and what flexibility does it create?",
     "options": [
       {
-        "id": "a",
-        "text": "A commitment by the Developers that still allows flexibility in the exact work needed to achieve it"
-      },
-      {
-        "id": "b",
-        "text": "A commitment by stakeholders that every selected item will be delivered"
+        "id": "d",
+        "text": "A commitment that freezes the Sprint Backlog"
       },
       {
         "id": "c",
         "text": "A commitment by the Scrum Master that no impediments will occur"
       },
       {
-        "id": "d",
-        "text": "A commitment that freezes the Sprint Backlog"
+        "id": "b",
+        "text": "A commitment by stakeholders that every selected item will be delivered"
+      },
+      {
+        "id": "a",
+        "text": "A commitment by the Developers that still allows flexibility in the exact work needed to achieve it"
       }
     ],
     "correctOptionIds": [
@@ -2933,20 +2933,20 @@
     "question": "A Scrum Team and its stakeholders are open about the work and the challenges ahead. Which Scrum value does this illustrate?",
     "options": [
       {
-        "id": "a",
-        "text": "Openness"
-      },
-      {
-        "id": "b",
-        "text": "Commitment"
+        "id": "d",
+        "text": "Respect"
       },
       {
         "id": "c",
         "text": "Focus"
       },
       {
-        "id": "d",
-        "text": "Respect"
+        "id": "b",
+        "text": "Commitment"
+      },
+      {
+        "id": "a",
+        "text": "Openness"
       }
     ],
     "correctOptionIds": [
@@ -2970,16 +2970,16 @@
         "text": "Because the Guide is still being written"
       },
       {
+        "id": "d",
+        "text": "Because teams are expected to skip the events they find unnecessary"
+      },
+      {
         "id": "b",
         "text": "Because only certified coaches know the missing parts"
       },
       {
         "id": "c",
         "text": "Because it defines only the parts required to implement Scrum theory, while teams may use various processes, techniques, and methods within it"
-      },
-      {
-        "id": "d",
-        "text": "Because teams are expected to skip the events they find unnecessary"
       }
     ],
     "correctOptionIds": [
@@ -2999,16 +2999,16 @@
     "question": "Which of the following are part of effective Product Backlog management? Select all that apply.",
     "options": [
       {
+        "id": "c",
+        "text": "Sizing every Product Backlog item on behalf of the Developers"
+      },
+      {
         "id": "a",
         "text": "Developing and explicitly communicating the Product Goal"
       },
       {
         "id": "b",
         "text": "Ordering Product Backlog items"
-      },
-      {
-        "id": "c",
-        "text": "Sizing every Product Backlog item on behalf of the Developers"
       },
       {
         "id": "d",
@@ -3034,8 +3034,8 @@
     "question": "How can someone who wants a change in the Product Backlog get it made?",
     "options": [
       {
-        "id": "a",
-        "text": "By editing the Product Backlog directly"
+        "id": "d",
+        "text": "By asking the Scrum Master to reorder it"
       },
       {
         "id": "b",
@@ -3046,8 +3046,8 @@
         "text": "By voting during the Sprint Review"
       },
       {
-        "id": "d",
-        "text": "By asking the Scrum Master to reorder it"
+        "id": "a",
+        "text": "By editing the Product Backlog directly"
       }
     ],
     "correctOptionIds": [
@@ -3071,16 +3071,16 @@
         "text": "Ordering the Product Backlog"
       },
       {
+        "id": "d",
+        "text": "Managing performance reviews of the Developers"
+      },
+      {
         "id": "b",
         "text": "Establishing Scrum as defined in the Scrum Guide, by helping everyone understand Scrum theory and practice"
       },
       {
         "id": "c",
         "text": "Personally delivering the Increment each Sprint"
-      },
-      {
-        "id": "d",
-        "text": "Managing performance reviews of the Developers"
       }
     ],
     "correctOptionIds": [
@@ -3104,16 +3104,16 @@
         "text": "Helping find techniques for effective Product Goal definition and Product Backlog management"
       },
       {
+        "id": "d",
+        "text": "Facilitating stakeholder collaboration as requested or needed"
+      },
+      {
         "id": "b",
         "text": "Helping the Scrum Team understand the need for clear and concise Product Backlog items"
       },
       {
         "id": "c",
         "text": "Ordering the Product Backlog"
-      },
-      {
-        "id": "d",
-        "text": "Facilitating stakeholder collaboration as requested or needed"
       }
     ],
     "correctOptionIds": [
@@ -3135,16 +3135,16 @@
     "question": "Which statement about the Scrum Master and Scrum events is correct?",
     "options": [
       {
+        "id": "c",
+        "text": "The Scrum Master decides which events can be skipped"
+      },
+      {
         "id": "a",
         "text": "The Scrum Master must personally facilitate every event"
       },
       {
         "id": "b",
         "text": "The Scrum Master ensures that all Scrum events take place and are positive, productive, and kept within the timebox"
-      },
-      {
-        "id": "c",
-        "text": "The Scrum Master decides which events can be skipped"
       },
       {
         "id": "d",
@@ -3168,20 +3168,20 @@
     "question": "Why are shorter Sprints useful?",
     "options": [
       {
-        "id": "a",
-        "text": "They shorten the learning cycle and limit the risk of cost and effort to a smaller time frame"
-      },
-      {
         "id": "b",
         "text": "They remove the need for a Product Owner"
       },
       {
-        "id": "c",
-        "text": "They eliminate the Sprint Retrospective"
+        "id": "a",
+        "text": "They shorten the learning cycle and limit the risk of cost and effort to a smaller time frame"
       },
       {
         "id": "d",
         "text": "They guarantee that the Product Goal is reached sooner"
+      },
+      {
+        "id": "c",
+        "text": "They eliminate the Sprint Retrospective"
       }
     ],
     "correctOptionIds": [
@@ -3201,10 +3201,6 @@
     "question": "What does the Scrum Guide say about burn-downs, burn-ups, and cumulative flow?",
     "options": [
       {
-        "id": "a",
-        "text": "They replace empiricism"
-      },
-      {
         "id": "b",
         "text": "They are forbidden in Scrum"
       },
@@ -3215,6 +3211,10 @@
       {
         "id": "d",
         "text": "They are mandatory in the Sprint Review"
+      },
+      {
+        "id": "a",
+        "text": "They replace empiricism"
       }
     ],
     "correctOptionIds": [
@@ -3238,16 +3238,16 @@
         "text": "Estimate every item for the Developers"
       },
       {
+        "id": "d",
+        "text": "Write the plan for how the chosen work will be done"
+      },
+      {
         "id": "b",
         "text": "Assign each item to an individual Developer"
       },
       {
         "id": "c",
         "text": "Ensure that attendees are prepared to discuss the most important Product Backlog items and how they map to the Product Goal"
-      },
-      {
-        "id": "d",
-        "text": "Write the plan for how the chosen work will be done"
       }
     ],
     "correctOptionIds": [
@@ -3267,10 +3267,6 @@
     "question": "What is the purpose of the Daily Scrum?",
     "options": [
       {
-        "id": "a",
-        "text": "To report status to the Scrum Master"
-      },
-      {
         "id": "b",
         "text": "To update management on progress"
       },
@@ -3281,6 +3277,10 @@
       {
         "id": "d",
         "text": "To plan the next Sprint"
+      },
+      {
+        "id": "a",
+        "text": "To report status to the Scrum Master"
       }
     ],
     "correctOptionIds": [
@@ -3300,20 +3300,20 @@
     "question": "What is the purpose of the Sprint Review?",
     "options": [
       {
-        "id": "a",
-        "text": "To approve the Increment before it can be released"
-      },
-      {
-        "id": "b",
-        "text": "To evaluate individual performance"
+        "id": "d",
+        "text": "To plan each Developer's tasks for the next Sprint"
       },
       {
         "id": "c",
         "text": "To inspect the outcome of the Sprint and determine future adaptations"
       },
       {
-        "id": "d",
-        "text": "To plan each Developer's tasks for the next Sprint"
+        "id": "b",
+        "text": "To evaluate individual performance"
+      },
+      {
+        "id": "a",
+        "text": "To approve the Increment before it can be released"
       }
     ],
     "correctOptionIds": [
@@ -3333,20 +3333,20 @@
     "question": "Which event concludes the Sprint?",
     "options": [
       {
-        "id": "a",
-        "text": "The Sprint Review"
+        "id": "d",
+        "text": "The Sprint Retrospective"
       },
       {
-        "id": "b",
-        "text": "The Daily Scrum"
+        "id": "a",
+        "text": "The Sprint Review"
       },
       {
         "id": "c",
         "text": "Sprint Planning"
       },
       {
-        "id": "d",
-        "text": "The Sprint Retrospective"
+        "id": "b",
+        "text": "The Daily Scrum"
       }
     ],
     "correctOptionIds": [
@@ -3366,20 +3366,20 @@
     "question": "Which Product Backlog items are ready for selection in Sprint Planning?",
     "options": [
       {
-        "id": "a",
-        "text": "Those the Scrum Team can get Done within one Sprint"
-      },
-      {
         "id": "b",
         "text": "Those estimated above 13 points"
       },
       {
-        "id": "c",
-        "text": "Every item currently in the Product Backlog"
+        "id": "a",
+        "text": "Those the Scrum Team can get Done within one Sprint"
       },
       {
         "id": "d",
         "text": "Those a stakeholder committee has approved"
+      },
+      {
+        "id": "c",
+        "text": "Every item currently in the Product Backlog"
       }
     ],
     "correctOptionIds": [
@@ -3399,20 +3399,20 @@
     "question": "What is the Product Goal?",
     "options": [
       {
-        "id": "a",
-        "text": "The objective of a single Sprint"
+        "id": "d",
+        "text": "The long-term objective for the Scrum Team, describing a future state of the product that serves as a target for planning"
       },
       {
-        "id": "b",
-        "text": "A checklist of quality criteria for the Increment"
+        "id": "a",
+        "text": "The objective of a single Sprint"
       },
       {
         "id": "c",
         "text": "The Developers’ plan for the current Sprint"
       },
       {
-        "id": "d",
-        "text": "The long-term objective for the Scrum Team, describing a future state of the product that serves as a target for planning"
+        "id": "b",
+        "text": "A checklist of quality criteria for the Increment"
       }
     ],
     "correctOptionIds": [
@@ -3432,8 +3432,8 @@
     "question": "What is the Definition of Done?",
     "options": [
       {
-        "id": "a",
-        "text": "The task list for the current Sprint"
+        "id": "d",
+        "text": "A checklist owned only by the Scrum Master"
       },
       {
         "id": "b",
@@ -3444,8 +3444,8 @@
         "text": "A formal description of the state of the Increment when it meets the quality measures required for the product"
       },
       {
-        "id": "d",
-        "text": "A checklist owned only by the Scrum Master"
+        "id": "a",
+        "text": "The task list for the current Sprint"
       }
     ],
     "correctOptionIds": [
@@ -3469,12 +3469,12 @@
         "text": "It keeps a self-organizing Development Team inside the Scrum Team"
       },
       {
-        "id": "b",
-        "text": "It describes one self-managing Scrum Team, which chooses who, how, and what to work on"
-      },
-      {
         "id": "c",
         "text": "It lets management assign the Sprint work"
+      },
+      {
+        "id": "b",
+        "text": "It describes one self-managing Scrum Team, which chooses who, how, and what to work on"
       },
       {
         "id": "d",
@@ -3498,20 +3498,20 @@
     "question": "Which commitment did the 2020 Scrum Guide introduce?",
     "options": [
       {
-        "id": "a",
-        "text": "The Product Goal"
-      },
-      {
-        "id": "b",
-        "text": "The Sprint Goal"
+        "id": "d",
+        "text": "Velocity"
       },
       {
         "id": "c",
         "text": "The Definition of Done"
       },
       {
-        "id": "d",
-        "text": "Velocity"
+        "id": "a",
+        "text": "The Product Goal"
+      },
+      {
+        "id": "b",
+        "text": "The Sprint Goal"
       }
     ],
     "correctOptionIds": [
@@ -3531,20 +3531,20 @@
     "question": "What does empiricism assert?",
     "options": [
       {
-        "id": "a",
-        "text": "Knowledge comes from experience, and decisions are based on what is observed"
-      },
-      {
         "id": "b",
         "text": "Knowledge comes from a detailed plan written before the work starts"
       },
       {
-        "id": "c",
-        "text": "Decisions should wait until every risk has been predicted"
-      },
-      {
         "id": "d",
         "text": "The best decision is the one made by the most senior job title"
+      },
+      {
+        "id": "a",
+        "text": "Knowledge comes from experience, and decisions are based on what is observed"
+      },
+      {
+        "id": "c",
+        "text": "Decisions should wait until every risk has been predicted"
       }
     ],
     "correctOptionIds": [
@@ -3564,20 +3564,20 @@
     "question": "Why does Scrum use an iterative, incremental approach?",
     "options": [
       {
-        "id": "a",
-        "text": "To optimize predictability and to control risk"
-      },
-      {
         "id": "b",
         "text": "To remove the need for inspection"
       },
       {
-        "id": "c",
-        "text": "To fix the scope before the first Sprint"
+        "id": "a",
+        "text": "To optimize predictability and to control risk"
       },
       {
         "id": "d",
         "text": "To guarantee a release date"
+      },
+      {
+        "id": "c",
+        "text": "To fix the scope before the first Sprint"
       }
     ],
     "correctOptionIds": [
@@ -3597,20 +3597,20 @@
     "question": "Who must be able to see the emergent process and the work?",
     "options": [
       {
-        "id": "a",
-        "text": "The people performing the work and the people receiving the work"
-      },
-      {
-        "id": "b",
-        "text": "Only the Product Owner"
-      },
-      {
         "id": "c",
         "text": "Only the Scrum Master"
       },
       {
         "id": "d",
         "text": "Only the stakeholders who attend the Sprint Review"
+      },
+      {
+        "id": "a",
+        "text": "The people performing the work and the people receiving the work"
+      },
+      {
+        "id": "b",
+        "text": "Only the Product Owner"
       }
     ],
     "correctOptionIds": [
@@ -3630,12 +3630,12 @@
     "question": "What can artifacts with low transparency lead to?",
     "options": [
       {
-        "id": "a",
-        "text": "Decisions that diminish value and increase risk"
-      },
-      {
         "id": "b",
         "text": "Faster adaptation, because less information is discussed"
+      },
+      {
+        "id": "a",
+        "text": "Decisions that diminish value and increase risk"
       },
       {
         "id": "c",
@@ -3663,20 +3663,20 @@
     "question": "How should inspection be timed?",
     "options": [
       {
-        "id": "a",
-        "text": "Frequently and diligently enough to detect problems, without happening so often that inspection gets in the way of the work"
+        "id": "d",
+        "text": "Only when the Scrum Master requests it"
       },
       {
-        "id": "b",
-        "text": "Only at the Sprint Review"
+        "id": "a",
+        "text": "Frequently and diligently enough to detect problems, without happening so often that inspection gets in the way of the work"
       },
       {
         "id": "c",
         "text": "Continuously, even when it stops the Developers from creating the Increment"
       },
       {
-        "id": "d",
-        "text": "Only when the Scrum Master requests it"
+        "id": "b",
+        "text": "Only at the Sprint Review"
       }
     ],
     "correctOptionIds": [
@@ -3696,16 +3696,16 @@
     "question": "A process has drifted outside acceptable limits, or the resulting product is unacceptable. When is the adjustment made?",
     "options": [
       {
-        "id": "a",
-        "text": "As soon as possible, to minimize further deviation"
+        "id": "c",
+        "text": "After the Product Goal is already achieved"
       },
       {
         "id": "b",
         "text": "At the next quarterly planning meeting"
       },
       {
-        "id": "c",
-        "text": "After the Product Goal is already achieved"
+        "id": "a",
+        "text": "As soon as possible, to minimize further deviation"
       },
       {
         "id": "d",
@@ -3729,16 +3729,16 @@
     "question": "What does respect mean as a Scrum value?",
     "options": [
       {
+        "id": "c",
+        "text": "Stakeholders accept the Product Backlog and do not discuss it"
+      },
+      {
         "id": "a",
         "text": "Scrum Team members respect each other as capable, independent people, and are respected as such by the people they work with"
       },
       {
         "id": "b",
         "text": "The team defers every decision to the most senior person"
-      },
-      {
-        "id": "c",
-        "text": "Stakeholders accept the Product Backlog and do not discuss it"
       },
       {
         "id": "d",
@@ -3762,16 +3762,16 @@
     "question": "What does courage mean as a Scrum value?",
     "options": [
       {
+        "id": "c",
+        "text": "Problems stay private until the Sprint Review"
+      },
+      {
         "id": "a",
         "text": "Scrum Team members have the courage to do the right thing and to work on tough problems"
       },
       {
         "id": "b",
         "text": "The team delays difficult Product Backlog items until a later release"
-      },
-      {
-        "id": "c",
-        "text": "Problems stay private until the Sprint Review"
       },
       {
         "id": "d",
@@ -3799,16 +3799,16 @@
         "text": "The decisions, the steps taken, and the way Scrum is used should reinforce the values, not diminish or undermine them"
       },
       {
-        "id": "b",
-        "text": "The values apply only during the Sprint Retrospective"
+        "id": "d",
+        "text": "The values replace the Sprint Goal"
       },
       {
         "id": "c",
         "text": "The values can be set aside when a deadline is close"
       },
       {
-        "id": "d",
-        "text": "The values replace the Sprint Goal"
+        "id": "b",
+        "text": "The values apply only during the Sprint Retrospective"
       }
     ],
     "correctOptionIds": [
@@ -3828,16 +3828,16 @@
     "question": "Which of the following are product-related activities a Scrum Team can be responsible for? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "Stakeholder collaboration"
-      },
-      {
         "id": "b",
         "text": "Verification, maintenance, and operation"
       },
       {
         "id": "c",
         "text": "Experimentation, research, and development"
+      },
+      {
+        "id": "a",
+        "text": "Stakeholder collaboration"
       },
       {
         "id": "d",
@@ -3863,16 +3863,16 @@
     "question": "What does the Scrum Guide say about the skills Developers need?",
     "options": [
       {
+        "id": "c",
+        "text": "Only software programmers can be Developers"
+      },
+      {
         "id": "a",
         "text": "The specific skills needed are often broad and vary with the domain of work"
       },
       {
         "id": "b",
         "text": "Every Developer must be able to perform every task"
-      },
-      {
-        "id": "c",
-        "text": "Only software programmers can be Developers"
       },
       {
         "id": "d",
@@ -3900,12 +3900,12 @@
         "text": "The Product Owner may represent those needs in the Product Backlog"
       },
       {
-        "id": "b",
-        "text": "Each stakeholder adds and reorders items directly"
-      },
-      {
         "id": "c",
         "text": "The stakeholders vote during the Daily Scrum and override the Product Owner"
+      },
+      {
+        "id": "b",
+        "text": "Each stakeholder adds and reorders items directly"
       },
       {
         "id": "d",
@@ -3929,20 +3929,20 @@
     "question": "Which of the following is a way the Scrum Master serves the Scrum Team?",
     "options": [
       {
-        "id": "a",
-        "text": "Coaching the team members in self-management and cross-functionality"
-      },
-      {
-        "id": "b",
-        "text": "Assigning tasks to individual Developers"
+        "id": "d",
+        "text": "Writing a hidden Definition of Done and keeping it from the Developers"
       },
       {
         "id": "c",
         "text": "Ordering the Product Backlog"
       },
       {
-        "id": "d",
-        "text": "Writing a hidden Definition of Done and keeping it from the Developers"
+        "id": "b",
+        "text": "Assigning tasks to individual Developers"
+      },
+      {
+        "id": "a",
+        "text": "Coaching the team members in self-management and cross-functionality"
       }
     ],
     "correctOptionIds": [
@@ -3962,20 +3962,20 @@
     "question": "What does the Scrum Guide say about the time and place of the Scrum events?",
     "options": [
       {
-        "id": "a",
-        "text": "Optimally, all events are held at the same time and place to reduce complexity"
-      },
-      {
-        "id": "b",
-        "text": "Each event must be held in a different place"
-      },
-      {
         "id": "c",
         "text": "The Scrum Master chooses a new time for every Sprint"
       },
       {
+        "id": "a",
+        "text": "Optimally, all events are held at the same time and place to reduce complexity"
+      },
+      {
         "id": "d",
         "text": "An event may be skipped when the team already knows the status"
+      },
+      {
+        "id": "b",
+        "text": "Each event must be held in a different place"
       }
     ],
     "correctOptionIds": [
@@ -4032,16 +4032,16 @@
         "text": "The Sprint Goal is the commitment. Scope may be renegotiated with the Product Owner as more is learned"
       },
       {
-        "id": "b",
-        "text": "Every selected item becomes a commitment that must be finished or the Sprint has failed"
-      },
-      {
         "id": "c",
         "text": "Stakeholders may insert mandatory items during the Sprint without affecting the Sprint Goal"
       },
       {
         "id": "d",
         "text": "Unfinished items move automatically into the next Sprint"
+      },
+      {
+        "id": "b",
+        "text": "Every selected item becomes a commitment that must be finished or the Sprint has failed"
       }
     ],
     "correctOptionIds": [
@@ -4061,20 +4061,20 @@
     "question": "Who creates the plan that comes out of Sprint Planning?",
     "options": [
       {
-        "id": "a",
-        "text": "The whole Scrum Team, working together"
-      },
-      {
         "id": "b",
         "text": "The Product Owner alone"
       },
       {
-        "id": "c",
-        "text": "The Scrum Master alone"
+        "id": "a",
+        "text": "The whole Scrum Team, working together"
       },
       {
         "id": "d",
         "text": "The stakeholders, who then hand the plan to the Developers"
+      },
+      {
+        "id": "c",
+        "text": "The Scrum Master alone"
       }
     ],
     "correctOptionIds": [
@@ -4094,20 +4094,20 @@
     "question": "How do Developers often break down the Product Backlog items selected for the Sprint?",
     "options": [
       {
-        "id": "a",
-        "text": "Into smaller work items of one day or less, in whatever way they choose"
-      },
-      {
-        "id": "b",
-        "text": "They wait for the Product Owner to assign the tasks"
-      },
-      {
         "id": "c",
         "text": "They follow a work-breakdown template required by the Scrum Guide"
       },
       {
         "id": "d",
         "text": "The Scrum Master sequences the tasks for them"
+      },
+      {
+        "id": "b",
+        "text": "They wait for the Product Owner to assign the tasks"
+      },
+      {
+        "id": "a",
+        "text": "Into smaller work items of one day or less, in whatever way they choose"
       }
     ],
     "correctOptionIds": [
@@ -4127,20 +4127,20 @@
     "question": "Why is the Daily Scrum held at the same time and place every working day of the Sprint?",
     "options": [
       {
-        "id": "a",
-        "text": "To reduce complexity"
+        "id": "c",
+        "text": "So stakeholders can attend a daily demonstration"
       },
       {
         "id": "b",
         "text": "So the Scrum Master can collect a status report"
       },
       {
-        "id": "c",
-        "text": "So stakeholders can attend a daily demonstration"
-      },
-      {
         "id": "d",
         "text": "Because the timebox changes from day to day"
+      },
+      {
+        "id": "a",
+        "text": "To reduce complexity"
       }
     ],
     "correctOptionIds": [
@@ -4160,20 +4160,20 @@
     "question": "Which outcome does the Scrum Guide associate with the Daily Scrum?",
     "options": [
       {
-        "id": "a",
-        "text": "Clearer communication, visible impediments, quicker decisions, and less need for other meetings"
-      },
-      {
-        "id": "b",
-        "text": "A written status report for management"
-      },
-      {
         "id": "c",
         "text": "A rewritten Sprint Goal"
       },
       {
+        "id": "a",
+        "text": "Clearer communication, visible impediments, quicker decisions, and less need for other meetings"
+      },
+      {
         "id": "d",
         "text": "A new Definition of Done"
+      },
+      {
+        "id": "b",
+        "text": "A written status report for management"
       }
     ],
     "correctOptionIds": [
@@ -4197,16 +4197,16 @@
         "text": "Collaborate on what to do next, and the Product Backlog may be adjusted to meet new opportunities"
       },
       {
-        "id": "b",
-        "text": "Have the Scrum Master accept or reject the Increment"
+        "id": "d",
+        "text": "Decompose the next Sprint into assigned tasks"
       },
       {
         "id": "c",
         "text": "Weaken the Definition of Done so unfinished work can be presented"
       },
       {
-        "id": "d",
-        "text": "Decompose the next Sprint into assigned tasks"
+        "id": "b",
+        "text": "Have the Scrum Master accept or reject the Increment"
       }
     ],
     "correctOptionIds": [
@@ -4234,12 +4234,12 @@
         "text": "Problems it ran into, and how those problems were or were not solved"
       },
       {
-        "id": "c",
-        "text": "Assumptions that led the team astray, and where those assumptions came from"
-      },
-      {
         "id": "d",
         "text": "Individual salary decisions"
+      },
+      {
+        "id": "c",
+        "text": "Assumptions that led the team astray, and where those assumptions came from"
       }
     ],
     "correctOptionIds": [
@@ -4261,20 +4261,20 @@
     "question": "Which details does the Scrum Guide give as examples of what refinement may add to a Product Backlog item? Select all that apply.",
     "options": [
       {
-        "id": "a",
-        "text": "A description"
-      },
-      {
-        "id": "b",
-        "text": "Order"
-      },
-      {
         "id": "c",
         "text": "Size"
       },
       {
         "id": "d",
         "text": "A story-point value that Scrum requires"
+      },
+      {
+        "id": "b",
+        "text": "Order"
+      },
+      {
+        "id": "a",
+        "text": "A description"
       }
     ],
     "correctOptionIds": [
@@ -4300,12 +4300,12 @@
         "text": "A highly visible, real-time picture of the planned work, updated as more is learned, with enough detail to inspect progress in the Daily Scrum"
       },
       {
-        "id": "b",
-        "text": "A fixed task list signed at the end of Sprint Planning"
-      },
-      {
         "id": "c",
         "text": "A plan owned by the Product Owner and changed only at the Sprint Review"
+      },
+      {
+        "id": "b",
+        "text": "A fixed task list signed at the end of Sprint Planning"
       },
       {
         "id": "d",
@@ -4329,20 +4329,20 @@
     "question": "What is an Increment?",
     "options": [
       {
-        "id": "a",
-        "text": "A concrete stepping stone toward the Product Goal"
-      },
-      {
-        "id": "b",
-        "text": "A document that describes work planned for a later Sprint"
-      },
-      {
         "id": "c",
         "text": "Another name for the Sprint Backlog"
       },
       {
+        "id": "a",
+        "text": "A concrete stepping stone toward the Product Goal"
+      },
+      {
         "id": "d",
         "text": "A status report presented by the Scrum Master"
+      },
+      {
+        "id": "b",
+        "text": "A document that describes work planned for a later Sprint"
       }
     ],
     "correctOptionIds": [
@@ -4366,16 +4366,16 @@
         "text": "Presenting them supports empiricism"
       },
       {
-        "id": "b",
-        "text": "The Sprint Review is the only moment an Increment may be released"
-      },
-      {
         "id": "c",
         "text": "The presentation replaces the Definition of Done"
       },
       {
         "id": "d",
         "text": "The Scrum Master uses it to accept or reject the Increment"
+      },
+      {
+        "id": "b",
+        "text": "The Sprint Review is the only moment an Increment may be released"
       }
     ],
     "correctOptionIds": [
@@ -4399,16 +4399,16 @@
         "text": "The Scrum Team creates a Definition of Done appropriate for the product"
       },
       {
+        "id": "d",
+        "text": "Each Developer uses a personal definition, and the result is still an Increment"
+      },
+      {
         "id": "b",
         "text": "The team may release work with no shared quality measure"
       },
       {
         "id": "c",
         "text": "The Scrum Master writes a private checklist and does not share it"
-      },
-      {
-        "id": "d",
-        "text": "Each Developer uses a personal definition, and the result is still an Increment"
       }
     ],
     "correctOptionIds": [
@@ -4428,20 +4428,20 @@
     "question": "Who is required to conform to the Definition of Done?",
     "options": [
       {
-        "id": "a",
-        "text": "The Developers"
-      },
-      {
-        "id": "b",
-        "text": "Only the Product Owner"
+        "id": "d",
+        "text": "Only the Scrum Master"
       },
       {
         "id": "c",
         "text": "Only the stakeholders at the Sprint Review"
       },
       {
-        "id": "d",
-        "text": "Only the Scrum Master"
+        "id": "a",
+        "text": "The Developers"
+      },
+      {
+        "id": "b",
+        "text": "Only the Product Owner"
       }
     ],
     "correctOptionIds": [
@@ -4469,12 +4469,12 @@
         "text": "To replace inspection and adaptation"
       },
       {
-        "id": "c",
-        "text": "To freeze the Product Backlog for the whole release"
-      },
-      {
         "id": "d",
         "text": "To give the Scrum Master a scale for rating individuals"
+      },
+      {
+        "id": "c",
+        "text": "To freeze the Product Backlog for the whole release"
       }
     ],
     "correctOptionIds": [
@@ -4494,20 +4494,20 @@
     "question": "How does the 2020 Scrum Guide refer to the Product Owner, the Scrum Master, and the Developers?",
     "options": [
       {
-        "id": "a",
-        "text": "As three accountabilities within one Scrum Team"
-      },
-      {
-        "id": "b",
-        "text": "As three roles that form separate sub-teams"
+        "id": "d",
+        "text": "As a Development Team plus two managers"
       },
       {
         "id": "c",
         "text": "As three job titles assigned by a line manager"
       },
       {
-        "id": "d",
-        "text": "As a Development Team plus two managers"
+        "id": "b",
+        "text": "As three roles that form separate sub-teams"
+      },
+      {
+        "id": "a",
+        "text": "As three accountabilities within one Scrum Team"
       }
     ],
     "correctOptionIds": [
@@ -4527,8 +4527,8 @@
     "question": "Mid-Sprint, a senior manager tells the Developers to drop the Sprint Goal and implement a marketing demo instead. The Product Owner is traveling and unreachable for two days. What should the Developers do?",
     "options": [
       {
-        "id": "a",
-        "text": "Keep working toward the current Sprint Goal and the Sprint Backlog plan until the Product Owner can renegotiate scope with them"
+        "id": "d",
+        "text": "Ask the Scrum Master to reorder the Product Backlog for the manager"
       },
       {
         "id": "b",
@@ -4539,8 +4539,8 @@
         "text": "Cancel the Sprint themselves, since the Sprint Goal appears threatened"
       },
       {
-        "id": "d",
-        "text": "Ask the Scrum Master to reorder the Product Backlog for the manager"
+        "id": "a",
+        "text": "Keep working toward the current Sprint Goal and the Sprint Backlog plan until the Product Owner can renegotiate scope with them"
       }
     ],
     "correctOptionIds": [
@@ -4567,16 +4567,16 @@
     "question": "A competitor ships a feature that makes the current Sprint Goal commercially pointless. Stakeholders want the team to stop immediately. Who may cancel the Sprint, and on what basis?",
     "options": [
       {
+        "id": "c",
+        "text": "Stakeholders cancel the Sprint by majority vote at an emergency meeting"
+      },
+      {
         "id": "a",
         "text": "Only the Product Owner may cancel the Sprint, and only if the Sprint Goal has become obsolete"
       },
       {
         "id": "b",
         "text": "The Scrum Master cancels the Sprint to protect the Developers from stakeholders"
-      },
-      {
-        "id": "c",
-        "text": "Stakeholders cancel the Sprint by majority vote at an emergency meeting"
       },
       {
         "id": "d",
@@ -4607,8 +4607,8 @@
     "question": "The Daily Scrum has become a status meeting where each Developer reports progress to the Scrum Master, who then assigns the day’s tasks. What should change?",
     "options": [
       {
-        "id": "a",
-        "text": "Restore the Daily Scrum as a 15-minute event for the Developers to inspect progress toward the Sprint Goal and adapt the Sprint Backlog"
+        "id": "d",
+        "text": "Invite the Product Owner to run the Daily Scrum and re-prioritize tasks each morning"
       },
       {
         "id": "b",
@@ -4619,8 +4619,8 @@
         "text": "Replace the Daily Scrum with a written status email to stakeholders"
       },
       {
-        "id": "d",
-        "text": "Invite the Product Owner to run the Daily Scrum and re-prioritize tasks each morning"
+        "id": "a",
+        "text": "Restore the Daily Scrum as a 15-minute event for the Developers to inspect progress toward the Sprint Goal and adapt the Sprint Backlog"
       }
     ],
     "correctOptionIds": [
@@ -4687,10 +4687,6 @@
     "question": "Three days into a Sprint, Developers learn the selected work will not achieve the Sprint Goal as planned. What may they do?",
     "options": [
       {
-        "id": "a",
-        "text": "Collaborate with the Product Owner to renegotiate the scope of the Sprint Backlog within the Sprint without changing the Sprint Goal"
-      },
-      {
         "id": "b",
         "text": "Silently drop quality criteria from the Definition of Done to finish more items"
       },
@@ -4701,6 +4697,10 @@
       {
         "id": "d",
         "text": "Add unplanned stakeholder requests without talking to the Product Owner"
+      },
+      {
+        "id": "a",
+        "text": "Collaborate with the Product Owner to renegotiate the scope of the Sprint Backlog within the Sprint without changing the Sprint Goal"
       }
     ],
     "correctOptionIds": [
@@ -4727,20 +4727,20 @@
     "question": "At Sprint Review, Developers want to demo a nearly finished item that still fails an automated regression check required by the Definition of Done. Stakeholders are eager to see it. What should happen?",
     "options": [
       {
-        "id": "a",
-        "text": "Do not present it as part of the Increment; return the unfinished work to the Product Backlog for later consideration"
-      },
-      {
         "id": "b",
         "text": "Present it as Done because stakeholders asked to see progress"
+      },
+      {
+        "id": "d",
+        "text": "Count it in the Increment if the Scrum Master personally tested the happy path"
       },
       {
         "id": "c",
         "text": "Have the Product Owner override the Definition of Done for this Review only"
       },
       {
-        "id": "d",
-        "text": "Count it in the Increment if the Scrum Master personally tested the happy path"
+        "id": "a",
+        "text": "Do not present it as part of the Increment; return the unfinished work to the Product Backlog for later consideration"
       }
     ],
     "correctOptionIds": [
@@ -4767,20 +4767,20 @@
     "question": "Developers are stuck behind a slow security approval queue owned by another department. They can still make some progress, but the Sprint Goal is at risk. How should the Scrum Master act?",
     "options": [
       {
-        "id": "a",
-        "text": "Cause the impediment to be removed by coaching the organization and helping remove barriers, while Developers continue adapting their plan"
-      },
-      {
-        "id": "b",
-        "text": "Personally write all remaining Product Backlog items so Developers are not blocked"
-      },
-      {
         "id": "c",
         "text": "Order the Developers to stop self-managing and wait idle until security replies"
       },
       {
         "id": "d",
         "text": "Cancel the Sprint without involving the Product Owner"
+      },
+      {
+        "id": "a",
+        "text": "Cause the impediment to be removed by coaching the organization and helping remove barriers, while Developers continue adapting their plan"
+      },
+      {
+        "id": "b",
+        "text": "Personally write all remaining Product Backlog items so Developers are not blocked"
       }
     ],
     "correctOptionIds": [
@@ -4807,16 +4807,16 @@
     "question": "A stakeholder insists a new request must jump to the top of the Product Backlog during the Sprint. The Product Owner disagrees. Who decides?",
     "options": [
       {
-        "id": "a",
-        "text": "The Product Owner decides Product Backlog content and order; people wanting a change address the Product Owner"
+        "id": "c",
+        "text": "Developers vote, because they will implement the work"
       },
       {
         "id": "b",
         "text": "The stakeholder wins because they fund the product"
       },
       {
-        "id": "c",
-        "text": "Developers vote, because they will implement the work"
+        "id": "a",
+        "text": "The Product Owner decides Product Backlog content and order; people wanting a change address the Product Owner"
       },
       {
         "id": "d",
@@ -4847,20 +4847,20 @@
     "question": "During Sprint Review, stakeholders demand that unfinished items be marked complete so the release metrics look green. What should the Scrum Team do?",
     "options": [
       {
-        "id": "a",
-        "text": "Keep unfinished work out of the Increment, discuss progress and Product Backlog adaptations honestly, and preserve transparency"
+        "id": "d",
+        "text": "Let finance redefine Done for reporting purposes"
       },
       {
         "id": "b",
         "text": "Mark the items Done to satisfy the metrics, then fix quality next Sprint"
       },
       {
-        "id": "c",
-        "text": "Hide the Sprint Review from stakeholders until everything is green"
+        "id": "a",
+        "text": "Keep unfinished work out of the Increment, discuss progress and Product Backlog adaptations honestly, and preserve transparency"
       },
       {
-        "id": "d",
-        "text": "Let finance redefine Done for reporting purposes"
+        "id": "c",
+        "text": "Hide the Sprint Review from stakeholders until everything is green"
       }
     ],
     "correctOptionIds": [
@@ -4887,20 +4887,20 @@
     "question": "After several Sprints, the same quality escapes keep recurring. In the Retrospective, management wants only a feel-good discussion with no changes. What is the Scrum intent?",
     "options": [
       {
-        "id": "a",
-        "text": "Plan ways to increase quality and effectiveness, including adapting the Definition of Done as appropriate, and implement improvements as soon as possible"
-      },
-      {
         "id": "b",
         "text": "Skip improvements if delivery pressure is high; Retrospectives are optional"
+      },
+      {
+        "id": "d",
+        "text": "Let the Product Owner alone decide process changes without the Developers"
       },
       {
         "id": "c",
         "text": "Assign individual blame scores and remove the lowest-rated Developer"
       },
       {
-        "id": "d",
-        "text": "Let the Product Owner alone decide process changes without the Developers"
+        "id": "a",
+        "text": "Plan ways to increase quality and effectiveness, including adapting the Definition of Done as appropriate, and implement improvements as soon as possible"
       }
     ],
     "correctOptionIds": [
@@ -4927,16 +4927,16 @@
     "question": "The Product Owner asks Developers mid-Sprint to change how they decompose work and which engineering approach they use. Developers disagree. Who decides how the work gets done?",
     "options": [
       {
+        "id": "c",
+        "text": "The Scrum Master dictates the technical design as process owner"
+      },
+      {
         "id": "a",
         "text": "The Developers, at their sole discretion, decide how to turn Product Backlog items into a Done Increment"
       },
       {
         "id": "b",
         "text": "The Product Owner decides the engineering approach because they maximize value"
-      },
-      {
-        "id": "c",
-        "text": "The Scrum Master dictates the technical design as process owner"
       },
       {
         "id": "d",
@@ -4967,12 +4967,12 @@
     "question": "An organization wants a separate “testing Scrum Team” that receives Increments from a “development Scrum Team” each Sprint. What does the Scrum Guide imply?",
     "options": [
       {
-        "id": "a",
-        "text": "A Scrum Team has no sub-teams or hierarchies and is cross-functional enough to create value each Sprint"
-      },
-      {
         "id": "b",
         "text": "Hand-offs between specialized Scrum Teams are the preferred scaling pattern"
+      },
+      {
+        "id": "a",
+        "text": "A Scrum Team has no sub-teams or hierarchies and is cross-functional enough to create value each Sprint"
       },
       {
         "id": "c",
@@ -5047,20 +5047,20 @@
     "question": "The Product Owner delegates writing and ordering of many Product Backlog items to Developers. A stakeholder later claims “nobody is accountable.” What is true?",
     "options": [
       {
-        "id": "a",
-        "text": "The Product Owner remains accountable for effective Product Backlog management even when work is delegated"
+        "id": "d",
+        "text": "The Scrum Master becomes accountable for backlog order"
       },
       {
         "id": "b",
         "text": "Accountability transfers fully to the Developers who performed the delegated work"
       },
       {
-        "id": "c",
-        "text": "Accountability disappears once delegation occurs"
+        "id": "a",
+        "text": "The Product Owner remains accountable for effective Product Backlog management even when work is delegated"
       },
       {
-        "id": "d",
-        "text": "The Scrum Master becomes accountable for backlog order"
+        "id": "c",
+        "text": "Accountability disappears once delegation occurs"
       }
     ],
     "correctOptionIds": [
@@ -5087,8 +5087,8 @@
     "question": "A team runs two-week Sprints but skips Sprint Retrospective whenever “things went fine,” and sometimes skips Daily Scrum when remote. Is this still Scrum?",
     "options": [
       {
-        "id": "a",
-        "text": "No. The Scrum framework is immutable; implementing only parts of Scrum is not Scrum, and skipping events loses inspect-and-adapt opportunities"
+        "id": "d",
+        "text": "Only the Retrospective is optional; Daily Scrum remains required"
       },
       {
         "id": "b",
@@ -5099,8 +5099,8 @@
         "text": "Yes, because events are suggestions, not part of the framework"
       },
       {
-        "id": "d",
-        "text": "Only the Retrospective is optional; Daily Scrum remains required"
+        "id": "a",
+        "text": "No. The Scrum framework is immutable; implementing only parts of Scrum is not Scrum, and skipping events loses inspect-and-adapt opportunities"
       }
     ],
     "correctOptionIds": [
@@ -5127,20 +5127,20 @@
     "question": "Leadership asks the Scrum Master to rate each Developer’s individual productivity for annual bonuses using Daily Scrum notes. What should the Scrum Master do?",
     "options": [
       {
-        "id": "a",
-        "text": "Refuse to turn Scrum events into individual performance surveillance and coach the organization toward empiricism and self-managing teams"
+        "id": "d",
+        "text": "Ask Developers to vote on each other’s bonuses during Retrospective"
       },
       {
         "id": "b",
         "text": "Comply, because the Scrum Master owns individual appraisals"
       },
       {
-        "id": "c",
-        "text": "Publish a leaderboard after every Daily Scrum"
+        "id": "a",
+        "text": "Refuse to turn Scrum events into individual performance surveillance and coach the organization toward empiricism and self-managing teams"
       },
       {
-        "id": "d",
-        "text": "Ask Developers to vote on each other’s bonuses during Retrospective"
+        "id": "c",
+        "text": "Publish a leaderboard after every Daily Scrum"
       }
     ],
     "correctOptionIds": [
@@ -5167,20 +5167,20 @@
     "question": "Sprint Planning is ending and the Scrum Team still has no Sprint Goal. Developers have selected items. What must be true before Planning ends?",
     "options": [
       {
-        "id": "a",
-        "text": "The Sprint Goal must be finalized prior to the end of Sprint Planning"
-      },
-      {
-        "id": "b",
-        "text": "The Sprint Goal can be invented on day three once work is clearer"
-      },
-      {
         "id": "c",
         "text": "Only the Product Owner needs a private Sprint Goal"
       },
       {
+        "id": "a",
+        "text": "The Sprint Goal must be finalized prior to the end of Sprint Planning"
+      },
+      {
         "id": "d",
         "text": "A Sprint Goal is optional when the backlog is clear"
+      },
+      {
+        "id": "b",
+        "text": "The Sprint Goal can be invented on day three once work is clearer"
       }
     ],
     "correctOptionIds": [
@@ -5211,16 +5211,16 @@
         "text": "Refinement is the act of breaking down and further defining Product Backlog items into smaller, more precise items"
       },
       {
+        "id": "d",
+        "text": "Attributes of Product Backlog items often vary with the domain of work"
+      },
+      {
         "id": "b",
         "text": "Refinement is an ongoing activity to add details such as description, order, and size"
       },
       {
         "id": "c",
         "text": "Refinement is a mandatory fifth Scrum event with a fixed timebox equal to Daily Scrum"
-      },
-      {
-        "id": "d",
-        "text": "Attributes of Product Backlog items often vary with the domain of work"
       }
     ],
     "correctOptionIds": [
@@ -5253,12 +5253,12 @@
         "text": "Others may attend, but the Developers remain responsible for conducting the Daily Scrum and it remains focused on progress toward the Sprint Goal"
       },
       {
-        "id": "b",
-        "text": "The Product Owner must run the Daily Scrum and assign tasks"
-      },
-      {
         "id": "c",
         "text": "Anyone outside the Developers is forbidden from being present under any circumstance"
+      },
+      {
+        "id": "b",
+        "text": "The Product Owner must run the Daily Scrum and assign tasks"
       },
       {
         "id": "d",
@@ -5289,8 +5289,8 @@
     "question": "A Developer hides a production-risk discovery until after Sprint Review to avoid “looking bad.” Which Scrum value is most directly undermined, and why does it matter?",
     "options": [
       {
-        "id": "a",
-        "text": "Openness (and thereby empiricism): without transparency, inspection is misleading and adaptation suffers"
+        "id": "d",
+        "text": "Only Focus is affected, because the Review agenda was shorter"
       },
       {
         "id": "b",
@@ -5301,8 +5301,8 @@
         "text": "Nothing; hiding risk until Review is a valid forecasting technique"
       },
       {
-        "id": "d",
-        "text": "Only Focus is affected, because the Review agenda was shorter"
+        "id": "a",
+        "text": "Openness (and thereby empiricism): without transparency, inspection is misleading and adaptation suffers"
       }
     ],
     "correctOptionIds": [
@@ -5337,12 +5337,12 @@
         "text": "Each team may keep incompatible Done definitions forever"
       },
       {
-        "id": "c",
-        "text": "Only the fastest team’s Done applies to the product"
-      },
-      {
         "id": "d",
         "text": "Done is unnecessary when scaling"
+      },
+      {
+        "id": "c",
+        "text": "Only the fastest team’s Done applies to the product"
       }
     ],
     "correctOptionIds": [
@@ -5369,12 +5369,12 @@
     "question": "Near the end of a Sprint, Developers realize they will not complete every selected Product Backlog item, but the Sprint Goal is still achievable with a smaller set of Done work. What should they do?",
     "options": [
       {
-        "id": "a",
-        "text": "Focus on achieving the Sprint Goal with a usable Done Increment; unfinished items return to the Product Backlog"
-      },
-      {
         "id": "b",
         "text": "Extend the Sprint by a few days until every selected item is finished"
+      },
+      {
+        "id": "a",
+        "text": "Focus on achieving the Sprint Goal with a usable Done Increment; unfinished items return to the Product Backlog"
       },
       {
         "id": "c",
@@ -5409,10 +5409,6 @@
     "question": "Select all that apply. Which are ways the Scrum Master serves the Product Owner?",
     "options": [
       {
-        "id": "a",
-        "text": "Helping find techniques for effective Product Goal definition and Product Backlog management"
-      },
-      {
         "id": "b",
         "text": "Helping the Scrum Team understand the need for clear and concise Product Backlog items"
       },
@@ -5423,6 +5419,10 @@
       {
         "id": "d",
         "text": "Ordering the Product Backlog when the Product Owner is busy"
+      },
+      {
+        "id": "a",
+        "text": "Helping find techniques for effective Product Goal definition and Product Backlog management"
       }
     ],
     "correctOptionIds": [
@@ -5451,20 +5451,20 @@
     "question": "Who is responsible for sizing Product Backlog items when the Product Owner asks for estimates before Sprint Planning?",
     "options": [
       {
-        "id": "a",
-        "text": "The Developers who will do the work are responsible for the sizing"
-      },
-      {
         "id": "b",
         "text": "The Product Owner alone, using business value points"
       },
       {
-        "id": "c",
-        "text": "The Scrum Master, using a mandated corporate scale"
-      },
-      {
         "id": "d",
         "text": "Stakeholders who requested the features"
+      },
+      {
+        "id": "a",
+        "text": "The Developers who will do the work are responsible for the sizing"
+      },
+      {
+        "id": "c",
+        "text": "The Scrum Master, using a mandated corporate scale"
       }
     ],
     "correctOptionIds": [
@@ -5491,16 +5491,16 @@
     "question": "What is the primary outcome expected from a Sprint Review?",
     "options": [
       {
+        "id": "c",
+        "text": "Individual performance ratings for Developers"
+      },
+      {
         "id": "a",
         "text": "Inspection of the Sprint’s outcome and adaptation of the Product Backlog as needed"
       },
       {
         "id": "b",
         "text": "Formal approval gate before any Increment may ever be released"
-      },
-      {
-        "id": "c",
-        "text": "Individual performance ratings for Developers"
       },
       {
         "id": "d",
@@ -5531,16 +5531,16 @@
     "question": "Select all that apply. Which commitments are associated with Scrum artifacts?",
     "options": [
       {
-        "id": "a",
-        "text": "Product Goal for the Product Backlog"
-      },
-      {
         "id": "b",
         "text": "Sprint Goal for the Sprint Backlog"
       },
       {
         "id": "c",
         "text": "Definition of Done for the Increment"
+      },
+      {
+        "id": "a",
+        "text": "Product Goal for the Product Backlog"
       },
       {
         "id": "d",
@@ -5573,20 +5573,20 @@
     "question": "The Product Owner is unavailable for several days. Stakeholders ask the Scrum Master to temporarily become Product Owner and reorder the backlog. What should happen?",
     "options": [
       {
-        "id": "a",
-        "text": "Keep a single Product Owner accountability; do not create a rotating committee of owners, and escalate availability as an organizational impediment"
+        "id": "d",
+        "text": "Developers should elect a temporary Product Owner each morning"
       },
       {
-        "id": "b",
-        "text": "The Scrum Master should silently assume Product Owner ordering rights"
+        "id": "a",
+        "text": "Keep a single Product Owner accountability; do not create a rotating committee of owners, and escalate availability as an organizational impediment"
       },
       {
         "id": "c",
         "text": "Stakeholders should reorder the Product Backlog until the Product Owner returns"
       },
       {
-        "id": "d",
-        "text": "Developers should elect a temporary Product Owner each morning"
+        "id": "b",
+        "text": "The Scrum Master should silently assume Product Owner ordering rights"
       }
     ],
     "correctOptionIds": [
@@ -5613,20 +5613,20 @@
     "question": "A team wants to add a mandatory “refinement meeting” as a sixth formal Scrum event with the same status as Sprint Review. What is accurate?",
     "options": [
       {
-        "id": "a",
-        "text": "Refinement is an ongoing activity; teams may schedule collaboration time, but Scrum does not define refinement as a formal event"
+        "id": "d",
+        "text": "Only the Scrum Master may refine the Product Backlog"
       },
       {
-        "id": "b",
-        "text": "Refinement must be added as a formal event or the team is not doing Scrum"
+        "id": "a",
+        "text": "Refinement is an ongoing activity; teams may schedule collaboration time, but Scrum does not define refinement as a formal event"
       },
       {
         "id": "c",
         "text": "Refinement replaces Sprint Planning Topic Two"
       },
       {
-        "id": "d",
-        "text": "Only the Scrum Master may refine the Product Backlog"
+        "id": "b",
+        "text": "Refinement must be added as a formal event or the team is not doing Scrum"
       }
     ],
     "correctOptionIds": [

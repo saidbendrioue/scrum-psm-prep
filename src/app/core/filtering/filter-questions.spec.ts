@@ -1,5 +1,5 @@
 import { EMPTY_FILTER, type Question } from '../models/question.model';
-import { filterQuestions } from './filter-questions';
+import { filterQuestions, shuffleQuestionOptions, withShuffledOptions } from './filter-questions';
 
 const questions: Question[] = [
   {
@@ -44,5 +44,32 @@ describe('filterQuestions', () => {
     expect(filterQuestions(questions, { ...EMPTY_FILTER, questionIds: [] })).toHaveLength(0);
     expect(filterQuestions(questions, { ...EMPTY_FILTER, questionIds: ['q2'] }).map((item) => item.id)).toEqual(['q2']);
     expect(filterQuestions(questions, { ...EMPTY_FILTER, certs: ['PSPO I'] })).toHaveLength(0);
+  });
+});
+
+describe('withShuffledOptions', () => {
+  it('reorders options while keeping correctOptionIds tied to option ids', () => {
+    const source: Question = {
+      ...questions[1]!,
+      options: [
+        { id: 'a', text: 'The Product Owner' },
+        { id: 'b', text: 'The Scrum Master' },
+        { id: 'c', text: 'The Developers' },
+        { id: 'd', text: 'Stakeholders' },
+      ],
+      correctOptionIds: ['a'],
+    };
+    // Deterministic Fisher–Yates: random always 0 → each index swaps with 0.
+    const shuffled = withShuffledOptions(source, () => 0);
+    expect(shuffled.options.map((option) => option.id)).toEqual(['b', 'c', 'd', 'a']);
+    expect(shuffled.correctOptionIds).toEqual(['a']);
+    expect(shuffled.options.find((option) => option.id === 'a')?.text).toBe('The Product Owner');
+  });
+
+  it('shuffles every question in a bank', () => {
+    const shuffled = shuffleQuestionOptions(questions, () => 0);
+    expect(shuffled).toHaveLength(2);
+    expect(shuffled[0]?.options.map((option) => option.id)).toEqual(['b', 'a']);
+    expect(shuffled[1]?.options.map((option) => option.id)).toEqual(['b', 'a']);
   });
 });
